@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Fantasy bow.ma
-//Last modified: Wed, Jan 27, 2021 03:15:21 PM
+//Last modified: Wed, Jan 27, 2021 03:18:52 PM
 //Codeset: 1252
 requires maya "2020";
 requires "mtoa" "4.0.0";
@@ -10,17 +10,17 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "47E549B9-4AC9-B438-67C0-3CB001D40D4C";
+fileInfo "UUID" "9E4FE36B-4265-D277-28A7-919B0C3FEFE4";
 createNode transform -s -n "persp";
 	rename -uid "9A6DD437-48A6-A1C8-7900-CAA787823A01";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.4380520736347515 20.774629209771703 72.768520054051976 ;
-	setAttr ".r" -type "double3" -5.7383527296025632 3.7999999999672687 -7.4708499351475906e-17 ;
+	setAttr ".t" -type "double3" 88.962861558507726 66.026716292820723 -105.10669829953019 ;
+	setAttr ".r" -type "double3" -22.538352729618143 140.59999999995151 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "939FA1CA-4E0A-5811-45E3-23B382B22965";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 66.2947972317817;
+	setAttr ".coi" 151.978802003444;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -85,13 +85,13 @@ createNode mesh -n "pCylinderShape1" -p "pCylinder1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.49999988079071045 0.61160516738891602 ;
+	setAttr ".pv" -type "double2" 0.49999991059303284 0.50046978890895844 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 61 ".pt";
+	setAttr -s 62 ".pt";
 	setAttr ".pt[3068]" -type "float3" -0.097993076 -0.0095801614 -1.6378441e-18 ;
 	setAttr ".pt[3069]" -type "float3" -0.11357773 -0.0072526676 0 ;
 	setAttr ".pt[3070]" -type "float3" -0.14553125 0.010646652 0 ;
