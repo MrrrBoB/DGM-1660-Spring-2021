@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Fantasy bow.ma
-//Last modified: Tue, Mar 23, 2021 10:21:22 AM
+//Last modified: Tue, Mar 23, 2021 10:44:42 AM
 //Codeset: 1252
 requires maya "2020";
 requires "mtoa" "4.0.0";
@@ -10,19 +10,19 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "6BAA89FD-4DD6-E84F-48B9-F39395D8A298";
+fileInfo "UUID" "327C8611-497A-884D-093A-FDA4D0FD5FE4";
 createNode transform -s -n "persp";
 	rename -uid "9A6DD437-48A6-A1C8-7900-CAA787823A01";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.2657879585590277 3.8772766124786866 1.2050811376620376 ;
-	setAttr ".r" -type "double3" 340.46164726445534 -9775.7999999882904 359.99999999993543 ;
+	setAttr ".t" -type "double3" -3.0928690826137393 1.2278687134203579 3.0765285778095253 ;
+	setAttr ".r" -type "double3" 353.6616472652637 -9769.7999999850763 359.99999999868129 ;
 	setAttr ".rp" -type "double3" -4.4408920985006262e-16 1.7763568394002505e-15 -8.8817841970012523e-16 ;
 	setAttr ".rpt" -type "double3" 1.7634425649345064e-15 -5.078372833847631e-16 1.7779450255266208e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "939FA1CA-4E0A-5811-45E3-23B382B22965";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 3.8354487817323477;
+	setAttr ".coi" 3.8354487817322491;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9341,13 +9341,13 @@ createNode mesh -n "polySurfaceShape1" -p "polySurface1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.35161101818084717 0.27499699592590332 ;
+	setAttr ".pv" -type "double2" 0.84982372320421207 0.85940025466352366 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 1265 ".pt";
+	setAttr -s 1277 ".pt";
 	setAttr ".pt[0]" -type "float3" 9.5367432e-07 -2.3841858e-07 -9.5367432e-07 ;
 	setAttr ".pt[1]" -type "float3" 9.5367432e-07 -2.3841858e-07 -9.5367432e-07 ;
 	setAttr ".pt[2]" -type "float3" 9.5367432e-07 -2.3841858e-07 -9.5367432e-07 ;
@@ -23138,22 +23138,22 @@ createNode mesh -n "polySurfaceShape4" -p "polySurface2";
 	setAttr ".bw" 3;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "2DF6B5A8-4866-907D-72E6-488CF0D851E8";
+	rename -uid "BF624FCE-4184-E925-46D5-D48304965941";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "928C2F4F-48FE-FF07-AC7A-D098D6EBDFF1";
+	rename -uid "DA32936D-4B4E-0516-291F-99B26DA3FBA5";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "3A6658AD-434D-D982-A888-5F8739B72729";
+	rename -uid "8917303A-4F82-18A1-D4E2-E5B29AF22FA2";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "E1F0F4D7-4402-70C1-5969-919AB6C343F9";
+	rename -uid "888D6D0F-43DA-FA67-2ED4-B69DF7C79A7B";
 	setAttr ".cdl" 1;
 	setAttr -s 4 ".dli[1:3]"  1 2 3;
 	setAttr -s 4 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "8BEF5441-4441-F23A-FBB8-408EE92B0E85";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "2A0975B3-4A8E-FBEF-9D92-DAA1610420E9";
+	rename -uid "758A8BCB-428B-6695-2689-03AED6B65B9E";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F4093ABC-4E64-BABC-737E-65942FFC9AF1";
 	setAttr ".g" yes;
@@ -23163,14 +23163,14 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 578\n            -height 384\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 578\n            -height 383\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 578\n            -height 383\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 0\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
 		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1163\n            -height 811\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
@@ -25113,964 +25113,968 @@ createNode polyTweakUV -n "polyTweakUV32";
 	rename -uid "F9B5EDD6-4800-ECAD-44C0-3E934AD27BA1";
 	setAttr ".uopa" yes;
 	setAttr -s 3460 ".uvtk";
-	setAttr ".uvtk[0:249]" -type "float2" -0.34006321 -1.50039876 -0.088099599
-		 -1.51173425 -0.084001124 -1.33967185 -0.33488649 -1.32987595 -2.86989784 -1.52488494
-		 -2.61796594 -1.5135498 -2.62314224 -1.34304833 -2.87399554 -1.35284436 -0.60150665
-		 -1.49294055 -0.57878315 -1.3192457 -2.35655451 -1.50609112 -2.37927604 -1.3324182
-		 -3.009578228 -1.52874839 -3.01361537 -1.35464525 0.051598489 -1.51559734 0.055635929
-		 -1.34147239 0.12888831 -1.52079117 0.13614029 -1.33817077 0.092715263 -1.51828742
-		 0.097675741 -1.33990777 -0.81664628 -1.48110247 -0.72777975 -1.48658633 -0.71065438
-		 -1.31189787 -0.79066086 -1.30661798 -2.23029637 -1.49973667 -2.1414423 -1.49425328
-		 -2.16742444 -1.31979072 -2.24742079 -1.32507026 -0.87109637 -1.47912288 -0.86409301
-		 -1.30276334 -0.078408778 -1.1705668 -0.32731688 -1.15965986 -2.63071179 -1.17285347
-		 -2.87958765 -1.1837604 -0.5673427 -1.14696503 -2.39071655 -1.16015923 -3.017609596
-		 -1.18528628 0.059629738 -1.17209244 0.1427505 -1.17170608 0.10312331 -1.17198479
-		 -0.69723737 -1.13755524 -0.78175271 -1.1303556 -2.17633271 -1.14355075 -2.26083779
-		 -1.1507498 -0.85704082 -1.12518191 -0.068419576 -1.013289809 -0.31738496 -1.0034034252
-		 -2.64064312 -1.016616821 -2.8895762 -1.026502967 -0.56958902 -0.99338818 -2.38846993
-		 -1.0066012144 -3.026301384 -1.031933069 0.068321526 -1.018719792 0.14869934 -1.02191186
-		 0.11036891 -1.020389438 -0.70552057 -0.98799038 -0.78709155 -0.98475105 -2.17099595
-		 -0.99796426 -2.25255585 -1.001203537 -0.85136318 -0.98219877 -0.30058229 -0.50617462
-		 -0.30894351 -0.67657071 -0.058071375 -0.68669993 -0.048512936 -0.51485431 -2.90948439
-		 -0.52813035 -2.89992571 -0.69995439 -2.64908576 -0.68982536 -2.65744662 -0.51945055
-		 -0.56179374 -0.49287784 -0.55291516 -0.66782755 -2.40514421 -0.68108189 -2.39626718
-		 -0.50615418 -3.049031496 -0.53535658 -3.039248228 -0.70923179 0.081268728 -0.69597775
-		 0.09105134 -0.52208054 0.16850978 -0.52303207 0.1612578 -0.70565265 0.12305212 -0.70087093
-		 0.13225186 -0.52265954 -0.77719462 -0.48761916 -0.76512676 -0.66361469 -0.68495363
-		 -0.66469574 -0.68817323 -0.48919925 -2.26990318 -0.50247514 -2.27312136 -0.67794967
-		 -2.19295835 -0.67686838 -2.18089366 -0.50089496 -2.12646461 -0.49855053 -2.11946106
-		 -0.6748879 -0.31489503 -0.84685123 -0.065905869 -0.85571587 -2.8920908 -0.86894912
-		 -2.6431334 -0.86008418 -0.55517167 -0.84047323 -2.40288711 -0.85370594 -3.029798985
-		 -0.87837368 0.071818829 -0.86514115 0.15464723 -0.87211716 0.11516708 -0.86869729
-		 -0.77022374 -0.84002829 -0.68540376 -0.83955312 -2.27267146 -0.85278505 -2.18786144
-		 -0.85325986 -2.11240911 -0.85244703 -3.086858511 -1.53394186 -3.050689459 -1.53143835
-		 -3.09411025 -1.35134447 -3.055650234 -1.35308111 -3.10072064 -1.18490088 -3.061098337
-		 -1.18517923 -3.081026554 -0.7141245 -3.090226412 -0.53593552 -3.12647963 -0.53630829
-		 -3.073142052 -0.88192999 -3.11922789 -0.71890575 -3.10666847 -1.035125017 -3.068343163
-		 -1.033602834 -3.11261749 -0.88534945 -0.84568506 -0.83921587 -2.10673118 -0.99541211
-		 -0.83863354 -0.66163409 -0.83163011 -0.48527452 -2.10105324 -1.13837695 -2.094001532
-		 -1.31593657 -2.086998463 -1.49227381 -1.16383576 0.38227373 -1.31751966 0.38349774
-		 -1.37007046 0.178121 -1.24234557 0.1405248 -2.13325953 0.198742 -2.0017290115 0.2193962
-		 -2.027106047 0.42986539 -2.17964339 0.44865134 -1.17335486 0.57336855 -1.30366218
-		 0.5878551 -2.014251709 0.63428843 -2.14533567 0.63688195 -1.93706369 -0.0089766383
-		 -1.85237265 0.065701157 -1.53815746 0.045168638 -1.46390522 -0.039895147 -1.7041657
-		 -0.080774903 -1.69966507 -0.011897415 -1.77637684 0.027083635 -1.82116032 -0.044707686
-		 -1.61853242 0.016769737 -1.58347213 -0.060239643 -1.42868483 0.86864954 -1.52846205
-		 0.81546134 -1.39197946 0.72363818 -1.26060081 0.74486983 -2.036514282 0.79557204
-		 -1.90901494 0.75742376 -1.76174438 0.83070546 -1.85375106 0.89642435 -1.63778794
-		 0.93503249 -1.64336395 0.84969127 -1.89901686 -1.6309762 -1.84360516 -1.85705757
-		 -1.72441936 -1.83132851 -1.75857377 -1.64021492 -1.026003838 -1.86392593 -0.96680033
-		 -1.63880825 -1.10737944 -1.64568591 -1.14473963 -1.83619881 -1.87744522 -1.45708942
-		 -1.75745893 -1.45264018 -0.98544872 -1.46458375 -1.10534358 -1.45811868 -1.21918893
-		 -2.040415764 -1.29150569 -1.96650445 -1.65341198 -2.036767721 -1.57986414 -1.964082
-		 -1.43673515 -2.0902946 -1.32745242 -2.065238476 -1.36351562 -1.99665308 -1.4362042
-		 -2.027084827 -1.5455811 -2.063405514 -1.50837076 -1.99543536 -1.6243515 -1.20461404
-		 -1.78620529 -1.30633569 -1.66764748 -1.33458042 -1.53680921 -1.25991535 -1.074141979
-		 -1.31231797 -1.23426437 -1.20789218 -1.32272315 -1.2617135 -1.19315875 -1.33856678
-		 -1.42890334 -1.1580776 -1.42956173 -1.23639607 -1.20620549 -2.58635926 -1.012101889
-		 -2.5703361 -1.016731501 -2.47642541 -1.20656455 -2.48748255 -3.047639132 -2.58392882
-		 -2.85353684 -2.59995222 -2.85317755 -2.50107551 -3.04301095 -2.49001789 -1.33434534
-		 -2.59220123 -1.3421284 -2.4946022 -2.72539711 -2.60579371 -2.7176137 -2.50819445
-		 -1.4373914 -2.59730315 -1.44333816 -2.49833679 -2.62235093 -2.61089563 -2.61640406
-		 -2.51192927 -1.52271616 -2.60196471 -1.52819479 -2.50303698 -0.78023517 -2.56177783
-		 -0.78118461 -2.46342421 -3.27950621 -2.57537079 -3.27855706 -2.47701693 -3.43222094
-		 -2.5639329 -3.43622732 -2.46731973 -0.62752056 -2.55033946 -0.62351465 -2.45372605
-		 -0.52307129 -2.54624796 -0.52853173 -2.44765353 -0.57324529 -2.54817605 -0.57451224
-		 -2.45060802 -1.16747892 0.67452812 -1.15691388 0.57615048 -0.96689308 0.5861221 -0.97266257
-		 0.68003303 -2.84833074 0.70600212 -2.84370303 0.61205965 -2.65380573 0.62311572 -2.65416193
-		 0.72202551 -1.29556572 0.66618359 -1.29252589 0.56825644 -2.51819611 0.63023382 -2.52597904
-		 0.72786587 -1.39861453 0.6598748 -1.39359713 0.56079096 -2.41695213 0.6339671 -2.42289829
-		 0.73296624 -2.33754492 0.73762792 -2.33206654 0.63866627 -0.73119313 0.59921098 -0.74111313
-		 0.69713426 -3.08027482 0.69744766 -3.079328299 0.5990606 -3.23304129 0.68600935 -3.23705149
-		 0.58936399 -0.57331073 0.60698265 -0.58796698 0.70262742 -0.48363447 0.71009552 -0.47817418
-		 0.611435 -0.52423084 0.60929447 -0.53374803 0.70647109;
-	setAttr ".uvtk[250:499]" -3.53667021 -2.55984092 -3.48649621 -2.56176949 -3.48522949
-		 -2.46420145 -3.53121018 -2.46124673 -3.3320663 0.58329165 -3.28607035 0.58624607
-		 -3.2873354 0.68384695 -3.33815217 0.68193799 -1.4839896 0.65508664 -1.47851074 0.5560919
-		 -2.53702617 -2.61555719 -2.53154731 -2.51662922 -1.054681301 -2.70275545 -1.0064337254
-		 -2.87234592 -0.88003224 -2.88917041 -0.91362745 -2.7130065 -1.68295324 -2.86177325
-		 -1.62942958 -2.69377279 -1.77073479 -2.69961143 -1.80981827 -2.87463903 -1.12275374
-		 -2.57265759 -0.98992449 -2.56753492 -1.55732417 -2.56586576 -1.68992829 -2.55659509
-		 -1.22582793 -2.50036335 -1.14272892 -2.45150185 -1.45204186 -2.49682832 -1.53357363
-		 -2.4453938 -1.33865988 -2.4810164 -1.33750999 -2.40745926 -1.065607548 -3.098027706
-		 -0.94191998 -3.1100595 -1.63086057 -3.089193106 -1.75486338 -3.09735322 -1.4813807
-		 -3.22858143 -1.58132648 -3.27206731 -1.21936989 -3.23267555 -1.12083197 -3.27926397
-		 -1.35089123 -3.26366448 -1.41644204 -3.24603987 -1.46722102 -3.30450296 -1.35204148
-		 -3.33724523 -1.28482246 -3.24809647 -1.23589492 -3.30811954 -1.75771427 1.57682109
-		 -1.91650319 1.57657385 -1.96815801 1.38195539 -1.82525468 1.39073157 -1.066749692
-		 1.34869385 -0.92569244 1.3241812 -0.95552462 1.52331507 -1.11331344 1.54110706 -1.67111564
-		 1.71710145 -1.81946921 1.7334168 -1.034633398 1.68992066 -1.18388081 1.69009864 -1.5499208
-		 1.7898587 -1.63909602 1.85119843 -1.20088553 1.82691193 -1.29629326 1.77580166 -1.42201495
-		 1.80253947 -1.41744423 1.88501143 -1.9164381 1.12964368 -1.77695715 1.13326812 -1.14320278
-		 1.098145008 -1.0049757957 1.079130054 -1.32171178 0.95394349 -1.21324158 0.89728189
-		 -1.72954309 0.92589569 -1.61547565 0.97022402 -1.47064686 0.92504406 -1.47521865
-		 0.84254634 -1.34361613 0.87004226 -1.39583039 0.93956184 -1.6029768 0.88441539 -1.54340029
-		 0.94774085 -0.8317396 -3.49321318 -0.81472027 -3.48987198 -0.69157809 -3.31068563
-		 -0.88894105 -3.34495664 -1.53278637 -3.79866791 -1.69107461 -3.64502239 -0.74057549
-		 -3.48529387 -0.5490979 -3.30607438 -1.60746682 -3.80893469 -1.83371389 -3.66893721
-		 -0.59836316 -3.49784613 -0.42540675 -3.30954504 -1.74644065 -3.84986448 -1.95605004
-		 -3.69712877 -0.41754466 -3.5277133 -0.30774665 -3.31377792 -1.92036664 -3.91573238
-		 -2.072244644 -3.7248652 -0.20961279 -3.5309732 -0.17661035 -3.29249001 -2.12657619
-		 -3.96053553 -2.20694971 -3.72990799 -2.35319781 -3.96627426 -2.38734674 -3.73173738
-		 0.01046586 -3.49253178 -0.0019691586 -3.25923157 0.29261947 -3.46601653 0.36451894
-		 -3.22691178 0.15555948 -3.47310519 0.15462255 -3.24095726 -0.77225661 -3.17767525
-		 -0.8883217 -3.19366646 -1.63742733 -3.49653339 -0.62947434 -3.14813447 -1.78534746
-		 -3.49572277 -0.48337293 -3.11615276 -1.93705773 -3.49314404 -0.31768662 -3.087012529
-		 -2.10768127 -3.49731016 -0.10967314 -3.082920551 -2.31541872 -3.53485489 -2.51367402
-		 -3.59012675 0.092609227 -3.097839832 0.32370704 -3.089758873 0.21177304 -3.095591068
-		 -0.47201103 -2.97828293 -0.60985953 -3.0022661686 -1.8340677 -3.3545301 -1.97596979
-		 -3.35826993 -0.77727991 -3.022727251 -1.66346335 -3.34136057 -0.32328057 -2.95261073
-		 -2.12903404 -3.36250353 -0.15353423 -2.95104384 -2.2981689 -3.39492846 -0.9403699
-		 -3.026937485 -2.51619411 -3.44436193 0.06674546 -2.95645118 0.35969511 -2.91515064
-		 0.200827 -2.94131112 -0.46852684 -2.95510387 -0.608832 -2.97936916 -1.83967972 -3.33195877
-		 -1.98408413 -3.33591151 -0.77709216 -2.99923348 -1.66835952 -3.31802559 -0.31628317
-		 -2.92907214 -2.14071965 -3.34049296 -0.14415336 -2.92487836 -2.3127408 -3.3707819
-		 -0.93959254 -2.99882579 -2.51049662 -3.41488123 0.055512905 -2.9290657 0.35606554
-		 -2.89164019 0.19508415 -2.91380048 -0.47007626 -2.84333777 -0.62161571 -2.86919832
-		 -1.84906173 -3.21980619 -2.0049536228 -3.22442961 -0.76506418 -2.88737535 -1.70275593
-		 -3.20915842 -0.3078683 -2.82896447 -2.16915941 -3.24260831 -0.11984938 -2.82113147
-		 -2.35770631 -3.27246118 -0.90514922 -2.87421012 -2.54757833 -3.31199479 0.071342587
-		 -2.82243466 0.28835508 -2.77787542 0.17705929 -2.80097437 -0.31267726 -2.7343092
-		 -0.48903388 -2.74167395 -2.0065250397 -3.11951828 -2.1833899 -3.14750767 -0.63034517
-		 -2.77094769 -1.86010647 -3.12033439 -0.75073111 -2.77894735 -1.73876858 -3.10418081
-		 -0.84881228 -2.75786352 -0.085076869 -2.73688221 -2.40919614 -3.19562769 -2.60185528
-		 -3.21685505 0.10530061 -2.71996379 0.21461898 -2.67836857 0.16134232 -2.70049214
-		 -2.63921881 -3.99621534 -2.50144267 -3.97592902 -2.75843787 -3.7727313 -2.54680204
-		 -3.74484086 -2.74520326 -3.62818789 -2.63267922 -3.61167526 -2.81587362 -3.46170378
-		 -2.65260124 -3.45607615 -2.81694484 -3.43759704 -2.65238476 -3.42757225 -2.77230859
-		 -3.31095934 -2.65700603 -3.31176162 -2.66145253 -3.20867443 -2.71884203 -3.19729471
-		 -1.56607151 -3.16798687 -1.6454488 -3.063551903 -1.50682712 -3.28505969 -1.50041747
-		 -3.31287122 -1.51879275 -3.48920155 -1.48791063 -3.63963032 -1.51518989 -3.79859495
-		 -2.0065922737 2.4536829 -1.98054206 2.29280949 -0.76924348 2.33588338 -0.89394581
-		 2.51639414 -2.02436161 2.45390654 -2.18570662 2.30020142 -0.62549657 2.33160901 -0.8191452
-		 2.51195621 -2.099696159 2.46498394 -2.32954383 2.32575989 -0.50072759 2.33547711
-		 -0.67574596 2.52500463 -2.23965883 2.50768042 -2.45283365 2.35545635 -0.38203919
-		 2.34012723 -0.49345765 2.55568266 -2.41467595 2.57593536 -2.56993222 2.38463783 -0.24966976
-		 2.31908846 -0.28371972 2.5596478 -2.62251091 2.62324762 -2.70595646 2.39108229 -2.85135579
-		 2.63131356 -2.88816833 2.39474678 -0.073356926 2.2861557 -0.061570019 2.52161884
-		 0.22320902 2.49585676 0.29657063 2.25485325 0.084716171 2.26828861 0.0848867 2.50253296
-		 -2.01320672 2.14110613 -0.85028338 2.201478 -2.13296914 2.14966249 -0.7061348 2.17201447
-		 -2.28239393 2.15030098 -0.55862927 2.14014196 -2.43566942 2.14921403 -0.39136574
-		 2.11125374 -2.60798597 2.15514469 -0.1814602 2.10785651 -2.81746721 2.19516039 -3.017190218
-		 2.25298262 0.022617668 2.1236639 0.25585812 2.11633825 0.14288387 2.12183118 -0.68595612
-		 2.024854898 -0.54676199 2.0010318756 -2.47633266 2.013366699;
-	setAttr ".uvtk[500:749]" -2.33302546 2.0081460476 -0.85495341 2.045104027 -2.16082525
-		 1.99313951 -0.39657959 1.97559333 -2.63091516 2.019201517 -0.2252807 1.97460818 -2.80144811
-		 2.053657055 -1.99641132 1.9627459 -3.02119875 2.1057806 -0.0029942393 1.98092103
-		 0.29280314 1.94030643 0.13238633 1.96615362 -0.68484122 2.001749754 -0.54317105 1.97765076
-		 -2.48475552 1.9908638 -2.33892608 1.98540044 -0.85470581 2.02139616 -2.16600966 1.96961427
-		 -0.38943583 1.95185995 -2.6429348 1.997087 -0.21570787 1.94823861 -2.81641364 2.029415369
-		 -2.0031673908 1.93470883 -3.015740633 2.075945854 -0.014224499 1.95324588 0.28921938
-		 1.91657555 0.12669373 1.93837821 -0.69743967 1.89054322 -0.54439181 1.86485457 -2.50699353
-		 1.8784678 -2.34956336 1.87219834 -0.84228992 1.90855896 -2.20187044 1.85997725 -0.38060015
-		 1.85086513 -2.67268276 1.8985095 -0.19077793 1.843642 -2.86283922 1.93056118 -2.064209938
-		 1.81701636 -3.057940245 1.97205496 0.0021668673 1.84571922 0.22132039 1.80156493
-		 0.10893902 1.82447982 -0.56322378 1.76221371 -0.38511148 1.75532794 -2.68805408 1.80259728
-		 -2.50969505 1.77251434 -0.7060048 1.79138398 -2.361763 1.77183223 -0.82758284 1.79918587
-		 -2.23933554 1.75429463 -2.1454742 1.71231413 -0.15532455 1.75876129 -2.9156394 1.85346961
-		 -3.12725616 1.87603617 0.036873281 1.74245381 0.1473088 1.70090914 0.093481869 1.72302818
-		 -3.049114704 2.40958667 -3.0010018349 2.64255619 -3.13997149 2.66442633 -3.13719106
-		 2.27594256 -3.26261997 2.43987703 -3.16576576 2.11778569 -3.25236416 2.29328442 -3.1682868
-		 2.088706493 -3.35613394 2.12002563 -3.18648458 1.97112799 -3.36242175 2.095235825
-		 -3.2779355 1.85629749 -3.20248628 1.86775589 -3.33160472 1.96833777 -0.98364639 1.89499521
-		 -0.92654145 1.77771568 -1.018695951 2.020668983 -1.019536853 2.049032211 -0.96743584
-		 2.21737528 -0.96845067 2.37001038 -0.91112679 2.51972532 -0.13577104 3.29396915 -0.091512084
-		 3.17016506 0.1653977 3.13672614 0.11716306 3.23084736 -2.34805202 2.73796606 -2.38982773
-		 2.64315414 -2.14057159 2.69062304 -2.10439658 2.81421614 -0.50716978 3.27966809 -0.40510857
-		 3.14409018 -1.83247232 2.68320346 -1.74050117 2.82164478 -2.64243507 2.60629797 -2.66485262
-		 2.56514025 0.45038384 3.07373023 0.42509997 3.11433029 -2.80136204 2.57588983 0.75880289
-		 3.10975504 0.75817394 3.084815502 0.60585451 3.067602396 0.58882612 3.092905521 -0.91346395
-		 3.063293457 -0.7646175 3.0061948299 -1.47302198 2.56914377 -1.33079267 2.63356686
-		 -1.050501108 2.88764429 -0.90493369 2.87129188 -1.32804489 2.44535303 -1.18666506
-		 2.4697504 -1.1314795 2.28423166 -1.27221179 2.27267694 -1.50810361 2.25499129 -0.67815298
-		 2.8324852 -1.5475328 2.39431834 -0.5102337 2.95606041 -1.71884739 2.50544167 -0.23394054
-		 3.046398163 -1.99420071 2.57782531 0.026419938 3.068976879 -2.25006533 2.58490801
-		 0.26886654 3.056513309 -2.48639011 2.55876637 -2.71764517 2.52766395 0.50641632 3.038713694
-		 0.76368862 3.0644629 0.63759071 3.049397469 -1.83485329 2.23191404 -0.33605963 2.80414963
-		 -1.88037705 2.34687948 -0.21028829 2.90016985 -2.0088946819 2.43350244 -0.027207792
-		 2.97973752 -2.19249392 2.50074673 0.17722976 3.030793428 -2.39531565 2.53889561 0.36833954
-		 2.99001193 -2.57982683 2.48801208 -2.75805187 2.43415427 0.55323964 2.94585276 0.8154673
-		 2.97328997 0.68224573 2.96010733 -0.06891489 2.67816973 -0.047908366 2.76631713 0.039783776
-		 2.85662985 -2.25088596 2.37652707 0.16131514 2.93848801 -2.37443805 2.44956136 0.31643909
-		 2.96320033 -2.52753472 2.46478748 0.45712268 2.90523767 -2.66171312 2.40000439 -2.81942987
-		 2.34181285 0.62141055 2.85546017 0.85753995 2.90173197 0.73682481 2.87883329 0.15974957
-		 2.65409517 0.16462517 2.67168832 0.19309139 2.74148345 -2.39409828 2.25509119 0.27358359
-		 2.84691763 -2.47889471 2.35354662 0.39907336 2.8874836 -2.60392094 2.3860023 0.52148473
-		 2.81105375 -2.71914244 2.30420685 -2.85742235 2.22131085 0.6674782 2.7349534 0.9225356
-		 2.79661703 0.79148245 2.76600337 -2.96861482 2.58242512 -2.81655908 2.55015826 -2.84653974
-		 2.53050733 -2.96652842 2.55807853 -2.885005 2.44058943 -2.97071671 2.53785706 -2.1342783
-		 2.20831561 -2.93362188 2.35793447 -3.016024351 2.44568443 -2.36222291 2.18849492
-		 -2.3564353 2.17157507 -2.15992117 2.2932837 -3.11037326 2.26668167 -2.98045969 2.24442339
-		 -3.052979231 2.37325668 -0.7099492 2.68810296 -0.37552869 2.68423414 -0.95144188
-		 2.69193363 -1.09557724 2.69523001 -0.47002715 4.16849518 -0.32510149 4.36510515 -0.44775939
-		 4.41733313 -0.5381754 4.20401764 -0.41593075 4.11391068 -0.23891956 4.26339436 -0.55709904
-		 4.43094826 -0.6057446 4.22765398 -0.37336066 4.056360245 -0.19356206 4.16298008 -0.77420062
-		 4.26550388 -0.73838568 4.22247934 -0.33905569 3.92812586 -0.28736076 3.90664625 -0.85535204
-		 4.15735245 -0.82569098 4.15910435 -0.37375927 3.82597876 -0.36665642 3.79712772 -0.45776254
-		 3.75846171 -0.44818407 3.71635389 -0.90838557 4.055575848 -0.86532873 4.058886528
-		 -0.59565693 3.73385358 -0.63493025 3.6693778 -0.89800185 3.86329174 -0.84803331 3.9198842
-		 -0.75707 3.7790823 -0.78556609 3.74042344 -0.70262468 3.69761944 -0.67425942 3.7427752
-		 -0.85099369 3.80698514 -0.81625378 3.84744143 -0.22968498 4.49455166 -0.34493846
-		 4.5467658 -0.14570743 4.39990997 -0.48781922 4.5448451 -0.10526505 4.26285887 -0.75801754
-		 4.42081785 -0.14379127 3.96805954 -0.91309118 4.23275709 -0.27754402 3.76428461 -0.97150266
-		 4.065946579 -0.41960278 3.65913105 -0.62868613 3.609833 -0.9567287 3.85163832 -0.83209717
-		 3.67729712 -0.73003095 3.64299011 -0.89506912 3.76464105 -0.14043908 5.39772511 -0.19810304
-		 5.26170349 -2.11699581 3.64058042 -0.41688034 5.41630077 -0.44948292 5.26148558 -0.3502166
-		 5.26843929 -0.3073861 5.42803574 -2.25891852 3.71909904 -2.10195756 3.73894858 -2.033491373
-		 3.97624063 -2.22569966 4.037068844 -0.7364912 5.40915775 -0.69157106 5.21262455 -1.94054997
-		 4.22633839 -2.13406396 4.33068562 -1.036593199 5.34180832;
-	setAttr ".uvtk[750:999]" -0.94841838 5.14041805 -1.26434195 5.24832201 -1.17467952
-		 5.084805489 -1.86663651 4.44730663 -2.022271872 4.55005741 -1.47444355 5.18331814
-		 -1.368222 5.043965816 -1.81010497 4.63687134 -1.94028795 4.7541647 -1.64722836 5.096421242
-		 -1.52397072 4.99369144 -1.74725306 4.78799438 -1.8395319 4.91927195 -1.76321507 5.029384613
-		 -1.65454602 4.91139936 -0.23962671 5.15282869 -1.99542236 3.64192629 -0.44649103
-		 5.13943386 -0.36148825 5.14738512 -1.98055542 3.72599745 -1.93460214 3.94747472 -0.67098498
-		 5.11171865 -1.87490761 4.16100121 -0.88866901 5.069659233 -1.093292594 5.02532959
-		 -1.81401134 4.36132097 -1.27114558 4.97908401 -1.75338197 4.53480291 -1.42497587
-		 4.91891861 -1.68083596 4.68320084 -1.57303691 4.82291222 -0.22877461 5.099870205
-		 -1.92197907 3.64286804 -0.46462694 5.057810783 -0.36842561 5.07426548 -1.89772224
-		 3.7374053 -1.8592813 3.92425585 -0.65399426 5.034757614 -1.81385779 4.10713005 -0.83996838
-		 5.0044159889 -1.025946736 4.96491003 -1.75929284 4.28925848 -1.20229924 4.9122591
-		 -1.69240737 4.46071863 -1.35413229 4.84031487 -1.60829055 4.60615969 -1.49632454
-		 4.73963785 -0.20360088 5.044620514 -1.85498965 3.61394525 -0.44048089 4.98607159
-		 -0.34507042 5.0051407814 -1.82819343 3.70748019 -1.79063463 3.88626146 -0.62173373
-		 4.96323824 -1.75342929 4.061704159 -0.79963201 4.94048357 -0.96982694 4.90997553
-		 -1.70912337 4.22883606 -1.14460015 4.85613012 -1.64118028 4.39862204 -1.28871679
-		 4.78834915 -1.56184518 4.5367136 -1.44045961 4.67900515 -0.17337576 4.99077702 -1.79519939
-		 3.57605743 -0.40667459 4.92200565 -0.31219125 4.94245815 -1.76710081 3.66855383 -1.72854543
-		 3.85182691 -0.59248406 4.89854574 -1.69631898 4.022668839 -0.76539022 4.88037729
-		 -0.93133289 4.85439825 -1.65687382 4.1859293 -1.090374827 4.80962515 -1.59925914
-		 4.34077597 -1.23698509 4.74427748 -1.52214921 4.48155165 -1.39703667 4.63187075 -0.14358976
-		 4.94778538 -1.75099802 3.53018045 -0.35830298 4.8722105 -0.27007753 4.89465809 -1.72141957
-		 3.61627913 -1.67804694 3.80103111 -0.54598057 4.84406805 -1.64749336 3.97034764 -0.7172308
-		 4.82744408 -0.87896168 4.80596924 -1.61288106 4.12977839 -1.038082123 4.76833582
-		 -1.5623771 4.28528643 -1.19436777 4.70343208 -1.4849211 4.43573761 -1.35967898 4.59132767
-		 -0.083678871 4.88185644 -1.68088615 3.46783113 -0.33746943 4.78724003 -0.21366014
-		 4.81969023 -1.63843381 3.58857822 -1.60559392 3.75988269 -0.51088488 4.76849842 -1.57713842
-		 3.92476583 -0.6775437 4.75360584 -0.83121228 4.73962641 -1.5506568 4.076775074 -0.98100734
-		 4.71334839 -1.51223028 4.22391462 -1.13714778 4.6624341 -1.44873142 4.3753643 -1.32028127
-		 4.54857016 0.0084249526 4.7811451 -1.57617402 3.38089752 -0.26421958 4.67857742 -0.13556534
-		 4.70823002 -1.53611457 3.50670075 -1.48995674 3.72404766 -0.48461044 4.65032196 -1.48333418
-		 3.88618279 -0.64674443 4.65696383 -0.80253428 4.68834066 -1.50188243 4.044010162
-		 -0.99738812 4.58902073 -1.38696969 4.23009014 -1.097293496 4.51050997 -1.30055642
-		 4.32324076 -1.20688951 4.42552042 -2.27955723 3.61092854 -2.26298141 3.44206309 -2.12270451
-		 3.48842525 -2.010798216 3.52091765 -1.95890093 3.50577664 -1.9058913 3.47617149 -1.85469401
-		 3.44165063 -1.81427705 3.40845346 -1.6606015 3.24334145 -1.75345767 3.34335947 -2.20209646
-		 3.94739008 -2.19517136 3.98574829 -2.28993297 4.0023150444 -2.30345607 3.98145938
-		 -1.98865271 3.96719313 -2.056892395 3.97643733 -2.10056281 3.96815825 -2.095158577
-		 3.94390106 -2.39512706 4.040257931 -2.32796574 4.025226593 -2.4258709 4.14820004
-		 -2.51450896 4.15084076 -1.83820033 4.029327869 -1.92221904 4.057731628 -2.46744657
-		 4.33941746 -2.62260413 4.4173193 -1.6440773 4.24132776 -1.81665039 4.22238445 -1.67695403
-		 4.39241648 -1.82909942 4.35566711 -2.40932488 4.46006489 -2.53913093 4.54751873 -1.82254863
-		 4.5645957 -1.89659405 4.47905207 -2.30306005 4.55219841 -2.3426466 4.65818405 -1.94812393
-		 4.70307636 -1.98846817 4.56726503 -2.18621349 4.60284567 -2.17668724 4.74420023 -2.056261778
-		 4.75779104 -2.083440781 4.60673952 -2.10595465 4.48161554 -2.055211544 4.45835543
-		 -2.16162062 4.47749949 -1.99114752 4.4061079 -2.23985958 4.45088577 -1.94719291 4.32149315
-		 -2.31052208 4.38693905 -1.92169762 4.21650457 -2.37102413 4.2973094 -2.37569714 4.16062832
-		 -1.96492124 4.086884975 -2.28862524 4.049874783 -2.085204363 4.01322937 -2.19222045
-		 4.0020589828 -2.25274563 4.022498608 -2.12838697 4.000020503998 -2.017032862 6.22388649
-		 -1.97239184 6.20075989 -0.79507023 6.53608847 -0.7691443 6.57899809 -2.07416296 6.13790035
-		 -2.046998262 6.095569611 -0.64319819 6.39883232 -0.64079809 6.4288435 -2.19876957
-		 5.98361588 -2.19547892 5.95361137 -0.40742964 6.25659227 -0.381899 6.28495502 -2.45425987
-		 5.83199167 -2.42784977 5.80427885 -0.1238966 6.15679646 -0.097267866 6.17666054 -2.73657918
-		 5.71540976 -2.70932245 5.6962409 -3.035770893 5.68881035 -2.97558308 5.66587353 0.14228272
-		 6.13395786 0.20162135 6.15849304 -3.33196616 5.69149685 -3.22298431 5.6598587 0.38898605
-		 6.13485575 0.49670529 6.16941786 0.88464648 6.03836441 0.84261334 5.98245478 -3.45007324
-		 5.61478758 0.61653441 6.0962677 0.68444008 6.12976742 -1.8040911 6.13434315 -0.9057067
-		 6.43248701 -1.93315268 5.99474382 -0.7092343 6.31327677 -2.12682414 5.86970139 -0.45686173
-		 6.18663883 -2.37629461 5.73554087 -0.17614192 6.096935272 -2.65524936 5.63768911
-		 -2.91325283 5.6312809 0.081135035 6.097751141 -3.16355467 5.64007187 0.33031571 6.11348343
-		 0.80670595 5.93532562 -3.40130281 5.58236361 0.56883675 6.062596798 -1.59667456 6.058157921
-		 -1.088215351 6.34601402 -1.74771678 5.91310167 -0.83184016 6.21563435 -2.001137495
-		 5.77522945 -0.53951222 6.069813728 -2.29012203 5.62074804 -0.24778754 5.98567057
-		 -2.58028245 5.52814198 -2.87322807 5.59048128 0.042384326 6.055978775 -3.15370083
-		 5.60944414 0.32134843 6.082688332 0.77477062 5.89383221 -3.38682103 5.54250193 0.5555172
-		 6.022472382 -1.39945662 5.98603296 -1.28822732 6.22243738;
-	setAttr ".uvtk[1000:1249]" -1.54372478 5.794734 -0.97736323 6.041697502 -1.85035348
-		 5.60488558 -0.63749963 5.81638765 -2.18476033 5.36937523 -0.36967069 5.7623415 -2.45179248
-		 5.30764198 -2.89482498 5.5729208 0.06439501 6.039081097 -3.2087791 5.5700345 0.37733155
-		 6.044949055 0.7582435 5.87222862 -3.40594482 5.49727011 0.57583296 5.97793102 -3.51910281
-		 5.64647675 -3.71729517 5.54921436 -3.67357969 5.49433041 -3.63625383 5.44807673 -3.58589125
-		 5.38616657 -3.60306835 5.4073658 -1.24272346 6.48640823 -1.43726468 6.4091053 -1.038142204
-		 6.5680542 -0.87226516 6.63887978 -0.82839507 6.66312933 -2.6367383 5.18760395 -2.6279552
-		 5.26406717 -2.7432971 5.3068428 -2.82108283 5.24223995 -2.26442099 5.27291107 -2.41486526
-		 5.29554224 -2.50591922 5.27957535 -2.44480705 5.19901705 -2.98001695 5.35510731 -2.82835937
-		 5.34303808 -3.0086586475 5.55808353 -3.11763167 5.54742622 -2.086783409 5.42901611
-		 -2.19050241 5.4641037 -3.038369894 5.79814053 -3.15114594 5.81375456 -1.99375415
-		 5.68081093 -2.10713387 5.69117355 -2.017615318 5.9509387 -2.13681793 5.9586978 -2.94880009
-		 6.051967144 -3.066658974 6.071436882 -2.19091272 6.21143484 -2.29102659 6.11898327
-		 -2.76226449 6.17311239 -2.83880949 6.28585577 -2.34157395 6.2966795 -2.41037464 6.15605259
-		 -2.63762069 6.18215561 -2.67274499 6.33471966 -2.50379491 6.34499502 -2.52005744
-		 6.20341158 -2.53638363 6.061271191 -2.47339439 6.042516708 -2.60198593 6.057286263
-		 -2.35757422 6.0018663406 -2.72400618 6.043957233 -2.21828008 5.88307524 -2.88660693
-		 5.95984316 -2.17057276 5.69833851 -2.97495818 5.79073477 -2.96808386 5.60138988 -2.22020149
-		 5.51548481 -2.85988474 5.42937088 -2.3645854 5.37247801 -2.6227355 5.30950403 -2.75464487
-		 5.35760021 -2.48335719 5.32643795 -2.077804565 7.80395746 -1.85374665 7.82319117
-		 0.14552164 6.67398119 -0.045756578 6.61944866 -2.076375961 7.64284611 -1.87785757
-		 7.60886526 0.034022212 6.86164713 -0.064399421 6.77173185 -2.078492403 7.4875083
-		 -1.96958089 7.40775394 -0.15907353 7.046775818 -0.18621534 6.9537735 -2.18121648
-		 7.29092884 -2.14372301 7.20027351 -0.4389984 7.1432209 -0.47879601 7.077974796 -2.46217132
-		 7.13390636 -2.41497231 7.072574615 -2.76608753 7.12154388 -2.70816875 7.062155724
-		 -0.72796297 7.12218523 -0.77849448 7.057700634 -3.020913839 7.20647335 -2.97467875
-		 7.15435791 -0.97978508 7.0032410622 -1.019619226 6.94714355 -1.48468351 6.72476292
-		 -1.4895401 6.74490738 -3.21450543 7.27107143 -1.20279479 6.86307764 -1.21173191 6.82821941
-		 -1.65081763 7.84126949 0.35056809 6.69385195 -1.66926944 7.61128378 0.19654542 6.90187263
-		 -1.80157208 7.38503122 -0.058193922 7.11755991 -2.034429789 7.14004946 -0.37588352
-		 7.24198151 -2.34063721 6.98005676 -2.67653513 7.0086092949 -0.70261621 7.17812681
-		 -2.97206831 7.12091637 -0.98078817 7.036350727 -1.4994421 6.78597832 -3.20990515
-		 7.23315477 -1.20232201 6.90079403 -1.43367338 7.86263084 0.56160831 6.72768497 -1.45311773
-		 7.60029936 0.45917767 6.97257662 -1.52945447 7.34257317 0.10128611 7.28141928 -1.85596704
-		 6.99253178 -0.29450709 7.36673212 -2.24507642 6.86336946 -2.64678669 6.90579414 -0.68437433
-		 7.28224182 -2.96063352 7.079576015 -0.97397017 7.078157425 -1.5077523 6.83112574
-		 -3.23391366 7.20414686 -1.22898626 6.92671299 -3.227314 7.30518579 -3.51340246 7.37948608
-		 -3.51608753 7.35867929 -3.52499437 7.26989031 -3.5215652 7.31624842 0.39320788 6.47002459
-		 0.60867399 6.47220469 0.19204843 6.46613455 -0.029977143 6.46112013 -4.15032053 0.35602242
-		 -4.0702281 0.45064187 -4.10842323 0.72697175 -4.21774721 0.70874465 -3.070995808
-		 0.58490944 -3.17401648 0.62611479 -3.2813673 0.35912424 -3.21420956 0.24821341 -3.99689245
-		 0.15718186 -3.92308736 0.27322787 -3.45497656 0.21911836 -3.40928507 0.089387536
-		 -3.89011717 0.033276945 -3.85279727 0.16932493 -3.54682493 0.13405743 -3.54144144
-		 -0.0069612563 -3.71901441 -0.014935315 -3.70086384 0.14182341 -3.67488194 0.37166673
-		 -3.78155947 0.39321214 -3.56600571 0.36870024 -3.88340759 0.41860086 -3.46108294
-		 0.36948121 -3.9976368 0.51588678 -3.32836604 0.43694887 -4.054549694 0.7237466 -3.22756076
-		 0.63395065 -4.010261536 0.98635387 -4.083206177 1.037213683 -3.13297248 0.94015992
-		 -3.21469045 0.90526545 -3.87198782 1.109465 -3.94752288 1.1609633 -3.24093318 1.08626771
-		 -3.32530832 1.050492644 -3.58170629 1.23144054 -3.58719492 1.18490911 -3.41183734
-		 1.12029052 -3.39285374 1.18044829 -3.77274728 1.16122031 -3.77811766 1.2241919 -3.22773886
-		 0.83865374 -4.01132679 0.91843218 -3.29863501 0.99603975 -3.90922284 1.060673118
-		 -3.58946657 1.165802 -3.40687251 1.098781586 -3.78228664 1.14131451 -6.22332811 2.65059018
-		 -6.13627243 2.6087172 -5.99245596 2.66916537 -5.99775553 2.73765945 -5.84105301 2.63156271
-		 -5.76147699 2.68633246 -6.35209131 2.53214192 -6.27146721 2.49212956 -5.6895318 2.53716421
-		 -5.61602306 2.58910441 -6.42662621 2.3980217 -6.31789875 2.39745593 -5.62908506 2.4507618
-		 -5.52174044 2.46804953 -6.40907049 2.22300649 -6.27016258 2.25260782 -5.65396738
-		 2.30029392 -5.5121603 2.29241705 -6.23010015 2.03182888 -6.17796326 2.11729527 -5.72424984
-		 2.15240765 -5.65958548 2.075980186 -6.13649321 1.9070859 -6.10603952 2.011913061
-		 -5.77910519 2.037212372 -5.73288488 1.93832076 -6.04586935 1.8743732 -6.031640053
-		 2.0027291775 -5.85120535 2.0166924 -5.93935013 1.98293281 -5.92773008 1.83277321
-		 -5.81739712 1.89205444 -4.13434362 3.38825154 -4.12015581 3.75306177 -4.17193508
-		 3.76216769 -4.1677866 3.35407734 -4.22384596 3.7501123 -4.20458889 3.38195109 -4.067624092
-		 3.44316912 -4.060047626 3.79401779 -4.28498173 3.79444551 -4.27673912 3.44226527
-		 -4.010281563 3.44803691 -3.99407601 3.80766535 -4.35072756 3.8118968 -4.33518648
-		 3.45092034 -3.91997814 3.84163833 -3.9113059 4.011441231 -4.43365049 4.01848793 -4.42944288
-		 3.84846449 -3.80940604 3.99618006 -3.82120275 4.15580177 -4.52551603 4.16671228 -4.54217672
-		 4.0077056885 -3.70456028 4.021386147 -3.73452687 4.17715359 -4.61103487 4.19141293;
-	setAttr ".uvtk[1250:1499]" -4.64844894 4.036855698 -3.69900775 4.17750883 -3.66314459
-		 4.019488335 -4.6463809 4.19309139 -3.65280604 4.1782198 -3.60764027 4.019775391 -4.68975306
-		 4.036518097 -4.1176095 4.066402435 -4.17129278 4.053329468 -4.2247529 4.066599369
-		 -4.058666229 4.067751884 -4.28348303 4.070457458 -3.99244928 4.08003664 -4.34920216
-		 4.085949421 -3.91407275 4.23164272 -4.4276619 4.23945522 -3.83233356 4.31513119 -4.50921106
-		 4.32618332 -3.75470519 4.33090925 -4.58560658 4.34497786 -3.72219419 4.33539915 -4.61777592
-		 4.35065699 -3.68038011 4.34376907 -4.11408758 4.397861 -4.16865063 4.38442421 -4.2227931
-		 4.40199375 -4.055440426 4.40168238 -4.28103304 4.40772009 -3.98782015 4.41679573
-		 -4.34780407 4.42541122 -3.9134326 4.48960304 -4.4219594 4.49883509 -3.8394208 4.47882605
-		 -4.49604845 4.490448 -3.7677505 4.48204803 -4.56692648 4.49621153 -3.7369957 4.48437881
-		 -4.59751511 4.49957132 -3.69880605 4.49015093 -4.10461998 4.69392586 -4.22326326
-		 4.69916439 -4.044923782 4.70816422 -4.28202629 4.71418762 -3.97452593 4.71667576
-		 -4.35140753 4.7246623 -3.89754796 4.72173738 -4.42725992 4.73194981 -3.81786871 4.71917963
-		 -4.50603008 4.73165512 -3.75440431 4.70599127 -4.56944847 4.72071743 -3.72783613
-		 4.69889641 -4.5967989 4.71444893 -3.69407177 4.693717 -4.099285603 4.94244289 -4.1588316
-		 4.93861341 -4.21824598 4.94780588 -4.036165237 4.95198488 -4.28081656 4.95873737
-		 -3.96127892 4.95675039 -4.35505438 4.96537399 -3.87998676 4.97382116 -4.43503189
-		 4.98458481 -3.79626107 4.9881444 -4.51742697 5.0011582375 -3.72408247 4.99273539
-		 -4.58872271 5.0083055496 -3.6909647 4.99641275 -4.62246084 5.012999535 -3.64880371
-		 5.0059828758 -4.086513519 5.15630817 -4.1549921 5.15213776 -4.22349548 5.16114759
-		 -4.014073849 5.16005564 -4.29569912 5.16665602 -3.93341374 5.16825771 -4.37588692
-		 5.17688847 -3.84605932 5.18393803 -4.46249247 5.19474363 -3.77836204 5.19897652 -4.52858877
-		 5.21222401 -3.7041707 5.2340498 -4.60135412 5.2498064 -3.67023849 5.25291348 -4.63530111
-		 5.26970816 -3.62710047 5.2821455 -4.08018589 5.32934237 -4.15209436 5.32559299 -4.22402859
-		 5.33367348 -4.0051083565 5.33614254 -4.2988081 5.34240627 -3.92363834 5.3470602 -4.37970924
-		 5.35550976 -3.84080672 5.35512018 -4.46196175 5.36585903 -3.77005506 5.37177229 -4.53110409
-		 5.3850522 -3.69558978 5.40947628 -4.60402298 5.42528486 -3.65767097 5.43485641 -4.64188528
-		 5.4518075 -3.61442423 5.46631384 -4.078177452 5.47980022 -4.14948273 5.47442675 -4.22080803
-		 5.48369789 -4.003973484 5.4845891 -4.29493141 5.49045658 -3.92422724 5.49248266 -4.37445831
-		 5.50074148 -3.84003162 5.50707006 -4.4582386 5.51817226 -3.77971673 5.54250288 -4.516397
-		 5.55534983 -3.71733475 5.58567476 -4.57673883 5.60047865 -3.67721486 5.60912132 -4.61639214
-		 5.62520218 -3.61873293 5.62993288 -4.076084137 5.606071 -4.14741516 5.5926671 -4.21881199
-		 5.60883951 -4.0040774345 5.61043787 -4.29067802 5.61563349 -3.92566252 5.62397528
-		 -4.36865711 5.63170671 -3.84543633 5.64189625 -4.44823885 5.65215445 -3.78208613
-		 5.66216564 -4.51002407 5.67449045 -3.72313643 5.67803192 -4.56779289 5.69251871 -3.68458629
-		 5.68696642 -4.60626698 5.70274115 -3.62481689 5.68954849 -4.080761909 5.72589207
-		 -4.14555359 5.70334911 -4.2105217 5.72734976 -4.011278152 5.72879696 -4.27983665
-		 5.73292351 -3.93442631 5.7493577 -4.35601807 5.7561326 -3.85482621 5.77410269 -4.43450546
-		 5.78357363 -3.78721571 5.77171993 -4.50115204 5.78349876 -3.73941541 5.76554489 -4.54843664
-		 5.779387 -3.69503331 5.77272272 -4.59273624 5.78808069 -3.64023232 5.78200579 -4.090829372
-		 5.87488365 -4.14213657 5.84607315 -4.19772387 5.87457132 -4.027733803 5.85102034
-		 -4.26038742 5.85331821 -3.95241594 5.86770296 -4.33491611 5.87290001 -3.87200093
-		 5.88862133 -4.41422319 5.8968749 -3.79444265 5.8735981 -4.490448 5.88476372 -3.75735855
-		 5.85537577 -4.52717113 5.86853504 -3.71226025 5.86886263 -4.57195377 5.88357449 -3.66276932
-		 5.879282 -4.10668516 6.14484978 -4.14445305 6.12603807 -4.1820507 6.14139795 -4.050444126
-		 6.060127258 -4.23703194 6.059898376 -3.97744513 5.98139334 -4.30742502 5.98460102
-		 -3.89710069 5.99723768 -4.38619995 6.0038962364 -3.8113122 5.977283 -4.47051191 5.98745251
-		 -3.76112247 5.95484734 -4.52049637 5.96769333 -3.71848845 5.96186352 -4.56305122
-		 5.97617149 -3.66964149 5.97565746 -4.12693596 6.45370388 -4.15050745 6.4659996 -4.16957378
-		 6.44568872 -4.083726883 6.30809498 -4.20441818 6.3046546 -4.013258457 6.22121048
-		 -4.27012014 6.22212458 -3.93383646 6.1718359 -4.34613132 6.17650652 -3.83645296 6.14142036
-		 -4.44180202 6.15026808 -3.76344252 6.082682133 -4.5147357 6.095157146 -3.72585058
-		 6.089479446 -3.67580152 6.098624706 -4.69235611 4.19545364 -4.74501133 4.038817406
-		 -4.65925074 4.36042404 -4.63560963 4.50650024 -4.63277578 4.71013832 -4.16409397
-		 4.68876982 -4.66681194 5.023629665 -4.67975283 5.30003357 -4.686625 5.48433018 -4.67524719
-		 5.64801168 -4.66679621 5.70739317 -4.64789534 5.79923105 -4.62191057 5.8956008 -4.61208534
-		 5.99156618 -4.55243683 6.10321283 -4.60239983 6.11407709 -5.084447384 0.31037676
-		 -5.080186844 0.56334317 -5.15236473 0.55220234 -5.15475035 0.28314173 -5.22473764
-		 0.56241977 -5.22553587 0.30991977 -4.99658442 0.33915168 -4.98573875 0.6207847 -5.32038355
-		 0.61800778 -5.31396151 0.33751816 -4.76436234 0.76072168 -4.78097391 0.93689162 -4.89866734
-		 0.78528571 -4.89811897 0.54923129 -5.40030861 0.54569793 -5.40402079 0.78014672 -5.5236063
-		 0.929052 -5.53770685 0.75389206 -4.62943316 0.98090291 -4.66668415 1.072829843 -5.64017153
-		 1.062093496 -5.67596006 0.96947682 -4.53719425 1.089845419 -4.5637145 1.17329764
-		 -5.74410248 1.16046548 -5.76945639 1.07533133 -5.81161737 1.22257602 -4.43717003
-		 1.2836051 -4.42236328 1.24112499 -5.84455633 1.13282382 -4.49673605 1.23584521 -4.46247244
-		 1.14751339 -5.063831806 0.87187874 -5.15072393 0.85804272 -5.23903227 0.86932027
-		 -4.98853636 0.95569927 -5.31539869 0.95115149;
-	setAttr ".uvtk[1500:1749]" -4.79134607 1.14876771 -4.89197111 1.048967838 -5.41381979
-		 1.042794704 -5.51605558 1.14125943 -4.68467665 1.24644279 -5.62413597 1.23762596
-		 -4.59237432 1.32696199 -5.71710014 1.31723332 -5.77042723 1.37215853 -4.49063969
-		 1.40652823 -4.53856945 1.38307118 -5.076319218 1.20668185 -5.15415144 1.18681788
-		 -5.23200703 1.203969 -4.99133635 1.25908494 -5.31752872 1.25480771 -4.80526352 1.39914668
-		 -4.89817905 1.32763195 -5.41141796 1.32235193 -5.50506783 1.39352977 -4.71031904
-		 1.47438276 -5.6006732 1.46848178 -4.63067532 1.53286266 -5.68011856 1.52587783 -5.73411942
-		 1.56118774 -4.53753042 1.59056282 -4.57719326 1.56937099 -5.073047161 1.52351904
-		 -5.15609169 1.51596284 -5.23905134 1.52129042 -4.99199629 1.5605588 -5.32040834 1.55667424
-		 -4.82557392 1.65823615 -4.90778255 1.60700047 -5.40501547 1.60240197 -5.48767567
-		 1.65351105 -4.7476778 1.71100736 -5.5660224 1.70602119 -4.67338467 1.75345361 -5.64052486
-		 1.74782157 -5.69139051 1.77262402 -4.5863018 1.79332733 -4.62306404 1.77929688 -5.073041439
-		 1.80094492 -5.24204683 1.79872441 -4.99443197 1.82639253 -5.3209672 1.82266247 -4.8439846
-		 1.90889335 -4.91623545 1.86505842 -5.39962578 1.86084044 -5.47244072 1.90453577 -4.77280045
-		 1.95137525 -5.5441761 1.94663072 -4.71134901 1.98288548 -5.60607815 1.97741199 -5.65199089
-		 1.99020433 -4.60412502 1.99468601 -4.66577673 1.99656141 -5.075300217 2.055249929
-		 -5.15900135 2.051917553 -5.2428875 2.052984238 -4.99772072 2.075564623 -5.32085896
-		 2.072153807 -4.85332489 2.16376853 -4.92342567 2.1167295 -5.39577913 2.11274815 -5.46659803
-		 2.1596868 -4.78085947 2.20688009 -5.53965664 2.2024498 -4.71675205 2.23358154 -5.60410833
-		 2.22832966 -5.64138699 2.2291429 -4.6077776 2.23604012 -4.67984867 2.23536134 -5.076780319
-		 2.29822302 -5.16083336 2.2869854 -5.24511099 2.29599762 -4.99440861 2.32740283 -5.32793617
-		 2.32441616 -4.84303236 2.43284726 -4.91728926 2.37700677 -5.40571165 2.37347341 -5.48059702
-		 2.42894316 -4.75335646 2.49293208 -5.57073402 2.48846126 -4.6830287 2.52718735 -5.641222
-		 2.52208257 -5.69111824 2.52873707 -4.54415751 2.52436042 -4.63331985 2.53467274 -5.063131809
-		 2.55070448 -5.1630969 2.5214541 -5.26339197 2.54855585 -4.97614861 2.59356427 -5.35059357
-		 2.59063983 -4.79260588 2.74337959 -4.89528847 2.65335131 -5.43183041 2.64979053 -5.53508854
-		 2.73915124 -4.70193434 2.82649684 -5.62642002 2.82155418 -4.63403749 2.87789965 -5.69486856
-		 2.87219381 -5.76948881 2.89819551 -4.4990325 2.90270758 -4.55967617 2.90481067 -5.067051888
-		 2.81407499 -5.16475916 2.79287505 -5.2631402 2.81177211 -4.96517897 2.86779833 -5.36537361
-		 2.86438513 -4.80875063 3.036343336 -4.89034176 2.94235706 -5.4406929 2.93842626 -5.52292824
-		 3.03192997 -4.72613049 3.15982842 -5.60758448 3.15357542 -4.66851568 3.24034142 -5.66614485
-		 3.23332834 -4.60387611 3.3069272 -4.63170671 3.25999475 -5.22383738 0.055066317 -5.15795946
-		 0.032332897 -5.29979658 0.09752056 -5.39941263 0.27585346 -5.54618073 0.63768047
-		 -5.71315289 0.91136396 -5.80603123 1.011498451 -4.40806293 1.20966733 -5.86517239
-		 1.11787689 -4.49965429 1.027745008 -4.44597292 1.13380122 -4.59113932 0.92314488
-		 -4.75381088 0.64377946 -4.91005516 0.27853894 -5.011075974 0.098515064 -5.087233067
-		 0.054843992 -5.72894907 1.7852819 -5.71414614 1.987481 -5.15753126 1.80034661 -5.71449661
-		 2.22916746 -5.78112602 2.51723576 -5.83067179 2.89454389 -5.70345783 3.2521317 -5.73277187
-		 3.29748702 -5.89957428 1.19622946 -5.88506126 1.22677982 -5.81878233 1.39404523 -5.77442265
-		 1.58080292 -5.87106609 1.26932788 -5.74136829 6.44991112 -6.0034222603 6.33837366
-		 -5.97795343 6.21923685 -5.64604712 6.23922157 -5.98900795 6.097897053 -5.71543312
-		 6.018623352 -5.92967558 6.57803965 -6.057421207 6.43477869 -6.031116009 5.99570227
-		 -5.8870163 5.86883259 -6.12435436 6.67153502 -6.15806103 6.52470779 -6.12005997 5.89428663
-		 -6.06889677 5.75258589 -6.29696226 6.67010593 -6.30316591 6.57712221 -6.25763607
-		 5.82475328 -6.240273 5.73319912 -6.48534298 6.61001968 -6.467453 6.5656414 -6.42193604
-		 5.81631851 -6.43434286 5.77010393 -6.66022682 6.44989967 -6.63584805 6.43480778 -6.6046648
-		 5.92587423 -6.62703371 5.9079423 -6.67965317 6.34194851 -6.68640709 6.3302207 -6.65948582
-		 6.012721539 -6.68971157 6.17610836 -6.72188616 6.17414761 -6.66761971 6.023542404
-		 -4.2305851 7.95539474 -4.15836048 8.017763138 -4.41925001 8.1062355 -4.43842125 8.038463593
-		 -4.68781519 8.16755676 -4.65897274 8.076597214 -4.06953764 7.83442259 -4.0040502548
-		 7.87394619 -4.89459848 8.12590218 -4.85952473 8.057924271 -3.9230752 7.63504744 -3.87504697
-		 7.68110037 -5.1055131 8.029220581 -5.088731289 7.96482468 -3.8197298 7.37046337 -3.77134371
-		 7.38677168 -5.34804916 7.83283043 -5.31541252 7.79353714 -3.79320765 7.069681644
-		 -3.74909687 7.061690807 -5.53775787 7.56771231 -5.49561453 7.55105352 -3.91541147
-		 6.70023155 -3.8765564 6.68392849 -5.62759352 7.1794486 -5.58655977 7.17295122 -3.99077654
-		 6.52345848 -4.023451328 6.547616 -5.61444283 6.98305941 -4.19654512 6.29563951 -4.23034573
-		 6.32362127 -5.57396412 6.98658466 -4.030149937 8.18522263 -4.35229969 8.34287071
-		 -4.70928955 8.37736797 -3.8611238 7.98486185 -4.95823097 8.29526138 -3.72215271 7.73364019
-		 -5.20822191 8.15408993 -3.6400342 7.42704344 -5.43879557 7.93600321 -3.63474274 7.076850414
-		 -5.62705231 7.64073277 -3.78608584 6.68583965 -5.70359278 7.2285347 -3.91359305 6.50434208
-		 -5.69022131 7.007121563 -4.13586426 6.23208952 -3.51144195 7.49843836 -3.60103059
-		 7.81870127 -5.26683521 8.28999805 -5.51094198 8.064152718 -3.76188636 8.10923386
-		 -4.97760248 8.4531889 -3.49923778 7.12798119 -5.7155776 7.75527954 -3.6829145 6.65859461
-		 -5.8057394 7.25929308 -3.87658739 6.47057199 -4.091843128 6.18266058 -3.92177415
-		 8.35534763 -4.71247005 8.57905388 -4.28773499 8.57108021 -5.55794477 6.68132162 -5.51450586
-		 6.68752432 -5.64288139 6.65882492 -5.73941183 6.99765873 -5.70623302 6.6396451;
-	setAttr ".uvtk[1750:1999]" -5.18318605 7.33670473 -5.36230087 7.043123245 -5.30087996
-		 6.96296787 -4.99760008 7.20325708 -5.23689079 6.8848505 -4.91012955 6.99207401 -5.34132576
-		 7.35468626 -5.44364834 7.10547066 -5.19479179 6.79140759 -4.92879009 6.83401155 -5.52198029
-		 7.34849119 -5.51365137 7.12719345 -5.18966532 6.71828651 -4.97614288 6.65955639 -5.69277859
-		 7.28650713 -5.63319397 7.14586687 -5.19884968 6.59763527 -5.075568199 6.50745773
-		 -5.848979 7.15458727 -5.80633163 7.037128925 -5.34432793 6.45394325 -5.23973703 6.38556385
-		 -5.92265558 6.889184 -5.85842133 6.852952 -5.5355587 6.44536304 -5.5149827 6.37454462
-		 -5.86365986 6.75256252 -5.83119392 6.75101089 -5.62856293 6.49519777 -5.74149942
-		 6.61389875 -5.78678942 6.57801723 -5.63447666 6.46324015 -7.46205378 2.20561004 -7.28270531
-		 2.50816512 -7.46043587 2.65061092 -7.6394186 2.28733993 -7.68167782 2.70473814 -7.81229448
-		 2.37817216 -7.30649853 2.083429575 -7.10871124 2.28164792 -7.96730375 2.70467257
-		 -8.0039539337 2.42706394 -7.22890711 1.96374297 -6.98702526 2.020323038 -8.24866199
-		 2.6419239 -8.14613628 2.415658 -7.12290573 1.75147295 -6.93693399 1.71891129 -8.51817989
-		 2.49798012 -8.37903595 2.3703599 -7.16692734 1.35701513 -7.0074234009 1.37756896
-		 -8.74588108 2.23409867 -8.66499233 2.095104933 -7.40963745 1.077968001 -7.26820755
-		 1.099301696 -8.80761909 1.8577621 -8.73835468 1.73262215 -7.49365664 0.97304052 -7.58638
-		 0.97641218 -8.77035713 1.60206282 -7.84891605 0.79548502 -7.86794662 0.83266187 -8.71118355
-		 1.5305922 -7.13615751 2.56090045 -7.34683084 2.88117933 -7.72915983 2.85307097 -7.023798466
-		 2.36290169 -7.95461941 2.82151461 -6.93131495 2.099078178 -8.22016048 2.7340858 -6.82274151
-		 1.73852479 -8.57190132 2.60019398 -6.84846258 1.40862989 -8.81568146 2.37592959 -7.15746593
-		 1.078668356 -8.89145184 1.9329896 -7.39715958 0.93933934 -7.81288242 0.72309017 -8.69467831
-		 1.21218622 -8.65360355 1.21974087 -8.85587692 1.65803766 -8.77403545 1.19663513 -8.27774048
-		 1.92801046 -8.45092392 1.93571699 -8.4682579 1.81268883 -8.32028389 1.72629786 -8.98993206
-		 1.38298678 -8.97372723 1.55357671 -9.083782196 1.61128283 -9.1785841 1.46614742 -8.35292435
-		 1.57664597 -8.51647758 1.70192528 -8.56845379 1.62692904 -8.40770531 1.46467233 -8.72646523
-		 1.30124879 -8.76439571 1.52648401 -8.85563087 1.52806962 -8.84936047 1.3221333 -8.6523819
-		 1.5493176 -8.51720047 1.2856729 -8.33137798 2.1006515 -8.49151039 2.062116861 -9.16277218
-		 1.71798646 -9.2875185 1.61045575 -8.55067348 2.21189404 -8.59005928 2.14483356 -9.17233562
-		 1.84629321 -9.24978256 1.85349166 -8.72018814 2.15583086 -8.70258808 2.20568395 -9.10523129
-		 1.95836115 -8.9278965 2.086719751 -8.94458199 2.11927509 -9.15598011 1.97317314 -7.21125126
-		 4.81690264 -7.85945034 4.72411251 -7.94438648 4.63197374 -8.007065773 4.52287436
-		 -7.52354002 4.90816259 -7.70162249 4.83338928 -8.028637886 4.35899401 -6.45419693
-		 4.2705965 -6.37097883 4.40248299 -6.40111446 4.5650053 -6.46943045 4.67066813 -6.55907774
-		 4.75823069 -6.72241926 4.85908031 -6.90417862 4.9244113 -7.21461868 4.94529486 -7.32613134
-		 4.93977261 -7.10297203 4.94562626 -7.93861723 4.23165035 -6.84297037 3.8329072 -6.976583
-		 3.84806538 -6.96797848 3.80733871 -6.83787107 3.8042326 -8.058901787 3.7467823 -6.62678623
-		 3.88236141 -6.61759853 3.8532877 -8.059913635 3.71767592 -7.07093811 3.9002769 -7.08244133
-		 3.85962319 -7.8255744 3.80697107 -7.84269333 3.84559751 -7.92875338 3.7806139 -7.93153477
-		 3.73907971 -7.14038563 3.98493266 -7.16820335 3.9410696 -7.75213909 3.89969468 -7.7858634
-		 3.93919826 -7.220222 4.066814423 -7.24778652 3.98595095 -7.679667 3.95534945 -7.71836758
-		 4.031516075 -7.31271982 4.11638165 -7.3316083 4.0023779869 -7.59898996 3.98343539
-		 -7.63378239 4.093631744 -7.40740299 4.13341475 -7.39395046 4.013406277 -7.53882647
-		 4.0031394958 -7.54244328 4.12384701 -7.47552395 4.1370945 -7.46568966 3.99845123
-		 -6.84518147 3.8787446 -6.97116184 3.90312147 -8.063167572 3.79247332 -8.27304173
-		 3.80298233 -7.060320854 3.95463943 -7.86086655 3.89792323 -7.94188166 3.83435774
-		 -7.12829304 4.025609016 -7.80357456 3.97776222 -7.20265818 4.11259699 -7.74220896
-		 4.074369907 -7.30293846 4.16648817 -7.65052986 4.14186096 -7.39897013 4.18459129
-		 -7.55801153 4.17332411 -7.47912502 4.18787718 -6.8537941 3.9548564 -6.97654009 3.98449016
-		 -7.94802141 3.91567183 -8.065367699 3.86904049 -7.061570168 4.03774786 -7.87134743
-		 3.98037934 -7.13515615 4.10511351 -7.80798817 4.057441711 -7.21568251 4.18382788
-		 -7.73936176 4.14672709 -7.31307793 4.22855711 -7.64924669 4.204741 -7.40688562 4.24533463
-		 -7.5587368 4.2345767 -7.48401022 4.25688505 -8.25927639 3.87137842 -7.40243959 4.33941126
-		 -7.39854288 4.43533278 -7.49777651 4.45124817 -7.4908123 4.35290337 -7.59377289 4.42150688
-		 -7.57640028 4.32708883 -7.31287766 4.3191185 -7.31475735 4.41905642 -7.67442942 4.39358616
-		 -7.66220808 4.2943759 -7.22698498 4.27816296 -7.24048138 4.39263153 -7.74424124 4.35695648
-		 -7.74147177 4.24171829 -7.15311289 4.20900631 -7.16447163 4.32392788 -7.80981016
-		 4.2782197 -7.80485439 4.1628356 -7.078658581 4.13356209 -7.087220669 4.24125576 -7.8746357
-		 4.18547916 -7.86793423 4.077649117 -6.98997211 4.076988697 -7.0096936226 4.18945837
-		 -7.94408751 4.12327051 -7.94775772 4.0091423988 -6.8682642 4.053314686 -6.89926767
-		 4.16610861 -8.050121307 4.084595203 -8.064918518 3.96855569 -6.70529318 4.076010704
-		 -8.19236565 4.077815533 -7.44250727 4.87476397 -7.53018761 4.90925217 -7.61214113
-		 4.86276245 -7.36701298 4.82772541 -7.6802597 4.80555916 -7.27590704 4.73182201 -7.7569499
-		 4.6977706 -7.21336269 4.62344933 -7.80360556 4.58166218 -7.1563139 4.52637053 -7.84641027
-		 4.47750616 -7.091492653 4.4575305 -7.90088272 4.40021133 -6.97634602 4.40690231 -8.0077486038
-		 4.33385944 -8.13718605 4.33236837 -7.4721837 5.2079339 -7.55375004 5.24251461 -7.62964058
-		 5.19680214 -7.35091066 5.10871983 -7.73574829 5.081505775;
-	setAttr ".uvtk[2000:2249]" -7.27643633 4.97769928 -7.79104376 4.94129515 -7.21808672
-		 4.84333992 -7.8298974 4.80004501 -7.17807961 4.75774288 -7.85745287 4.70965624 -7.12422991
-		 4.67977238 -7.89978218 4.62486553 -7.017977715 4.61379576 -7.9956789 4.54456854 -8.12313366
-		 4.5486064 -6.84798431 4.42366314 -6.89236069 4.63575268 -6.75749063 4.17943621 -6.66215754
-		 3.9844861 -8.22945976 3.96806574 -6.6388936 3.91871166 -8.27989674 3.76528811 -8.28489971
-		 3.73520947 -0.16063899 -5.28382683 0.056306899 -5.18922806 0.085325003 -5.097685814
-		 -0.13963789 -5.16632366 -2.67364216 -5.025958061 -2.45691633 -5.12682676 -2.47521877
-		 -5.0076642036 -2.70067787 -4.93282175 -0.49525017 -5.32697535 -0.42430556 -5.19022226
-		 -2.12009883 -5.17861414 -2.18837118 -5.038790703 -2.93057156 -4.86742687 -2.94626307
-		 -4.82647419 0.3144514 -5.038464069 0.33097404 -4.99830055 0.60820818 -4.96173859
-		 0.61253744 -4.98396921 0.45781583 -4.99456692 0.46924472 -4.96934462 -0.89157045
-		 -5.1945281 -0.76692891 -5.12097168 -1.71666765 -5.054606915 -1.84071529 -4.97727537
-		 -1.040729284 -5.057944298 -0.91287816 -5.021359444 -1.56270599 -4.9203577 -1.6909014
-		 -4.88027716 -0.98155355 -4.867805 -1.11009121 -4.89248562 -0.71570724 -4.95243168
-		 -0.76593965 -4.82797241 -1.88829672 -4.80584002 -0.54675043 -5.037746429 -2.060988426
-		 -4.88783503 -0.28578413 -5.076980114 -2.32545185 -4.92104149 -0.049294055 -5.057971001
-		 -2.56376982 -4.89603424 0.16587359 -5.010269165 -2.77985358 -4.84258795 -2.99060678
-		 -4.78519249 0.37586075 -4.95849466 0.61007142 -4.94268465 0.49490917 -4.94825172
-		 -0.41372019 -4.87551022 -2.19132781 -4.72075081 -0.28664643 -4.9425149 -2.3212769
-		 -4.78528404 -0.1107493 -4.98615885 -2.49995232 -4.82503128 0.079959691 -5.0010585785
-		 -2.69288063 -4.83539248 0.24490172 -4.93572903 -2.85782266 -4.76539564 -3.016586304
-		 -4.69344139 0.40376073 -4.86829472 0.642645 -4.85323572 0.5213961 -4.86157131 -0.16146803
-		 -4.7982235 -0.19357288 -4.72247982 -2.44413829 -4.63650894 -0.069340467 -4.86585522
-		 -2.53881621 -4.70253801 0.051800847 -4.92081928 -2.66248107 -4.7550621 0.19439512
-		 -4.91955471 -2.80643082 -4.75029707 0.31157988 -4.84644365 -2.92298508 -4.67361784
-		 -3.062213659 -4.60019398 0.45112646 -4.77708101 0.66949058 -4.78281498 0.55797112
-		 -4.78056669 0.014501572 -4.6814661 0.0074809194 -4.66645193 -2.61897755 -4.51429987
-		 0.050518334 -4.73965359 -2.65676475 -4.57217312 0.13847882 -4.82191038 -2.74759674
-		 -4.65307236 0.25693047 -4.83931303 -2.8676343 -4.66774273 0.35496306 -4.75242329
-		 -2.96452403 -4.57762051 -3.082700014 -4.48368645 0.47414947 -4.66224861 0.7117815
-		 -4.67889357 0.58984202 -4.67130375 -3.22527647 -4.78284979 -3.23018503 -4.80519295
-		 -3.074231863 -4.81962538 -3.085155487 -4.79388142 -3.22669554 -4.76356745 -3.11055446
-		 -4.7719655 -3.25743151 -4.67247295 -0.46713805 -4.77410984 -3.13520384 -4.68380642
-		 -3.28284454 -4.60072708 -2.409868 -4.56081533 -2.61152101 -4.49931097 -3.17018414
-		 -4.60113668 -3.19973898 -4.49004459 -3.32304955 -4.49477959 -2.13490295 -4.61967421
-		 -1.83451962 -4.68140411 -1.61778796 -4.72691584 -1.48860884 -4.75499678 -0.054758132
-		 -7.10022831 -0.090031683 -6.97482538 -0.29860324 -7.085671902 -0.20415109 -7.10813332
-		 -0.22382528 -6.96376801 -0.30987257 -6.94663572 -1.72122765 -5.39653015 -1.7274611
-		 -5.67833757 -1.55258703 -5.64647388 -1.58613777 -5.43131828 -0.57735074 -7.043888092
-		 -0.51617241 -6.87698412 -1.67989564 -5.94531393 -1.49904776 -5.87554359 -0.83235842
-		 -6.95162725 -0.7327984 -6.78529263 -1.021179676 -6.84454632 -0.92453057 -6.71151257
-		 -1.606475 -6.14958191 -1.4589268 -6.077020645 -1.19773912 -6.76432753 -1.089290261
-		 -6.65427685 -1.55745077 -6.33718348 -1.43053722 -6.24909353 -1.33920825 -6.66910362
-		 -1.21993828 -6.5929842 -1.4876895 -6.49277544 -1.39236116 -6.38824654 -1.43319893
-		 -6.59756184 -1.32499921 -6.50648451 -0.11422056 -6.87495184 -0.22019911 -6.85661745
-		 -0.29366165 -6.84020567 -1.46289825 -5.63229227 -1.47851241 -5.43346786 -0.48693401
-		 -6.79101133 -1.43438172 -5.82568884 -0.67266053 -6.73004103 -0.84671867 -6.66853905
-		 -1.40335083 -6.0076642036 -0.99714947 -6.60832691 -1.36958361 -6.16613436 -1.12502003
-		 -6.53860283 -1.32261491 -6.30398989 -1.24385524 -6.43816853 -0.098829806 -6.82982254
-		 -0.21812594 -6.79187965 -0.300439 -6.76678801 -1.39444113 -5.6203475 -1.40732658
-		 -5.45264053 -0.46351063 -6.72557831 -1.37500501 -5.78534889 -0.622805 -6.67838383
-		 -0.78108954 -6.62317419 -1.34749246 -5.95071554 -0.92949504 -6.55753088 -1.30802405
-		 -6.10811806 -1.054309249 -6.47773218 -1.25060165 -6.24467754 -1.16749573 -6.3738699
-		 -0.07066226 -6.78428507 -0.19000602 -6.7340045 -0.27133924 -6.70671558 -1.33018184
-		 -5.59473276 -1.34319031 -5.43418407 -0.42734087 -6.66660166 -1.3171103 -5.75232506
-		 -0.58041704 -6.6269393 -0.72589558 -6.58135605 -1.29690647 -5.90343666 -0.87278765
-		 -6.51484871 -1.25632477 -6.059495926 -0.9913156 -6.43955088 -1.2022655 -6.18909836
-		 -1.11189485 -6.32704878 -0.038234472 -6.74053764 -0.15427631 -6.68282652 -0.23464727
-		 -6.65442848 -1.27205157 -5.57150507 -1.28543329 -5.40691566 -0.39456803 -6.61326027
-		 -1.26282656 -5.72452068 -0.54379088 -6.57816505 -0.68605322 -6.53701687 -1.24644542
-		 -5.87170887 -0.82019162 -6.48019218 -1.21323967 -6.01355648 -0.94117165 -6.40674877
-		 -1.16142142 -6.14525986 -1.068680763 -6.29064655 -0.0074003935 -6.70623493 -0.11212736
-		 -6.64569283 -0.18680322 -6.61624575 -1.22224426 -5.53267765 -1.239676 -5.36626101
-		 -0.34784359 -6.57077074 -1.21431375 -5.68417263 -0.49579275 -6.53720856 -0.63487226
-		 -6.50046778 -1.20173597 -5.82747459 -0.76987058 -6.44988203 -1.17482328 -5.9691124
-		 -0.89936209 -6.37575388 -1.12377632 -6.10932064 -1.031505585 -6.25933361 0.052330196
-		 -6.65521622 -0.054450929 -6.58638477 -0.15914351 -6.54422951 -1.15430355 -5.50472498
-		 -1.16401458 -5.35124016 -0.30875951 -6.50856256 -1.14771652 -5.65210772 -0.45289236
-		 -6.47702551 -0.58575702 -6.44773293 -1.14142871 -5.78801489 -0.71385312 -6.40811348
-		 -1.12415361 -5.92099333 -0.84476793 -6.3462429 -1.085425138 -6.060526371 -0.99230194
-		 -6.22630692 0.14408487 -6.57736015 0.026242673 -6.49757004 -0.083006263 -6.45731926;
-	setAttr ".uvtk[2250:2499]" -1.049179673 -5.48621273 -1.065428615 -5.290977 -0.27267724
-		 -6.40810347 -1.061383605 -5.62876701 -0.41525185 -6.39590931 -0.55499935 -6.40605068
-		 -1.095130682 -5.76476336 -0.71440583 -6.29752302 -1.015286922 -5.94029093 -0.79306835
-		 -6.2177515 -0.95005345 -6.031369209 -0.87948757 -6.1312356 -1.69402862 -5.15375948
-		 -1.72727287 -5.2996254 -1.5764761 -5.2098856 -1.58837318 -5.34360695 -1.48220265
-		 -5.25072861 -1.48218548 -5.35828018 -1.43512964 -5.24324608 -1.41805112 -5.3672576
-		 -1.38547897 -5.2232337 -1.35624671 -5.34939384 -1.33686709 -5.19872236 -1.29974532
-		 -5.32289028 -1.29783154 -5.17417049 -1.25599122 -5.28766823 -1.23740995 -5.12398195
-		 -1.18774569 -5.24091148 -1.086506605 -5.17649174 -1.14508939 -5.046801567 -0.093595803
-		 -5.41774607 -0.14336854 -5.48081875 0.034380198 -5.6455555 0.12887466 -5.54349899
-		 -0.064892888 -5.34271336 0.16769415 -5.40992832 -0.19755018 -5.53242779 -0.063782752
-		 -5.70535517 -0.048842907 -5.26954985 0.1682778 -5.29483986 -0.3259266 -5.58458424
-		 -0.34156173 -5.64110041 -0.0707739 -5.13244438 -0.030502796 -5.089865208 -0.43690944
-		 -5.56218767 -0.46592045 -5.57318878 -0.14747679 -5.049334526 -0.15312952 -5.01883316
-		 -0.25689626 -5.021729946 -0.26606745 -4.97743845 -0.5173595 -5.48308039 -0.55995804
-		 -5.49809551 -0.39886177 -5.057541847 -0.46411937 -5.013089657 -0.55974346 -5.34278774
-		 -0.63148367 -5.30977774 -0.53331 -5.16954184 -0.46981287 -5.099852562 -0.51628852
-		 -5.068950653 -0.57689261 -5.14495564 -0.5600006 -5.26000595 -0.61055148 -5.23618603
-		 0.18776625 -5.72508574 0.27523038 -5.62630224 0.31488597 -5.50042772 0.051029682
-		 -5.78419876 0.29511684 -5.35265923 -0.25909567 -5.78211546 0.13294226 -5.087628365
-		 -0.48846352 -5.66984272 -0.082175732 -4.94935513 -0.61598426 -5.5346489 -0.26380295
-		 -4.91057682 -0.48399037 -4.95376539 -0.69256711 -5.32339859 -0.56589997 -5.028697491
-		 -0.64826155 -5.10467911 -0.67066896 -5.2145009 -2.79673147 -5.32141352 -2.90433478
-		 -5.31020975 -2.90061522 -5.33513021 -2.80637336 -5.35973549 -2.60792232 -5.4282093
-		 -2.69663882 -5.36246586 -2.71170902 -5.382658 -2.67479825 -5.40842342 -3.013600349
-		 -5.32613897 -3.17006874 -5.37835264 -3.087134838 -5.41297436 -2.94532275 -5.34035826
-		 -2.49479461 -5.54825497 -2.58423901 -5.539505 -3.38123369 -5.57925034 -3.20541263
-		 -5.57217693 -2.40384746 -5.82516384 -2.55538583 -5.73572636 -2.49722481 -5.95109034
-		 -2.62248087 -5.85372114 -3.35856915 -5.73437166 -3.20214677 -5.70787525 -2.70364475
-		 -6.049490929 -2.7363596 -5.93957281 -3.22329617 -5.91874504 -3.14245844 -5.83739614
-		 -2.87751198 -6.12502384 -2.85808229 -5.98274231 -3.10587525 -6.067566872 -3.055657387
-		 -5.93303156 -3.00027823448 -6.13041401 -2.96232224 -5.97955799 -2.8742733 -5.85432959
-		 -2.93088841 -5.85462284 -2.9806242 -5.82757139 -2.79328084 -5.83272934 -3.041750908
-		 -5.7702136 -2.71731091 -5.7729311 -3.080375671 -5.68158293 -2.64998746 -5.68651772
-		 -3.098786831 -5.57359791 -3.046004534 -5.44543266 -2.63583064 -5.5486331 -2.91934419
-		 -5.37957144 -2.71624136 -5.43067169 -2.87479901 -5.36935902 -2.81047821 -5.37604856
-		 -2.75064921 -5.40059519 -0.74102312 -7.31712294 -0.825387 -7.38822412 -0.81014723
-		 -7.43973064 -0.70222235 -7.35418415 -2.16586637 -7.041706562 -2.16062522 -6.98712969
-		 -0.99919266 -7.50924683 -1.0047690868 -7.54098797 -2.36349535 -6.95445299 -2.37530947
-		 -6.92374182 -1.30638599 -7.58841705 -1.28758109 -7.62471247 -2.68662596 -6.93543434
-		 -2.67496634 -6.8953743 -1.63062739 -7.62362957 -1.60840654 -7.65142345 -3.018394232
-		 -6.9639039 -3.0016205311 -6.93169594 -3.32171392 -7.087761879 -3.2748313 -7.035441875
-		 -1.94530582 -7.56154585 -1.89045215 -7.60303736 -3.60767794 -7.23819208 -3.51773739
-		 -7.15313387 -2.24816895 -7.4703269 -2.14588737 -7.53531313 -2.68570828 -7.50111341
-		 -3.81170845 -7.28781605 -3.76052547 -7.22269964 -4.037297726 -7.21713877 -2.45347023
-		 -7.46059132 -2.39216375 -7.5136981 -0.72352755 -7.57710695 -0.54950041 -7.47256708
-		 -2.1006422 -6.83258533 -0.95941931 -7.64749956 -2.35075927 -6.80813742 -1.25524306
-		 -7.71057415 -2.65949488 -6.8029933 -1.57045496 -7.72759771 -2.97860599 -6.8479166
-		 -3.23172808 -6.97080374 -1.83688211 -7.65711641 -3.46996713 -7.10428667 -2.090869904
-		 -7.57334805 -3.72936654 -7.1669445 -4.024122238 -7.1536932 -2.35184741 -7.56150627
-		 -0.55779767 -7.71621513 -0.35961056 -7.61264706 -1.96171713 -6.66087389 -0.85877031
-		 -7.78187847 -2.27620173 -6.65381098 -1.20116878 -7.85399055 -2.6334908 -6.64868975
-		 -1.52631044 -7.86229181 -2.96086311 -6.70424986 -3.21332026 -6.91129351 -1.80803013
-		 -7.71090126 -3.4756875 -7.069675446 -2.089914322 -7.60769081 -3.73517299 -7.12106657
-		 -4.012204647 -7.097680092 -2.34890652 -7.60669565 -0.38403559 -7.89851856 -0.17897582
-		 -7.74551249 -1.82310867 -6.44430542 -0.75506383 -8.0015516281 -2.21520686 -6.4134059
-		 -1.1682235 -8.14316559 -2.65708303 -6.35249519 -1.46042728 -8.12672043 -2.94675851
-		 -6.42631149 -3.24298835 -6.90505266 -1.83541894 -7.7224555 -3.54872322 -7.058942318
-		 -2.1581521 -7.63164425 -3.77624178 -7.086727619 -4.0060949326 -7.068564415 -2.38202095
-		 -7.64735746 -1.74290252 -6.72607279 -1.58776367 -6.55770636 -1.90588164 -6.90348339
-		 -2.035845757 -7.051891327 -2.067606926 -7.096576214 -2.61096597 -7.680655 -2.59968781
-		 -7.70751953 -2.63282919 -7.62900591 -2.65728354 -7.57043791 -4.052378654 -7.29213715
-		 -0.51416028 -9.21515846 -0.32309246 -9.27549934 -0.35400641 -9.17620468 -0.4784199
-		 -9.14568615 -0.78866589 -8.92817688 -0.67439151 -9.094744682 -0.57560694 -9.062240601
-		 -0.64570826 -8.99611187 -0.12120247 -9.27202415 0.10703659 -9.18917561 0.018706858
-		 -9.11742878 -0.25946516 -9.19491291 -0.85349631 -8.69414806 -0.74380314 -8.72445965
-		 0.28728551 -8.98415756 0.18084395 -8.93215847 -0.79122388 -8.42844296 -0.68709934
-		 -8.48494339 -0.61729461 -8.21461487 -0.50948435 -8.27658653 0.36044198 -8.71831226
-		 0.24739581 -8.66648579 -0.31929773 -8.09430027 -0.28436726 -8.22968578 0.28541136
-		 -8.40582943 0.15489233 -8.45597553 -0.13938367 -8.10852528 -0.15952754 -8.2667942
-		 0.16939014 -8.26760197 0.052201271 -8.37587738 0.029155254 -8.16059589 -0.037474871
-		 -8.28991604 -0.16969383 -8.39936352 -0.10444236 -8.41988659;
-	setAttr ".uvtk[2500:2749]" -0.049860895 -8.46111965 -0.29330307 -8.36705017 0.048223257
-		 -8.54298782 -0.48176891 -8.38734913 0.14112204 -8.70818901 -0.62767839 -8.51576042
-		 0.12125683 -8.9016552 0.0076608062 -9.056822777 -0.68800473 -8.69827461 -0.18348134
-		 -9.13864899 -0.64391363 -8.90154934 -0.31501126 -9.13829613 -0.45646691 -9.10300827
-		 -0.56742978 -9.0085172653 -1.80284548 -9.63887691 -1.77103019 -9.48773384 -1.94991267
-		 -9.41506672 -2.016589642 -9.6107769 -3.15598011 -8.42426014 -2.97966027 -8.34301949
-		 -1.73708439 -9.34272385 -1.82264864 -9.24563885 -3.19676638 -8.28017712 -3.11530542
-		 -8.17871475 -1.6004529 -9.17980289 -1.61690378 -9.087206841 -3.34151959 -8.12283993
-		 -3.32926893 -8.029075623 -1.30508113 -9.090592384 -1.33665299 -9.02345562 -3.64231253
-		 -8.046868324 -3.61369801 -7.9779768 -3.92833209 -8.11130142 -3.88925219 -8.041542053
-		 -1.017977953 -9.14155579 -1.059987545 -9.074029922 -4.14433813 -8.25404263 -4.1143198
-		 -8.19397354 -0.79685801 -9.27351093 -0.8294245 -9.21519947 -0.37133795 -9.53684521
-		 -0.36454171 -9.51791382 -0.62391609 -9.40840626 -0.62888849 -9.37382889 -2.14571381
-		 -9.37440968 -2.21031404 -9.5859499 -2.78487277 -8.29314613 -1.97528017 -9.18979263
-		 -2.96457624 -8.11557961 -1.70684302 -9.0083265305 -3.24257135 -7.94569874 -1.38721728
-		 -8.92153454 -3.56761456 -7.87327099 -3.87318325 -7.98378754 -1.07858777 -9.017383575
-		 -4.12024593 -8.16218948 -0.82498777 -9.18335152 -0.35068208 -9.4793129 -0.62539369
-		 -9.33737946 -2.34583759 -9.31964874 -2.41802359 -9.56127262 -2.58639145 -8.22890854
-		 -2.22132969 -9.094042778 -2.72185802 -8.0080537796 -1.84358513 -8.8334856 -3.11329389
-		 -7.76377392 -1.45268106 -8.79261398 -3.50780988 -7.74076319 -3.87118101 -7.88064003
-		 -1.08528471 -8.9149971 -4.11993122 -8.12084675 -0.8271867 -9.14229298 -0.33793145
-		 -9.43661308 -0.59694487 -9.31516171 -4.55958843 -8.53817558 -4.31182098 -8.39751625
-		 -4.56728888 -8.51947498 -4.30842018 -8.36255836 -4.58298922 -8.48134422 -4.31361341
-		 -8.32610798 -4.34321213 -8.3051033 -4.59776497 -8.43904495 -2.71022415 -8.50264168
-		 -2.50273728 -8.46826744 -2.90365815 -8.53652 -3.11705112 -8.57460213 -4.7502389 -3.77194786
-		 -4.85978222 -3.99126768 -4.7922802 -4.022909641 -4.71598053 -3.84813833 -4.095129013
-		 -4.12259054 -4.12428188 -3.88067627 -4.18875074 -3.93953085 -4.16936302 -4.12992191
-		 -4.58702421 -3.76066017 -4.61294937 -3.67179441 -4.21928453 -3.73943496 -4.27353859
-		 -3.8143189 -4.52188873 -3.70661497 -4.52028227 -3.61163664 -4.28658676 -3.65165186
-		 -4.31684399 -3.74158692 -4.41827726 -3.71724606 -4.40022373 -3.61269546 -4.51778746
-		 -3.86484003 -4.44436216 -3.8702178 -4.37317228 -3.88794565 -4.58869505 -3.86209702
-		 -4.30618048 -3.91018414 -4.68109846 -3.90346909 -4.2339797 -3.98155403 -4.75667763
-		 -4.030380249 -4.20536947 -4.1252408 -4.83256483 -4.23030233 -4.77624226 -4.21027088
-		 -4.20040607 -4.33834839 -4.24704266 -4.30090237 -4.70780277 -4.31108665 -4.76601458
-		 -4.3318367 -4.34485102 -4.37647152 -4.29661083 -4.41462898 -4.54410315 -4.44402552
-		 -4.41260433 -4.44874573 -4.41342115 -4.40625906 -4.53836393 -4.41302299 -4.66794157
-		 -4.40062237 -4.65256834 -4.36098528 -4.24335146 -4.25539637 -4.76477337 -4.16647434
-		 -4.31785059 -4.34566164 -4.72350883 -4.27382994 -4.40617847 -4.39338636 -4.53599739
-		 -4.40029526 -4.65491009 -4.34621906 -4.32412386 -0.69667983 -4.42992115 -0.65944695
-		 -4.42322683 -0.90578759 -4.32767439 -0.945912 -4.53355598 -0.70197272 -4.52118683
-		 -0.95141321 -4.2205081 -0.73410821 -4.2142396 -0.9895097 -4.63498211 -0.74537331
-		 -4.62742233 -1.00072145462 -3.92971659 -1.13798213 -4.081815243 -0.85363168 -4.091697693
-		 -1.14225733 -3.96595144 -1.32843578 -4.76700592 -0.87220669 -4.90352297 -1.16436183
-		 -4.85715246 -1.3525331 -4.7415309 -1.1598711 -3.78965139 -1.41332042 -3.84811068
-		 -1.49636793 -5.028597832 -1.4468348 -4.96572924 -1.52659798 -3.71191931 -1.54834235
-		 -3.75554299 -1.6142801 -5.098946571 -1.58585238 -5.051820278 -1.64933276 -5.096250534
-		 -1.70460391 -5.13766956 -1.65340602 -5.16383314 -1.6913054 -3.67018938 -1.67583013
-		 -3.70820141 -1.66707277 -3.66960835 -1.61370671 -4.41529274 -1.25036728 -4.30739355
-		 -1.2716974 -4.5224905 -1.27784371 -4.20914173 -1.31745827 -4.61478853 -1.32845867
-		 -4.10728264 -1.42482507 -3.99867845 -1.54920638 -4.81249952 -1.57122195 -4.7107954
-		 -1.44114256 -3.89072895 -1.66909575 -4.91381073 -1.69677436 -3.80404902 -1.75057018
-		 -4.99599981 -1.78280318 -5.04574728 -1.82068777 -3.70449042 -1.77776718 -3.75238895
-		 -1.78573525 -4.40525913 -1.59937513 -4.29029131 -1.59167671 -4.52053928 -1.59754372
-		 -4.19243765 -1.63711882 -4.61563683 -1.64791834 -4.12721205 -1.71287274 -4.026792526
-		 -1.80306399 -4.77074766 -1.82316673 -4.67534828 -1.72767568 -3.92790961 -1.89061594
-		 -4.86477232 -1.91593122 -3.84774661 -1.9429487 -4.942029 -1.97251034 -5.00027704239
-		 -1.99358046 -3.74043894 -1.95372319 -3.78846025 -1.96084309 -4.39586973 -1.92665136
-		 -4.31171942 -1.90983486 -4.48084545 -1.9141283 -4.20860195 -1.94267678 -4.58192444
-		 -1.95219123 -4.13916111 -2.0021493435 -4.041235447 -2.071450472 -4.74186611 -2.09035635
-		 -4.64777851 -2.015878439 -3.94976521 -2.13325787 -4.82986546 -2.15701962 -3.87337589
-		 -2.17013407 -4.90414 -2.19797945 -4.9612689 -2.21196795 -3.7675972 -2.17268896 -3.81556892
-		 -2.18101001 -4.38741827 -2.21966434 -4.30627108 -2.20173717 -4.46947718 -2.20587516
-		 -4.19970322 -2.22892666 -4.57434607 -2.23846531 -4.1333704 -2.28313875 -4.045312405
-		 -2.34217691 -4.72313213 -2.36047196 -4.63834763 -2.2967751 -3.9620719 -2.3908689
-		 -4.80357313 -2.41361308 -3.89245081 -2.41951871 -4.87155437 -2.4459846 -4.92455387
-		 -2.45388865 -3.79502225 -2.40682387 -3.83911371 -2.4245491 -4.37963438 -2.48816872
-		 -4.28186083 -2.4819169 -4.47766829 -2.48690391 -4.17925882 -2.50828862 -4.57864475
-		 -2.51846743 -4.12456274 -2.56321621 -4.044528484 -2.62457204 -4.70859385 -2.64251399
-		 -4.63199139 -2.57691932 -3.9642694 -2.67827368 -4.78581572 -2.70048428 -3.89622092
-		 -2.70634723 -4.85219526 -2.73221803 -4.90049553 -2.73221803 -3.80935144 -2.69657779
-		 -3.84797907 -2.7037282 -4.37223816 -2.74402237 -4.2593832 -2.74974775 -4.48465919
-		 -2.75549793 -4.1638341 -2.78739381;
-	setAttr ".uvtk[2750:2999]" -4.57792997 -2.79796338 -4.11992168 -2.84971619 -4.047850132
-		 -2.91959453 -4.6892662 -2.93694425 -4.62111807 -2.86325455 -3.96393132 -2.99612856
-		 -4.76887274 -3.017925501 -3.89459825 -3.04358387 -4.83554554 -3.069060087 -4.89130735
-		 -3.085906982 -3.7800231 -3.044383049 -3.83802414 -3.057399035 -4.36697817 -2.98675585
-		 -4.27981806 -3.014829159 -4.45246935 -3.01949358 -4.19739389 -3.066737652 -4.53194714
-		 -3.075792789 -4.12593222 -3.13744664 -4.039191246 -3.2490139 -4.68002605 -3.2663734
-		 -4.59945393 -3.15027308 -3.96099329 -3.353894 -4.75241899 -3.37533808 -3.89672184
-		 -3.42012477 -4.81297779 -3.4449625 -4.88428736 -3.4880228 -3.75387859 -3.45659256
-		 -3.82319355 -3.45926642 -4.35947895 -3.2643559 -4.29897881 -3.27788162 -4.41903496
-		 -3.28115082 -4.21793461 -3.34056211 -4.49657249 -3.3481226 -4.16350651 -3.43271112
-		 -4.091620922 -3.5605979 -4.61080599 -3.57466936 -4.5459795 -3.44306731 -3.99548554
-		 -3.70380664 -4.69895458 -3.72290826 -3.93374801 -3.79606342 -4.75558853 -3.81837749
-		 -4.79811239 -3.83765984 -3.85572815 -3.84380674 -3.89028001 -3.8130331 -4.54844713
-		 -0.4538722 -4.43580055 -0.44361827 -4.64453077 -0.52618229 -4.7854495 -0.66762602
-		 -4.94135618 -1.032276273 -5.090666771 -1.4054333 -5.15433121 -1.55156028 -5.1786437
-		 -1.64850557 -5.18042517 -1.68469715 -3.62893486 -1.6065855 -3.65842533 -1.51108444
-		 -3.72986078 -1.36859894 -3.89907646 -1.0040402412 -4.074429989 -0.64833862 -4.22285128
-		 -0.51470697 -4.3227458 -0.44771564 -3.64141846 -1.65012836 -5.13375282 -1.71539795
-		 -4.95364332 -3.48910475 -4.83095503 -3.87025666 -4.94993305 -3.076047897 -4.93944931
-		 -2.72717023 -4.96952057 -2.43858266 -5.0096001625 -2.20626211 -5.048591614 -1.98907566
-		 -5.093999386 -1.8153255 -3.62519002 -1.64262402 -6.10533333 -2.93523788 -5.82321501
-		 -3.0079388618 -5.82507753 -2.92737818 -6.0050034523 -2.87760162 -5.54502964 -2.9231112
-		 -5.64767265 -2.8696053 -6.2735734 -2.81902695 -6.1806612 -2.76643515 -5.38152695
-		 -2.80095792 -5.47639608 -2.75212646 -6.37850094 -2.6825037 -6.24744368 -2.66993785
-		 -5.28211594 -2.66025114 -5.41357994 -2.65277529 -6.3773284 -2.49243045 -6.20683527
-		 -2.50904465 -5.29062033 -2.47037649 -5.46032906 -2.49358559 -6.18436289 -2.2672987
-		 -6.11167955 -2.35354924 -5.49236107 -2.2529223 -5.56146002 -2.34200191 -6.086438656
-		 -2.12262702 -6.037098885 -2.23249865 -5.59644794 -2.11258149 -5.64117622 -2.22439671
-		 -5.94876099 -2.21461701 -5.98093748 -2.077712774 -5.73030853 -2.21035123 -5.7037406
-		 -2.072150946 -5.84344816 -2.019918203 -5.84012318 -2.18347859 -4.1761322 -5.30967236
-		 -4.28466988 -5.23763227 -4.28925753 -5.545753 -4.19799614 -5.58845997 -4.39531517
-		 -5.30716515 -4.38175917 -5.58637762 -4.064388752 -5.43353844 -4.11972332 -5.66850567
-		 -4.51070595 -5.42844486 -4.4623847 -5.6646266 -4.010680199 -5.54989767 -4.063018322
-		 -5.77332449 -4.56786013 -5.54353809 -4.52218628 -5.76813745 -4.011658192 -5.80634022
-		 -4.031816959 -5.92510462 -4.57451057 -5.79997444 -4.55788517 -5.91920376 -3.99267507
-		 -6.035342693 -4.015505314 -6.10442257 -4.60028267 -6.028586388 -4.57951117 -6.098178864
-		 -3.93827295 -6.12583494 -3.95062017 -6.22645712 -4.65734196 -6.11790371 -4.64798641
-		 -6.21879482 -3.90504026 -6.24593449 -3.89751124 -6.16270638 -3.82108784 -6.17576647
-		 -3.83374381 -6.25913334 -4.29259586 -5.77012157 -4.21169281 -5.80778313 -4.37459087
-		 -5.80595303 -4.14499331 -5.86571503 -4.44298887 -5.86237144 -4.092439175 -5.95049238
-		 -4.49804258 -5.94595814 -4.05513382 -6.075260162 -4.53903675 -6.069889069 -4.021397591
-		 -6.2087059 -4.57671261 -6.20259857 -3.95339441 -6.30684137 -4.64759302 -6.29923582
-		 -3.90757036 -6.32214212 -3.83802032 -6.32630491 -4.29629564 -6.019029617 -4.22174215
-		 -6.04963541 -4.3717289 -6.047977448 -4.15982533 -6.097726822 -4.43505335 -6.094682693
-		 -4.10586596 -6.17146683 -4.49117756 -6.16722107 -4.062738895 -6.26012087 -4.53691292
-		 -6.2549262 -4.01355648 -6.32728767 -4.58806276 -6.32101107 -3.94389629 -6.38743019
-		 -4.65947485 -6.37961006 -3.8999536 -6.39345694 -3.83772516 -6.38605976 -4.29969788
-		 -6.24829912 -4.21869755 -6.27129841 -4.38135052 -6.26952648 -4.15042591 -6.31117773
-		 -4.45077419 -6.3079071 -4.094090939 -6.37280703 -4.50890779 -6.36829901 -4.053678513
-		 -6.45639658 -4.55177736 -6.45100212 -4.0044484138 -6.51710796 -4.60278225 -6.51062822
-		 -3.92683411 -6.52549887 -4.68061447 -6.51729345 -3.88537216 -6.51131105 -3.82714772
-		 -6.47351933 -4.30322838 -6.48661852 -4.22006798 -6.49339962 -4.14630461 -6.5210762
-		 -4.46110058 -6.51770639 -4.08366251 -6.57355165 -4.52526522 -6.56881285 -4.035801888
-		 -6.65361452 -4.57547188 -6.64781809 -3.98599863 -6.71784592 -4.62715292 -6.71094322
-		 -3.90351844 -6.73150873 -4.71001053 -6.72277069 -3.85355854 -6.7105155 -3.78381062
-		 -6.65556526 -4.30512905 -6.61488676 -4.20526266 -6.62636709 -4.1255765 -6.66254473
-		 -4.48599386 -6.6587224 -4.065644264 -6.72472191 -4.5477376 -6.71958256 -4.015172005
-		 -6.79369259 -4.60022831 -6.78742886 -3.9556973 -6.84033489 -4.66106272 -6.83274317
-		 -3.86831808 -6.85801506 -4.74893618 -6.8484745 -3.81854582 -6.84356737 -3.74913549
-		 -6.79275799 -4.30666494 -6.71867275 -4.19784641 -6.73539543 -4.11419201 -6.77811432
-		 -4.50077391 -6.77403784 -4.050602913 -6.83816385 -4.56611729 -6.83268166 -3.99747872
-		 -6.89294767 -4.62084389 -6.88627911 -3.93499994 -6.93470049 -4.68453979 -6.92663527
-		 -3.84970951 -6.95212984 -4.77031994 -6.94215536 -3.79518032 -6.93787622 -3.72600055
-		 -6.88953733 -4.30811691 -6.81652784 -4.19910812 -6.83385563 -4.1121664 -6.87280798
-		 -4.50558758 -6.86868286 -4.043057919 -6.92012978 -4.57607555 -6.91447163 -3.983778
-		 -6.96982288 -4.63681078 -6.9628377 -3.9220984 -7.014478683 -4.69979429 -7.0061073303
-		 -3.83941746 -7.041830063 -4.78325939 -7.031607628 -3.78487372 -7.031952858 -3.70632887
-		 -6.98157072 -4.30906487 -6.88002825 -4.19085693 -6.90282202 -4.10573196 -6.94174194
-		 -4.51404953 -6.93747282 -4.036483765 -6.98756075 -4.58463812 -6.98175144 -3.97536063
-		 -7.034874439 -4.64714336 -7.027690411 -3.91022706 -7.075941563 -4.7134757 -7.06729269
-		 -3.82733297 -7.094045162 -4.79688263 -7.083538055 -3.7782445 -7.077995777 -3.70087218
-		 -7.016877651 -4.30998898 -6.94218588 -4.19664574 -6.96456766;
-	setAttr ".uvtk[3000:3249]" -4.10964012 -7.00073862076 -4.51187992 -6.99655533
-		 -4.038493156 -7.045022011 -4.58432198 -7.039251804 -3.9684875 -7.097812176 -4.65587234
-		 -7.090461731 -3.90384126 -7.13369942 -4.72156429 -7.12489176 -3.82933807 -7.1464262
-		 -4.7964263 -7.13595104 -3.77133155 -7.13118315 -3.69329381 -7.073160648 -4.30712938
-		 -7.024419785 -4.210464 -7.038955688 -4.1273818 -7.058087349 -4.4958272 -7.054297447
-		 -4.053118706 -7.091922283 -4.57107782 -7.086473942 -3.97929978 -7.14120913 -4.64634037
-		 -7.13409328 -3.90699172 -7.18443966 -4.7199111 -7.1756897 -3.83193398 -7.20380259
-		 -4.79552412 -7.19337082 -3.76973224 -7.19599199 -3.68350792 -7.13827753 -4.31320858
-		 -7.20012236 -4.22023201 -7.17794704 -4.40662861 -7.17608356 -4.14657164 -7.13835049
-		 -4.47900534 -7.13499498 -4.072426319 -7.14445066 -4.55331945 -7.13942862 -3.99617386
-		 -7.18020248 -4.63061953 -7.17345762 -3.91280675 -7.22770882 -4.71537733 -7.21907806
-		 -3.82124257 -7.24949932 -4.80756521 -7.23881292 -3.76295471 -7.23735762 -3.67726111
-		 -7.18313169 -4.31710768 -7.44104099 -4.22783947 -7.37028456 -4.40448332 -7.36859322
-		 -4.15841627 -7.26179218 -4.47079277 -7.25870132 -4.083353043 -7.26007652 -4.5457902
-		 -7.25528479 -4.017518997 -7.26973295 -4.61191654 -7.26344919 -3.9305439 -7.30869627
-		 -4.70003414 -7.30044079 -3.81201029 -7.32121277 -4.81891203 -7.31030321 -3.74917412
-		 -7.29040432 -3.66702104 -7.24574375 -4.69917965 -6.15388012 -4.77595901 -6.16521549
-		 -4.76578188 -6.24884796 -4.69412231 -6.2372613 -4.76349926 -6.31610823 -4.69385147
-		 -6.31351566 -4.76556396 -6.37585926 -4.7035799 -6.38465595 -4.77872753 -6.46308708
-		 -4.72164011 -6.5021801 -4.8274312 -6.64416552 -4.75933409 -6.70066452 -4.38655472
-		 -6.49162626 -4.86615086 -6.78057528 -4.79826641 -6.8329196 -4.40527773 -6.62426758
-		 -4.89213657 -6.87682152 -4.82440901 -6.92669106 -4.41589594 -6.73313665 -4.91452074
-		 -6.96840143 -4.83749199 -7.020516872 -4.41752434 -6.83162069 -4.92101765 -7.003578186
-		 -4.84548187 -7.066399097 -4.42777395 -6.90041828 -4.93026161 -7.059674263 -4.8539629
-		 -7.11941814 -4.42377853 -6.96229362 -4.94196892 -7.1245575 -4.85748005 -7.18417311
-		 -4.41210222 -7.036986828 -4.94954205 -7.16925526 -4.86547756 -7.22537422 -4.96163082
-		 -7.23161983 -4.88082314 -7.27809668 -3.9802537 -8.56719112 -4.17625141 -8.48008823
-		 -4.19271183 -8.78740692 -4.081973553 -8.81048679 -4.38040829 -8.54573154 -4.30526638
-		 -8.79822731 -3.86013055 -8.74098396 -3.99212503 -8.86008072 -4.51815319 -8.70598984
-		 -4.39953852 -8.83837223 -3.77200389 -8.92126179 -3.90783119 -8.95264339 -4.62448978
-		 -8.87590694 -4.49283648 -8.9219656 -3.77282286 -9.081480026 -3.85886192 -9.087208748
-		 -4.6410346 -9.035178185 -4.55613995 -9.050443649 -3.82789469 -9.25609684 -3.86890054
-		 -9.23943138 -4.60526562 -9.21512699 -4.56267452 -9.20298004 -3.97557211 -9.41726017
-		 -3.98940134 -9.39463425 -4.474298 -9.39305878 -4.45824242 -9.37188339 -4.07519865
-		 -9.43406582 -4.085992813 -9.44035912 -4.37703562 -9.4205246 -4.36690187 -9.42784405
-		 -4.22828007 -9.47547245 -4.22693443 -9.44565582 -5.83342934 -7.39423323 -5.6238637
-		 -7.42378902 -5.60772991 -7.3591733 -5.8633647 -7.30911255 -5.42498922 -7.49618864
-		 -5.3585639 -7.43512058 -6.022428989 -7.4177742 -6.057574749 -7.35456276 -5.26922894
-		 -7.60578871 -5.20849609 -7.56650925 -6.23631954 -7.51249266 -6.25407362 -7.45213032
-		 -5.12494802 -7.78992605 -5.080906391 -7.74498367 -6.44549131 -7.68098068 -6.47752094
-		 -7.64485502 -5.019497395 -8.037017822 -4.97425079 -8.020126343 -6.60865211 -7.91528463
-		 -6.64859819 -7.90110302 -4.98564959 -8.3206768 -4.94324446 -8.32682037 -6.68207455
-		 -8.27584076 -6.72161865 -8.27095032 -5.088787556 -8.67363739 -5.052066326 -8.68759537
-		 -6.70334721 -8.45630169 -6.6651845 -8.45184422 -6.60074377 -8.73287678 -6.64162922
-		 -8.7399416 -5.55141401 -7.13355923 -5.88982725 -7.1114502 -5.24231291 -7.2730813
-		 -6.12269402 -7.19636965 -5.076673031 -7.45747566 -6.35481453 -7.33714771 -4.93794012
-		 -7.69081974 -6.56632185 -7.55008507 -4.85129738 -7.97814083 -6.73529148 -7.83490658
-		 -4.83565426 -8.30889225 -6.79494667 -8.22684956 -4.96664047 -8.68305206 -6.77565861
-		 -8.43569756 -6.72128868 -8.76355457 -6.41419554 -7.21042252 -6.63825798 -7.4310565
-		 -4.73185825 -7.90692043 -4.82595921 -7.60687399 -6.14564276 -7.047678947 -4.98653603
-		 -7.33701324 -6.82242632 -7.72925425 -4.70917559 -8.25653267 -6.89239836 -8.20069885
-		 -4.86837578 -8.70583916 -6.82189322 -8.44600964 -6.78064251 -8.78341389 -5.89876461
-		 -6.92092609 -5.14488697 -7.10910845 -5.49710131 -6.91597557 -5.18673515 -8.82061577
-		 -5.37610817 -9.038022041 -5.34338474 -9.063532829 -5.15518284 -8.84253788 -5.28427649
-		 -9.12192059 -5.081697464 -8.85842228 -5.24131775 -9.16743755 -5.045789719 -8.88930893
-		 -5.76452112 -7.7012167 -5.96534443 -7.63807058 -5.97542095 -7.99538851 -5.88217163
-		 -7.99604368 -6.16940451 -7.68979979 -6.068556309 -7.99078751 -5.66378498 -7.807827
-		 -5.79105759 -8.021258354 -6.2759881 -7.79056454 -6.16094446 -8.010826111 -5.5683589
-		 -7.94461966 -5.73637247 -8.060966492 -6.37897158 -7.92176247 -6.21778011 -8.047390938
-		 -5.51971579 -8.10511875 -5.65657091 -8.13899136 -6.43657923 -8.079265594 -6.30185127
-		 -8.12079811 -5.53078604 -8.29353046 -5.64118099 -8.32704067 -6.43614578 -8.26800346
-		 -6.32781839 -8.30767918 -5.68618679 -8.49484921 -5.74850655 -8.46744823 -6.29233456
-		 -8.4777565 -6.22857237 -8.45390987 -5.83897209 -8.5037117 -5.81986094 -8.5268383
-		 -6.14028978 -8.49521732 -6.160676 -8.51722908 -5.99152422 -8.56656933 -5.99002123
-		 -8.51326847 -6.26024055 -5.74546814 -6.44463205 -5.81077194 -6.29931927 -6.18949318
-		 -6.10901165 -6.063659668 -6.62537718 -5.88556767 -6.52495384 -6.22325277 -6.093905926
-		 -5.63781929 -5.91474438 -5.85362482 -6.82102394 -5.91680908 -6.80985308 -6.19706774
-		 -6.0055646896 -5.52553177 -5.76946688 -5.60408783 -6.96180534 -5.89243031 -7.084762096
-		 -6.10874844 -5.88042068 -5.32348967 -5.69194078 -5.30801725 -7.18997383 -5.82594824
-		 -7.34043646 -5.94052315 -5.88825893 -4.9260025 -5.73103762 -4.96108961 -7.45003843
-		 -5.52524042 -7.54343462 -5.65648413 -6.10483932 -4.62546492 -5.96571732 -4.65967751
-		 -7.49006748 -5.15696239 -7.57060003 -5.27545357 -6.17905188 -4.5131197;
-	setAttr ".uvtk[3250:3459]" -6.27184916 -4.50800323 -6.53956079 -4.33886766 -6.51717806
-		 -4.30352545 -6.20708561 -6.4298687 -5.96765709 -6.12966251 -6.58587837 -6.36686945
-		 -5.8374753 -5.9424386 -6.80788374 -6.31477547 -5.72109938 -5.68773746 -7.064762115
-		 -6.20328474 -5.58024359 -5.3380537 -7.40337038 -6.037567139 -5.57928276 -5.0062613487
-		 -7.62602663 -5.79157448 -5.85336924 -4.64922333 -7.66110086 -5.34282446 -6.079716682
-		 -4.4883275 -6.47461605 -4.2346077 -7.44449282 -4.95792627 -7.35862923 -4.65312529
-		 -7.39891148 -4.64183474 -7.5100522 -5.023806095 -7.47664499 -4.61906576 -7.60047436
-		 -5.071819782 -5.62654686 -4.91330528 -5.74020338 -4.75309515 -5.83680773 -4.88470459
-		 -5.77503014 -4.98569822 -6.45568943 -4.70672989 -6.58907366 -4.85093403 -6.45117712
-		 -4.94188356 -6.37688208 -4.8497057 -5.8254385 -4.63463783 -5.91576195 -4.55749416
-		 -5.99478674 -4.76024008 -5.92095852 -4.80615377 -6.25635529 -4.53542137 -6.35587931
-		 -4.60026217 -6.28329277 -4.78267574 -6.20416164 -4.74667263 -6.079319954 -4.44250965
-		 -6.097579956 -4.72422743 -5.60793161 -5.084569454 -5.76250172 -5.1115737 -6.62964058
-		 -5.018362999 -6.47984457 -5.065088749 -5.75760698 -5.26490974 -5.81745052 -5.22117233
-		 -6.50448227 -5.21651363 -6.43950129 -5.18086433 -5.92702675 -5.28016472 -5.89274883
-		 -5.31707001 -6.33845186 -5.25350475 -6.37720394 -5.28567696 -6.13703966 -5.33322287
-		 -6.13478899 -5.29843807 -5.70879507 -3.17959046 -5.70267344 -3.14465761 -5.86112213
-		 -3.14885235 -5.87146854 -3.19847322 -5.43427944 -3.2037189 -5.44538021 -3.23915005
-		 -6.00035619736 -3.21289992 -5.98621035 -3.26236415 -6.90554237 -3.15139127 -7.034799576
-		 -3.069087267 -7.031270027 -3.11965346 -6.92625141 -3.1984868 -6.10453701 -3.31237078
-		 -6.070505142 -3.36568689 -6.81580639 -3.26404309 -6.85672998 -3.31226587 -6.20131397
-		 -3.36729693 -6.16745186 -3.46566868 -6.72736883 -3.33155465 -6.77421045 -3.42444324
-		 -6.30334663 -3.38759041 -6.27992249 -3.52634645 -6.62903214 -3.36546469 -6.67098475
-		 -3.49977803 -6.37922859 -3.40123653 -6.39516878 -3.54742193 -6.46665287 -3.38327765
-		 -6.47810936 -3.55214095 -5.71134472 -3.23541498 -5.86468697 -3.26549911 -7.19490242
-		 -3.13455844 -5.46001101 -3.2834506 -5.97309875 -3.32852769 -7.047070503 -3.18514276
-		 -6.94820023 -3.26226664 -6.05563736 -3.4151783 -6.87815666 -3.35928655 -6.14590168
-		 -3.52136064 -6.80308723 -3.4767077 -6.26783514 -3.58733106 -6.69120646 -3.55856657
-		 -6.38471651 -3.60971093 -6.48231316 -3.61399198 -5.8709693 -3.3646028 -5.72159004
-		 -3.32812476 -7.19731712 -3.22780204 -7.054263115 -3.28418088 -5.97434044 -3.42973518
-		 -6.96067095 -3.36270881 -6.063723564 -3.51201797 -6.88324547 -3.45632601 -6.1615181
-		 -3.60814667 -6.79936171 -3.56480503 -6.27996731 -3.6629498 -6.68942022 -3.63512778
-		 -6.3941431 -3.68370628 -6.48802185 -3.69804049 -5.48813629 -3.3636167 -6.38840771
-		 -3.79825068 -6.49597645 -3.81498504 -6.50412416 -3.93476439 -6.38333988 -3.91504359
-		 -6.60028648 -3.78385019 -6.27941513 -3.77323174 -6.28136826 -3.89493895 -6.7048912
-		 -3.7443161 -6.71943569 -3.8651619 -6.17496014 -3.72306466 -6.19101381 -3.86250758
-		 -6.8015976 -3.68047595 -6.80457306 -3.82080197 -6.085240364 -3.63859725 -6.098685265
-		 -3.77858686 -6.87905836 -3.58464766 -6.88468981 -3.72515988 -5.99482822 -3.54647422
-		 -6.0048947334 -3.6776495 -6.95617151 -3.48113966 -6.96395159 -3.61246133 -5.88702011
-		 -3.47728705 -5.91066074 -3.61431623 -7.05361414 -3.39799714 -7.048742294 -3.53695631
-		 -5.73889256 -3.44806743 -5.77627611 -3.58552337 -7.17799902 -3.49022841 -5.54037189
-		 -3.47519851 -5.60359573 -3.60130596 -6.54207706 -4.49257755 -6.43542337 -4.45029306
-		 -6.64202118 -4.43624115 -6.34364891 -4.39276314 -6.7251544 -4.36681557 -6.23302937
-		 -4.27567816 -6.81889915 -4.23583269 -6.15722847 -4.1434989 -6.87610149 -4.094619751
-		 -6.088081837 -4.025089741 -6.9285779 -3.96794486 -6.0093793869 -3.94104338 -6.99517298
-		 -3.87401772 -5.86933565 -3.87901163 -7.12553263 -3.79359603 -5.71298075 -3.89901257
-		 -6.56969547 -4.89846945 -6.47048426 -4.85609865 -6.66224957 -4.84304953 -6.32313347
-		 -4.73489285 -6.79182529 -4.70300627 -6.23287153 -4.57510233 -6.85961199 -4.53246593
-		 -6.16226101 -4.41129637 -6.9073863 -4.36061239 -6.11382818 -4.30692768 -6.94124031
-		 -4.25065231 -6.048515797 -4.21179771 -6.9930706 -4.14755869 -5.91935968 -4.13110018
-		 -7.11011553 -4.050122738 -5.7663312 -4.15743542 -7.1911974 -3.043465376 -7.46509743
-		 -3.065589905 -7.4589076 -3.10220051 -7.18986416 -3.078906059 -6.55569553 -3.38924575
-		 -6.5596509 -3.53624701 -6.5784297 -3.59654975 -7.45043039 -3.14807725 -7.19642258
-		 -3.34897971 -7.39678621 -3.34894943 -6.57909727 -3.67113924 -7.43342876 -3.23131657
-		 -6.62112093 -3.8988781 -7.35123444 -3.48246455 -7.28315687 -3.79222655 -7.26530361
-		 -4.055480957 0.29073429 0.29286021 0.66082209 0.073207557 0.4498347 0.23753533 0.29844624
-		 0.29849643 -0.0674119 0.1104053 0.14674693 0.25093561 0.78618723 -0.34349245 0.75874931
-		 -0.13070312 -0.21381277 -0.26539627 -0.17375624 -0.071894675 0.68413931 -0.61088616
-		 0.75746346 -0.48124856 -0.13545066 -0.51443875 -0.19587463 -0.39266735 0.25675499
-		 -0.74607933 0.50179672 -0.74085104 0.027288258 -0.64129496 0.25675499 -0.65692866;
+	setAttr ".uvtk[0:249]" -type "float2" -0.32311031 -1.5108341 -0.061511487
+		 -1.51221263 -0.064345166 -1.33372033 -0.32476327 -1.33389306 -3.19933295 -1.48745918
+		 -2.9569304 -1.48618233 -2.95539856 -1.32222509 -3.19670582 -1.32206488 -0.59437436
+		 -1.51386428 -0.57797259 -1.33291388 -2.70557141 -1.48898971 -2.72076988 -1.32131803
+		 -3.33363724 -1.48584187 -3.33087349 -1.31846893 0.083428726 -1.51046705 0.080447167
+		 -1.32983935 0.16374512 -1.51266885 0.16374524 -1.3231045 0.12615252 -1.51156271 0.12395225
+		 -1.32648766 -0.81782979 -1.51044965 -0.72550392 -1.51247573 -0.71494466 -1.33072555
+		 -0.79807973 -1.3285464 -2.58406401 -1.48770261 -2.4985137 -1.4858259 -2.51681399
+		 -1.31727076 -2.59384871 -1.31928992 -0.87434292 -1.51063907 -0.87434292 -1.32757401
+		 -0.065508947 -1.15823162 -0.32392338 -1.15717149 -2.95617676 -1.15847158 -3.19562793
+		 -1.15945339 -0.57320577 -1.15389311 -2.72518682 -1.15543389 -3.32824993 -1.15565467
+		 0.07761547 -1.15413141 0.16374482 -1.15031028 0.1226875 -1.15223002 -0.70821476 -1.14948666
+		 -0.79610187 -1.1455034 -2.51864696 -1.14766026 -2.60008526 -1.15135098 -0.87434238
+		 -1.14323974 -0.061629027 -0.99482042 -0.32006082 -0.99482042 -2.95975494 -1.0080342293
+		 -3.1992228 -1.0080336332 -0.58185452 -0.99482042 -2.71717215 -1.0080339909 -3.33074808
+		 -1.0080342293 0.080311328 -0.99482042 0.1637456 -0.99482042 0.12395738 -0.99482042
+		 -0.72295451 -0.99482042 -0.80762726 -0.99482042 -2.50796795 -1.0080341101 -2.58642626
+		 -1.0080341101 -0.8743428 -0.99482042 -0.32311031 -0.47880638 -0.32476321 -0.65574723
+		 -0.064345166 -0.65592033 -0.061511368 -0.47742784 -3.19933271 -0.5286091 -3.19670606
+		 -0.69400352 -2.95539832 -0.69384319 -2.9569304 -0.52988607 -0.59437442 -0.47577608
+		 -0.57797259 -0.65672678 -2.72076964 -0.69475067 -2.70557141 -0.52707821 -3.33363676
+		 -0.53022665 -3.33087325 -0.69759923 0.080447167 -0.65980113 0.083428785 -0.47917342
+		 0.16374512 -0.4769716 0.16374512 -0.66653603 0.12395225 -0.66315281 0.12615269 -0.47807783
+		 -0.81782979 -0.47919089 -0.79807973 -0.66109407 -0.71494466 -0.65891486 -0.72550398
+		 -0.47716486 -2.58406401 -0.52836508 -2.59384847 -0.69677788 -2.51681399 -0.6987974
+		 -2.4985137 -0.53024256 -2.44614744 -0.53006697 -2.44614744 -0.69969851 -0.32392338
+		 -0.83246893 -0.065508947 -0.83140892 -3.19562769 -0.85661405 -2.95617676 -0.85759622
+		 -0.57320583 -0.83574766 -2.72518706 -0.86063415 -3.32824969 -0.86041361 0.07761541
+		 -0.83550912 0.16374506 -0.83933014 0.12268738 -0.83741063 -0.79610199 -0.84413701
+		 -0.70821476 -0.84015381 -2.60008526 -0.86471736 -2.51864696 -0.86840826 -2.44614744
+		 -0.87050587 -3.40805936 -1.48788238 -3.37322545 -1.48685682 -3.40805936 -1.31222844
+		 -3.37118649 -1.31536329 -3.40805936 -1.15211427 -3.37001443 -1.15389287 -3.37118649
+		 -0.70070499 -3.37322545 -0.52921104 -3.40805936 -0.52818614 -3.37001443 -0.86217552
+		 -3.40805936 -0.70384008 -3.40805888 -1.0080339909 -3.37119126 -1.0080339909 -3.40805936
+		 -0.86395425 -0.8743425 -0.84640062 -2.44614744 -1.0080337524 -0.87434286 -0.66206676
+		 -0.87434286 -0.47900125 -2.44614744 -1.14556241 -2.44614744 -1.31636965 -2.44614744
+		 -1.48600125 -1.55060363 0.45405659 -1.69146705 0.44597802 -1.72731447 0.25468591
+		 -1.60805488 0.22788993 -2.42770839 0.2278904 -2.30844927 0.25468531 -2.34429646 0.44597778
+		 -2.48516059 0.45405629 -1.57076347 0.62854934 -1.69100547 0.63402003 -2.34475756
+		 0.63401985 -2.46499944 0.62854862 -2.23553801 0.049343489 -2.16242266 0.12282627
+		 -1.87334037 0.12282597 -1.80022526 0.049343728 -2.017881632 -0.0024889987 -2.017881632
+		 0.060879409 -2.090490818 0.091997795 -2.12721968 0.023548571 -1.94527197 0.091998272
+		 -1.90854347 0.023548273 -1.82234788 0.88377213 -1.91057014 0.82907331 -1.78004146
+		 0.75312376 -1.66095638 0.78043932 -2.37480736 0.7804392 -2.25572133 0.75312394 -2.12519336
+		 0.82907343 -2.21341491 0.8837713 -2.017881632 0.93206829 -2.017881155 0.85355294
+		 -1.95815718 -1.46413362 -1.88084531 -1.70211411 -1.75511122 -1.6650908 -1.80686355
+		 -1.46291387 -1.0037949085 -1.64471722 -0.958157 -1.3986913 -1.10831952 -1.41719925
+		 -1.13328195 -1.62439704 -1.9488045 -1.27601027 -1.82052577 -1.26173627 -0.9919489
+		 -1.21339166 -1.12099373 -1.2159574 -1.1969192 -1.84922409 -1.28030038 -1.77571607
+		 -1.6627152 -1.87970686 -1.5896256 -1.79595888 -1.42618799 -1.91992772 -1.31101644
+		 -1.88441002 -1.35511065 -1.81374002 -1.4306252 -1.85212195 -1.54500556 -1.89972329
+		 -1.51049829 -1.82390869 -1.69747424 -0.9852981 -1.86293209 -1.10716867 -1.73359489
+		 -1.12805712 -1.59924412 -1.037648916 -1.09909308 -1.057180524 -1.27902293 -0.95791429
+		 -1.36959171 -1.022619724 -1.22460544 -1.094747543 -1.49163055 -0.91992766 -1.48613274
+		 -1.0039405823 -0.91671556 -2.58774853 -0.73253053 -2.58354926 -0.73161322 -2.49461341
+		 -0.91148674 -2.49436378 -2.71424508 -2.5971427 -2.53006053 -2.60134149 -2.53528953
+		 -2.50795746 -2.71516347 -2.50820637 -1.038040638 -2.58604908 -1.039894104 -2.49345231
+		 -2.4087348 -2.5996418 -2.40688205 -2.50704527 -1.13562942 -2.58506274 -1.13567209
+		 -2.49127913 -2.31114674 -2.59865594 -2.31110406 -2.50487208 -1.2164607 -2.58466029
+		 -1.21606266 -2.49093819 -0.51310784 -2.58852601 -0.50846553 -2.49560165 -2.93366742
+		 -2.60211921 -2.93831015 -2.50919437 -3.078513384 -2.59991837 -3.087737083 -2.50891662
+		 -0.36826277 -2.58632517 -0.3590396 -2.49532366 -0.2694059 -2.58834386 -0.26900953
+		 -2.49493861 -0.31689125 -2.58733916 -0.31259334 -2.49513888 -1.044606328 0.67313892
+		 -1.039629579 0.56926918 -0.83964878 0.56793422 -0.83987159 0.66681963 -2.79123425
+		 0.69400591 -2.79145741 0.59512085 -2.59147859 0.59645671 -2.5865016 0.70032525 -1.17950797
+		 0.67233616 -1.18239796 0.56940621 -2.44871116 0.59659392 -2.45160103 0.69952303 -1.28801394
+		 0.67211467 -1.28890109 0.56784868 -2.34220862 0.5950368 -2.34309673 0.69930172 -2.25322747
+		 0.69957894 -2.25282979 0.59537822 -0.59154946 0.56703371 -0.59587771 0.67038637 -3.035225391
+		 0.6975711 -3.039553881 0.59421951 -3.19624019 0.69382614 -3.2056787 0.59257096 -0.42542353
+		 0.56538564 -0.43486214 0.66664189 -0.32493743 0.6679998 -0.3253338 0.56415039 -0.37378731
+		 0.56476396 -0.3777394 0.66730833;
+	setAttr ".uvtk[250:499]" -3.17737007 -2.60193658 -3.1298852 -2.60093188 -3.13418317
+		 -2.50873184 -3.17776656 -2.50853086 -3.30576754 0.59133548 -3.25731444 0.59194905
+		 -3.25336242 0.69449306 -3.30682063 0.69523799 -1.37788284 0.67239147 -1.37828064
+		 0.56819022 -2.23031521 -2.59825301 -2.23071313 -2.50453162 -1.41979909 -2.44679952
+		 -1.3613075 -2.64082646 -1.21574438 -2.65789151 -1.25751591 -2.45604682 -2.13895059
+		 -2.64082694 -2.080459356 -2.44680047 -2.24274182 -2.4560473 -2.28451324 -2.65789104
+		 -1.50036454 -2.29851437 -1.34780943 -2.2902422 -1.99989343 -2.2985146 -2.15244794
+		 -2.29024172 -1.62011552 -2.21728468 -1.52549529 -2.15964174 -1.88014257 -2.21728587
+		 -1.97476304 -2.15964174 -1.75012898 -2.19707847 -1.75012875 -2.11252546 -1.42525649
+		 -2.90124202 -1.28289914 -2.91284776 -2.075001717 -2.90124154 -2.21735978 -2.91284728
+		 -1.90071726 -3.058740616 -2.014793634 -3.11050963 -1.59954095 -3.05874157 -1.48546481
+		 -3.11051059 -1.75012851 -3.096715212 -1.82577586 -3.077639341 -1.88308215 -3.14573693
+		 -1.75012922 -3.1812942 -1.6744827 -3.077638626 -1.61717653 -3.14573717 -1.62916064
+		 1.90374243 -1.77056003 1.89568508 -1.80695581 1.71981621 -1.68012524 1.73468435 -1.0025545359
+		 1.73468399 -0.87572426 1.71981585 -0.91212016 1.89568508 -1.053519368 1.90374172
+		 -1.55896306 2.032945156 -1.69188631 2.040153027 -0.99079436 2.040153027 -1.12371719
+		 2.032945156 -1.45462239 2.10372114 -1.53706598 2.15394664 -1.14561343 2.1539464 -1.22805715
+		 2.1037209 -1.34133995 2.1213274 -1.34134018 2.19499922 -1.74844337 1.4976691 -1.6244055
+		 1.50778103 -1.058274508 1.50778151 -0.93423629 1.49766982 -1.21013081 1.37055027
+		 -1.1107347 1.32544339 -1.57194543 1.32544327 -1.4725492 1.37055004 -1.34134078 1.33746278
+		 -1.34134018 1.26376796 -1.22549701 1.29474998 -1.27542806 1.35408437 -1.45718324
+		 1.29474902 -1.40725183 1.35408473 -0.8919903 -4.30903721 -0.87287271 -4.30726528
+		 -0.71716601 -4.12373304 -0.93836534 -4.13934851 -1.57246256 -4.28906298 -1.7267555
+		 -4.10433769 -0.79070318 -4.31053591 -0.55973512 -4.1346283 -1.65466809 -4.29171228
+		 -1.88425803 -4.11406851 -0.63549143 -4.3403039 -0.42390236 -4.15231895 -1.81012821
+		 -4.32032347 -2.020215273 -4.13074923 -0.43970338 -4.39346981 -0.29479733 -4.17017174
+		 -2.0063514709 -4.37202168 -2.14945579 -4.14763403 -0.21107359 -4.42037058 -0.14799079
+		 -4.16142893 -2.23521161 -4.39719105 -2.29620385 -4.13778925 -2.48177958 -4.37764788
+		 -2.49216628 -4.11926126 0.035609975 -4.40271044 0.048071519 -4.14438152 0.34931961
+		 -4.40514135 0.45530954 -4.14987564 0.19757995 -4.39758253 0.22257552 -4.14181137
+		 -0.79110509 -3.96820331 -0.92072105 -3.97280097 -1.65165675 -3.94930625 -0.63054639
+		 -3.95167708 -1.81207728 -3.93160653 -0.466059 -3.93283534 -1.97641122 -3.91155767
+		 -0.28032115 -3.91931891 -2.16203427 -3.89667606 -0.050776131 -3.93813348 -2.39172745
+		 -3.91379547 -2.61314607 -3.95122933 0.17032519 -3.97724319 0.42574021 -3.99425292
+		 0.30181316 -3.98812652 -0.43808892 -3.78227305 -0.59259099 -3.79323077 -1.84889066
+		 -3.77285361 -2.0032989979 -3.7607758 -0.77926576 -3.79699421 -1.66226435 -3.77796268
+		 -0.27141306 -3.77067518 -2.16987586 -3.74796557 -0.084295571 -3.78798056 -2.35709763
+		 -3.76391816 -0.95934933 -3.78334641 -2.59930539 -3.79276848 0.15769348 -3.81863141
+		 0.48494992 -3.80599093 0.30705503 -3.81699061 -0.43165311 -3.75713634 -0.58889228
+		 -3.76812959 -1.85241413 -3.74772239 -2.0095617771 -3.73559165 -0.77642483 -3.77114224
+		 -1.66492391 -3.75208426 -0.26106814 -3.74553657 -2.18005371 -3.72275162 -0.071030915
+		 -3.760216 -2.37016416 -3.73605871 -0.95534116 -3.75247478 -2.58977127 -3.76142526
+		 0.1483932 -3.78721285 0.48358884 -3.77969146 0.30381486 -3.78604913 -0.42082897 -3.63387394
+		 -0.59061927 -3.64536452 -1.84984112 -3.62495542 -2.019530773 -3.61224461 -0.75063759
+		 -3.64930034 -1.68986917 -3.63003683 -0.24057768 -3.63623071 -2.19978452 -3.61329937
+		 -0.032633029 -3.64868379 -2.40777731 -3.62425423 -0.90343767 -3.61909604 -2.61830974
+		 -3.6455636 0.17778115 -3.67155409 0.42177364 -3.64681149 0.2966136 -3.6597724 -0.23526151
+		 -3.53144646 -0.43030909 -3.5197866 -2.0093071461 -3.49822354 -2.20441198 -3.50848413
+		 -0.58921772 -3.5361824 -1.85051596 -3.5157578 -0.72269654 -3.53149533 -1.71701086
+		 -3.51202679 -0.82834965 -3.49727941 0.015107398 -3.55979848 -2.45491385 -3.53502464
+		 -2.66638899 -3.53615141 0.22666746 -3.56250978 0.351724 -3.52895761 0.29056975 -3.54734898
+		 -2.79555535 -4.37761545 -2.64374256 -4.37126827 -2.89951158 -4.12154818 -2.66668725
+		 -4.11534834 -2.86871481 -3.96620393 -2.74473333 -3.96108127 -2.92647004 -3.77750993
+		 -2.74865723 -3.78996873 -2.92489171 -3.75122857 -2.74518204 -3.75906229 -2.86205482
+		 -3.61888576 -2.73702717 -3.6328671 -2.73013043 -3.52049804 -2.79111195 -3.50162339
+		 -1.53686631 -3.60090327 -1.61112618 -3.47855067 -1.48589087 -3.73468018 -1.48209798
+		 -3.76558805 -1.52208757 -3.9548409 -1.50568247 -4.12158823 -1.55335975 -4.29098415
+		 -1.98875427 2.52230239 -1.95213675 2.38266397 -1.0730474 2.27568293 -1.2017591 2.42511344
+		 -2.0044407845 2.52099323 -2.13366628 2.37177634 -0.94415361 2.28559709 -1.13447595
+		 2.42829442 -2.071806192 2.52436996 -2.26266313 2.38211083 -0.83300167 2.30097675
+		 -1.0075473785 2.4536593 -2.19884038 2.550143 -2.37389231 2.39783573 -0.72735733 2.3164742
+		 -0.84754425 2.49849844 -2.35895085 2.59547901 -2.4796195 2.41363263 -0.607032 2.31031728
+		 -0.66045219 2.52208352 -2.54622197 2.61956477 -2.60010433 2.40777564 -2.74868941
+		 2.60726285 -2.76108027 2.3955493 -0.44629094 2.29772758 -0.45825428 2.50931859 -0.20124808
+		 2.51350236 -0.11264683 2.30509543 -0.30329296 2.29686165 -0.32552242 2.50625253 -1.96806848
+		 2.24612904 -1.13264179 2.14780378 -2.074394941 2.24351358 -1.00098156929 2.13524175
+		 -2.2062037 2.2313993 -0.86609071 2.12084746 -2.34126139 2.21743822 -0.71382552 2.11100888
+		 -2.49370337 2.20804954 -0.52588052 2.12802815 -2.68180728 2.22556138 -2.86281776
+		 2.25960326 -0.34497949 2.16165757 -0.13580191 2.17739654 -0.23730662 2.17151093 -0.96888375
+		 2.0056335926 -0.84219187 1.99764037 -2.36559176 2.094205856;
+	setAttr ".uvtk[500:749]" -2.23878789 2.10176015 -1.12187409 2.0075850487 -2.085678339
+		 2.10313678 -0.70552248 1.98925209 -2.50238872 2.086237907 -0.55231619 2.0047397614
+		 -2.6556778 2.10215116 -1.93812847 2.090285063 -2.85386443 2.12946868 -0.35423255
+		 2.031622171 -0.085958607 2.023583651 -0.23181427 2.03135848 -0.96568006 1.98508859
+		 -0.83674735 1.9770844 -2.37110877 2.073650122 -2.24206138 2.081203699 -1.11938739
+		 1.98641825 -2.088253736 2.081953526 -0.69686973 1.96872139 -2.51111078 2.065718412
+		 -0.54124027 1.98208487 -2.66681743 2.079506636 -1.94170713 2.064990997 -2.8465209
+		 2.10362458 -0.3616263 2.005812645 -0.086894527 2.0020298958 -0.2342484 2.005988121
+		 -0.96631438 1.88448453 -0.82706088 1.87614727 -2.38118267 1.97265887 -2.24183726
+		 1.98048639 -1.097507834 1.88674688 -2.11057234 1.9822402 -0.67932194 1.87929344 -2.52897787
+		 1.97627449 -0.50896293 1.89097524 -2.69936705 1.98840427 -1.98554695 1.95603752 -2.87491608
+		 2.0084395409 -0.3367011 1.91126776 -0.1365954 1.89274168 -0.23923483 1.90248549 -0.83408612
+		 1.78260398 -0.67422587 1.79346824 -2.53439522 1.89040017 -2.37457585 1.87900519 -0.96449554
+		 1.79503441 -2.24407983 1.89095378 -1.073911428 1.79039085 -2.13464236 1.88587618
+		 -2.048318863 1.85682249 -0.46916261 1.8184936 -2.7393837 1.91594958 -2.92788887 1.91789579
+		 -0.2958121 1.82228208 -0.19313157 1.79570055 -0.24335709 1.81032801 -2.90425229 2.39497948
+		 -2.88159299 2.60448122 -3.0059831142 2.61197543 -2.97057605 2.2696681 -3.095078945
+		 2.40357518 -2.9823544 2.1277895 -3.073600054 2.27518868 -2.98211002 2.10193515 -3.15039968
+		 2.11361527 -2.98818135 1.9967171 -3.15384173 2.09122324 -3.059075594 1.88770819 -2.99352121
+		 1.904212 -3.11590314 1.98194635 -1.22256088 1.86111641 -1.16031218 1.7617445 -1.26589727
+		 1.97009826 -1.26935911 1.99537003 -1.23887491 2.15081835 -1.25436687 2.28715205 -1.21743441
+		 2.42645001 -0.20415287 2.88434577 -0.1740755 2.76768565 0.057575457 2.71577716 0.021398354
+		 2.80568171 -2.66168857 3.50036836 -2.71552682 3.40134335 -2.44101644 3.43033862 -2.39065528
+		 3.5610714 -0.54425377 2.90222454 -0.46241084 2.77000761 -2.10765815 3.39452147 -1.99546838
+		 3.53632188 -2.99271369 3.38415742 -3.020727634 3.34155655 0.31238577 2.63455915 0.2926943
+		 2.67371273 -3.1677556 3.3655169 0.59682429 2.64174747 0.59417385 2.61904192 0.45374581
+		 2.61601949 0.44031391 2.64052749 -0.93302518 2.73861384 -0.80195493 2.67411423 -1.72824168
+		 3.23846078 -1.56823623 3.29548478 -1.072702885 2.58974242 -0.94123083 2.56269765
+		 -1.58222389 3.091184378 -1.42674732 3.10489011 -1.38364077 2.89878488 -1.53725815
+		 2.89894414 -1.79459476 2.90103436 -0.7375204 2.50839949 -1.82478237 3.055640459 -0.57399839
+		 2.60718107 -2.00049614906 3.19155788 -0.31435171 2.66660714 -2.29249549 3.2948544
+		 -0.074886665 2.66552854 -2.56925344 3.32559776 0.14531298 2.63396406 -2.82782197
+		 3.31855965 -3.081341505 3.30568576 0.3606002 2.59793925 0.59751105 2.60001063 0.48118928
+		 2.59676433 -2.15092087 2.90546966 -0.4277117 2.45405436 -2.18991208 3.034213781 -0.30494609
+		 2.53120065 -2.32143617 3.13971019 -0.1312549 2.58856106 -2.51442337 3.22916484 0.059550159
+		 2.61812592 -2.73087454 3.28880668 0.23054631 2.56499672 -2.93549967 3.25027394 -3.13357711
+		 3.20794988 0.39559445 2.50930214 0.63716751 2.51250148 0.51450181 2.51156616 -0.19442765
+		 2.31684732 -0.1679184 2.39553428 -0.080375955 2.470644 -2.58892751 3.099755526 0.037340812
+		 2.53522038 -2.7162931 3.19007277 0.18095328 2.54485273 -2.88090062 3.22038126 0.30450264
+		 2.48024392 -3.032210588 3.16224146 -3.20844436 3.11337018 0.4502736 2.42113948 0.66960049
+		 2.44369912 0.55753851 2.4328568 0.012228989 2.27583623 0.018143225 2.29148412 0.04993175
+		 2.35280347 -2.7551384 2.9810102 0.13216251 2.44231081 -2.83819509 3.095394373 0.25005287
+		 2.46887755 -2.97081685 3.14185214 0.355391 2.38893938 -3.10310745 3.063560247 -3.26049662
+		 2.98615265 0.48227653 2.30733848 0.72015667 2.34236693 0.59801888 2.32534552 -3.34849405
+		 3.38767838 -3.18655086 3.3389895 -3.22082567 3.32038784 -3.34842706 3.36109567 -3.27063394
+		 3.22637057 -3.35479069 3.33954954 -2.47767019 2.90687633 -3.33079219 3.14114213 -3.41221929
+		 3.24370456 -2.72658348 2.90593553 -2.72183394 2.88707113 -2.49781203 3.0013065338
+		 -3.53064418 3.058143377 -3.39180493 3.022301435 -3.45881319 3.16851377 -0.77855855
+		 2.37929606 -0.47371492 2.34791541 -0.99860674 2.40290213 -1.12985945 2.41791344 -0.069561198
+		 4.065797806 0.10821176 4.2986598 -0.037833571 4.36377048 -0.15057291 4.10977364 -0.0057886075
+		 3.99924374 0.20951359 4.17494059 -0.16868593 4.38230658 -0.23112924 4.13948393 0.044102989
+		 3.92936563 0.26188108 4.053601265 -0.43238956 4.18827581 -0.39030576 4.13595581 0.082655072
+		 3.77488685 0.1442176 3.74808311 -0.53189427 4.060213089 -0.49628687 4.061715603 0.03897386
+		 3.65308571 0.046909861 3.61834192 -0.063131139 3.57381082 -0.052494496 3.52311826
+		 -0.59755033 3.93922663 -0.54584682 3.94232774 -0.2290004 3.54708242 -0.27740124 3.47055197
+		 -0.5889793 3.70841742 -0.52791125 3.77527761 -0.4216648 3.60458207 -0.45661902 3.55879569
+		 -0.35801423 3.50578809 -0.3230851 3.55936933 -0.53374034 3.63994193 -0.49126166 3.68775773
+		 0.22525464 4.45197296 0.088089079 4.51691866 0.32405522 4.33677769 -0.083301544 4.51749945
+		 0.36978942 4.17159986 -0.40984637 4.37421179 0.31763509 3.8188355 -0.59961635 4.15180874
+		 0.15311657 3.57715583 -0.67303544 3.95293784 -0.019372836 3.45391655 -0.27111492
+		 3.39901519 -0.65964347 3.6956265 -0.51369685 3.48402953 -0.39198533 3.4408257 -0.58745354
+		 3.59004998 0.50922281 4.64366388 0.4417899 4.52920866 -1.45979357 3.31025028 0.26498717
+		 4.692801 0.21767916 4.5586381 0.30698732 4.55313921 0.36397573 4.69035912 -1.57705319
+		 3.3969686 -1.43479633 3.39616489 -1.34579945 3.59962249 -1.50996864 3.67649698 -0.020761777
+		 4.72409821 -0.0038801283 4.54361296 -1.23347521 3.81160998 -1.39368033 3.92743325
+		 -0.29621413 4.69942904;
+	setAttr ".uvtk[750:999]" -0.24134766 4.50951529 -0.51025122 4.64293337 -0.44959548
+		 4.48660612 -1.1415472 3.99987626 -1.26817441 4.10981083 -0.70519996 4.60974741 -0.62693554
+		 4.47300863 -1.06881392 4.16219282 -1.17103827 4.28209257 -0.86946446 4.5526495 -0.77169704
+		 4.44654989 -0.99497598 4.28950071 -1.061764836 4.41740084 -0.98075694 4.5065608 -0.8977924
+		 4.3885808 0.39194396 4.43704653 -1.35126281 3.29712248 0.20596303 4.4494853 0.28267297
+		 4.44655704 -1.32810187 3.37031293 -1.26103759 3.56232619 0.0025791088 4.45123768
+		 -1.18266094 3.74563289 -0.19642542 4.43939877 -0.38405457 4.42399693 -1.10476828
+		 3.91702437 -0.54804498 4.40373135 -1.03027904 4.064522743 -0.69226331 4.36822796
+		 -0.94812113 4.1882596 -0.83556229 4.30009651 0.39537737 4.38855982 -1.28568292 3.28930664
+		 0.18017747 4.37886333 0.26787192 4.38219547 -1.25291896 3.37072015 -1.19663215 3.53275204
+		 0.0086550871 4.38062811 -1.13458812 3.69041705 -0.16070147 4.37550068 -0.33114162
+		 4.36220121 -1.064485073 3.84633756 -0.49455002 4.33605003 -0.98465556 3.99129844
+		 -0.63837516 4.28981113 -0.89253241 4.11103296 -0.77699274 4.21682358 0.41130617 4.33634233
+		 -1.22937548 3.25562978 0.19324739 4.31206799 0.28054544 4.31782198 -1.19446635 3.33585024
+		 -1.13991666 3.49079251 0.028984614 4.31307411 -1.086074591 3.64280128 -0.13227905
+		 4.3137536 -0.28758982 4.30661631 -1.026883841 3.78656387 -0.44973102 4.27921677 -0.94630826
+		 3.92990613 -0.58618718 4.23577785 -0.85931396 4.043653011 -0.73433912 4.15619183
+		 0.43190405 4.28478527 -1.18054307 3.21481013 0.21583219 4.2509737 0.30246666 4.25807047
+		 -1.14459419 3.29395127 -1.088626504 3.45278049 0.047434039 4.25195932 -1.039765716
+		 3.60127401 -0.10883908 4.25614166 -0.25982526 4.2525382 -0.9853639 3.74215889 -0.40687475
+		 4.23136997 -0.91575634 3.87340212 -0.54526639 4.19039583 -0.83042866 3.98980308 -0.70118642
+		 4.10905695 0.45338902 4.24295044 -1.14654768 3.16870522 0.25308296 4.20088434 0.33437482
+		 4.21049976 -1.11003447 3.24196887 -1.049597979 3.40154839 0.082467169 4.19791842
+		 -1.0024082661 3.54887986 -0.072147369 4.20327997 -0.21884774 4.2031951 -0.95276529
+		 3.68692017 -0.36512581 4.18840122 -0.88941807 3.81959009 -0.51208979 4.1489625 -0.80264223
+		 3.94457769 -0.67266327 4.068514347 0.49902484 4.17711878 -1.091395974 3.10486341
+		 0.26164055 4.12268591 0.37583086 4.13702202 -1.039323568 3.20749593 -0.98986107 3.35632968
+		 0.10484698 4.12641764 -0.94506478 3.49995613 -0.045470402 4.13278198 -0.18410121
+		 4.13843012 -0.90354377 3.63233924 -0.32072845 4.13265848 -0.85194886 3.75897384 -0.46591535
+		 4.10567331 -0.77749693 3.88649464 -0.64258254 4.025755882 0.56925911 4.076488972
+		 -1.0082988739 3.015028477 0.31413159 4.017189503 0.43231091 4.028460979 -0.95776361
+		 3.12245059 -0.89100343 3.31075788 0.11434093 4.017975807 -0.86599231 3.45450854 -0.029405631
+		 4.043003559 -0.16458119 4.089333534 -0.86392689 3.59738421 -0.34998181 4.023760319
+		 -0.73956239 3.74971676 -0.44829199 3.96555066 -0.65155405 3.82256985 -0.55600351
+		 3.902704 -1.60819864 3.30297589 -1.61332345 3.15049338 -1.48281419 3.17528939 -1.37922978
+		 3.19106579 -1.33475208 3.17145276 -1.29098701 3.13881421 -1.24941695 3.10200906 -1.21730077
+		 3.067651987 -1.099770188 2.90235829 -1.17075706 3.0024585724 -2.14768887 3.79527712
+		 -2.15659165 3.83838558 -2.26286006 3.81582522 -2.26824403 3.788275 -1.93238878 3.90594292
+		 -2.0077826977 3.88688207 -2.050051928 3.85981011 -2.034170389 3.83666921 -2.38906455
+		 3.81126499 -2.31236219 3.82380962 -2.46675086 3.91141462 -2.56073546 3.87684202 -1.80092239
+		 4.034427166 -1.90092158 4.028794289 -2.59086514 4.094254017 -2.78625393 4.11051559
+		 -1.68682945 4.33833313 -1.85966992 4.24578619 -1.78492749 4.48279238 -1.92885971
+		 4.38019323 -2.58079076 4.24515295 -2.75364089 4.28210163 -2.010011196 4.60186434
+		 -2.051557541 4.48104 -2.50826001 4.38645315 -2.59438658 4.4808259 -2.1999228 4.69406128
+		 -2.18498302 4.53476572 -2.40716505 4.48874187 -2.4567318 4.64086485 -2.33627772 4.70583534
+		 -2.30112386 4.53611851 -2.27200341 4.39553165 -2.20903659 4.39253664 -2.32859492
+		 4.36776876 -2.11990094 4.364779 -2.39936018 4.30692339 -2.038200378 4.29463816 -2.44646168
+		 4.21015406 -1.96725976 4.19537258 -2.47209692 4.090752602 -2.41941404 3.94557309
+		 -1.9579438 4.041350365 -2.2815249 3.86620784 -2.052946568 3.91350532 -2.16037059
+		 3.85671806 -2.23239708 3.85263634 -2.092627525 3.88147473 -1.75971222 6.23366737
+		 -1.7147913 6.20365858 -1.25706387 6.56743336 -1.2392087 6.60656738 -1.83095503 6.14863968
+		 -1.8069824 6.10020208 -1.11405563 6.46546221 -1.11497545 6.49127817 -1.98238492 5.99870491
+		 -1.98244119 5.96627045 -0.89904863 6.36753941 -0.88009268 6.39423561 -2.27327132
+		 5.86718464 -2.24836421 5.83444691 -0.64752775 6.31051159 -0.62679505 6.33007383 -2.58863807
+		 5.77627993 -2.56181145 5.75256586 -2.91131663 5.78347635 -2.84977031 5.75181913 -0.41840541
+		 6.3173604 -0.37025654 6.34413671 -3.22731018 5.82159138 -3.11469054 5.77483654 -0.20822991
+		 6.34251261 -0.11983742 6.38261938 0.22376002 6.30927324 0.19346248 6.25746584 -3.36256719
+		 5.75372696 -0.010475295 6.33211851 0.044088185 6.36738443 -1.54296374 6.1127038 -1.34111762
+		 6.46819687 -1.69740248 5.97898006 -1.16188002 6.38601637 -1.91910768 5.8684907 -0.93426347
+		 6.30303049 -2.20148706 5.75490522 -0.68613869 6.2543273 -2.51103234 5.68360233 -2.787323
+		 5.7074604 -0.46694285 6.28045654 -3.053579092 5.74663353 -0.2561214 6.3184967 0.16751753
+		 6.2137475 -3.31434202 5.71329737 -0.047799051 6.29870605 -1.33052433 6.0066618919
+		 -1.48812044 6.37645197 -1.50908685 5.86972618 -1.25672364 6.29067469 -1.79612708
+		 5.75264645 -0.9931578 6.19529009 -2.1231215 5.6220603 -0.7362029 6.15241337 -2.44401026
+		 5.557693 -2.74943471 5.65912771 -0.49584073 6.24102306 -3.046700716 5.71275377 -0.2607196
+		 6.29136419 0.14440097 6.17522478 -3.3036201 5.66900444 -0.055186503 6.2631917 -1.12849379
+		 5.90616941 -1.64637399 6.25135612;
+	setAttr ".uvtk[1000:1249]" -1.30532491 5.71904469 -1.36355805 6.12804317 -1.6553719
+		 5.55278921 -1.05161953 5.96960878 -2.04051733 5.34107685 -0.81800622 5.95002174 -2.33303213
+		 5.30692625 -2.77458739 5.64294338 -0.4754101 6.22879696 -3.11020923 5.67722082 -0.20927562
+		 6.26473427 0.13245015 6.15517855 -3.32942486 5.6229763 -0.033467412 6.22723722 -3.43251491
+		 5.79578257 -3.65574217 5.71549797 -3.61558819 5.65168428 -3.58123159 5.59784889 -3.53481507
+		 5.52573967 -3.55063605 5.55042315 -1.63368654 6.48083639 -1.79185247 6.39572048 -1.46739364
+		 6.57064772 -1.3330183 6.64741039 -1.29802513 6.67241526 -2.86920142 5.76806688 -2.85614657
+		 5.83413172 -2.95372057 5.8795743 -3.026115656 5.82872105 -2.53847861 5.81619692 -2.66808748
+		 5.84654856 -2.74862361 5.83904696 -2.70100951 5.76447964 -3.15676212 5.93836737 -3.025351048
+		 5.91714191 -3.16742063 6.11740685 -3.26321006 6.1157999 -2.37254548 5.93980646 -2.4605248
+		 5.97772408 -3.17639685 6.32885981 -3.27364874 6.35043335 -2.27364898 6.1528368 -2.37179828
+		 6.16987371 -2.27540088 6.39010334 -2.37881231 6.40527964 -3.080373526 6.54390669
+		 -3.18178701 6.56920195 -2.4081583 6.62951183 -2.50199175 6.55594635 -2.90914679 6.63639927
+		 -2.96794844 6.74012518 -2.53353834 6.71448469 -2.60346198 6.59669542 -2.79980445
+		 6.6354928 -2.81967402 6.77102423 -2.67160535 6.76806688 -2.69577599 6.64573622 -2.72004247
+		 6.5229249 -2.66643167 6.50212574 -2.77753687 6.52407789 -2.56829095 6.45850182 -2.88489318
+		 6.5210619 -2.45519209 6.34507608 -3.032633781 6.45917654 -2.42661834 6.18059778 -3.12161708
+		 6.31792736 -3.12897992 6.15231276 -2.48280048 6.024629593 -3.046753883 5.99465799
+		 -2.61880946 5.91009808 -2.84838867 5.87338972 -2.9600358 5.92464113 -2.72564077 5.87832499
+		 -1.32200491 7.29945087 -1.078464508 7.29051304 0.22671951 6.5143919 0.024926219 6.43104267
+		 -1.34177089 7.12596941 -1.13273609 7.063171864 0.081694886 6.70513439 -0.014415946
+		 6.59478998 -1.36458516 6.95916748 -1.257985 6.85898399 -0.15199991 6.8829236 -0.16998903
+		 6.77811098 -1.50106692 6.76130819 -1.47272491 6.65884113 -0.46931627 6.95315838 -0.50457269
+		 6.87703514 -1.82402349 6.6295619 -1.78136659 6.55735302 -2.15255165 6.65644836 -2.098106384
+		 6.58491325 -0.78182513 6.89414358 -0.82888216 6.81751108 -2.41541314 6.78149176 -2.37257409
+		 6.71932316 -1.041603565 6.73299217 -1.078042507 6.66684151 -1.55746484 6.36626387
+		 -1.56527638 6.38762522 -2.6151011 6.87657118 -1.26731384 6.55229473 -1.27270877 6.51316357
+		 -0.85780281 7.28312635 0.44785437 6.56165886 -0.90805751 7.038192272 0.25391525 6.7692914
+		 -1.080278397 6.81232834 -0.050820194 6.97271204 -1.36313176 6.57961273 -0.41281375
+		 7.068742752 -1.71364307 6.44801235 -2.071160316 6.52313471 -0.7611652 6.95831776
+		 -2.37418747 6.68300915 -1.04683125 6.76897478 -1.58120203 6.43118 -2.61516547 6.83517981
+		 -1.27150595 6.59348536 -0.62141794 7.27739191 0.67378497 6.62490129 -0.67701739 6.99779892
+		 0.53150666 6.87918472 -0.79320234 6.73068094 0.10264771 7.17132092 -1.19068217 6.39734745
+		 -0.33964142 7.21494961 -1.62628686 6.30986834 -2.052757978 6.40861368 -0.75426912
+		 7.074139118 -2.36735487 6.63703108 -1.044615388 6.81541824 -1.59590042 6.47937965
+		 -2.6448245 6.80715322 -1.30382097 6.61842394 -2.62436604 6.91495705 -2.92226052 7.032702446
+		 -2.92789841 7.010675907 -2.94921827 6.91635275 -2.93940091 6.96576262 0.52229929
+		 6.32288456 0.75700605 6.35215998 0.3034071 6.29352951 0.061899818 6.26034451 -4.53320599
+		 0.49591836 -4.44271421 0.55871564 -4.41197348 0.80466038 -4.50999212 0.81414825 -3.55424142
+		 0.44425049 -3.63318849 0.50329763 -3.78670001 0.29882681 -3.75455642 0.18819803 -4.44723272
+		 0.28999051 -4.35721207 0.37262246 -3.96788716 0.21857327 -3.95849395 0.096725993
+		 -4.38407469 0.15910161 -4.32076883 0.26728821 -4.066270828 0.16668302 -4.094067097
+		 0.044413745 -4.24830484 0.078390203 -4.19669199 0.20875838 -4.12155628 0.40005261
+		 -4.20816135 0.44306716 -4.028792858 0.37247837 -4.2897377 0.4882699 -3.93856263 0.34902886
+		 -4.36541224 0.59802622 -3.80914664 0.37642524 -4.36647701 0.78950757 -3.67734218
+		 0.52233225 -4.26809692 1.0047143698 -4.31901217 1.065134048 -3.52576971 0.7633971
+		 -3.60392642 0.75223404 -4.12112141 1.078590035 -4.1741128 1.14015305 -3.58484077
+		 0.91361457 -3.66548204 0.90230614 -3.84394312 1.11654747 -3.85935092 1.077873349
+		 -3.723701 0.98210293 -3.6935792 1.029369831 -4.024049759 1.10019696 -4.014183044
+		 1.15547776 -3.63043833 0.69806278 -4.28462505 0.94666427 -3.65510631 0.84943914 -4.1642952
+		 1.045273304 -3.86569238 1.061996698 -3.72438478 0.96250063 -4.036812305 1.085305333
+		 -6.28828526 2.8705914 -6.19016075 2.82762194 -6.033172131 2.90027857 -6.04174614
+		 2.97597313 -5.8639102 2.86457825 -5.77788544 2.92840934 -6.42630577 2.73425436 -6.33538342
+		 2.69309282 -5.69227695 2.765944 -5.61286545 2.82640028 -6.50361395 2.58268809 -6.38310385
+		 2.58634758 -5.6218853 2.67257833 -5.50361109 2.69596839 -6.47726011 2.3894341 -6.32449341
+		 2.42771411 -5.64352655 2.50485373 -5.48607016 2.50171638 -6.27139235 2.18463397 -6.21698618
+		 2.28140068 -5.71558046 2.33819914 -5.64090824 2.25605464 -6.16274214 2.050088644
+		 -6.13312721 2.1674552 -5.77182722 2.20838189 -5.71670914 2.10061574 -6.061026096
+		 2.017410755 -6.050317764 2.16021156 -5.85091686 2.18279958 -5.94726515 2.14191294
+		 -5.92846823 1.97596872 -5.80853796 2.046012163 -4.26610565 4.04818964 -4.2227335
+		 4.38187408 -4.26950598 4.39454079 -4.29964733 4.019602776 -4.31815815 4.38779354
+		 -4.33111 4.048250675 -4.20029449 4.093048096 -4.16415215 4.41446877 -4.37058687 4.43357372
+		 -4.39231968 4.10961533 -4.14725494 4.092746258 -4.10246038 4.42150736 -4.42948437
+		 4.45506191 -4.44525051 4.1224227 -4.031618118 4.44652748 -4.0095329285 4.60167027
+		 -4.48841429 4.65159416 -4.49869585 4.49517632 -3.91726661 4.57918453 -3.91481471
+		 4.726686 -4.56040812 4.79529381 -4.5889287 4.65072393 -3.81892991 4.59359884 -3.8334775
+		 4.73907328 -4.63685226 4.82508087;
+	setAttr ".uvtk[1250:1499]" -4.68405247 4.68632364 -3.80084586 4.73644543 -3.78107166
+		 4.58841228 -4.66915607 4.82956123 -3.75837684 4.73325491 -3.73010015 4.58405685 -4.72199488
+		 4.68944931 -4.19432831 4.66928196 -4.24469233 4.66174889 -4.29266024 4.67837715 -4.14011049
+		 4.6656189 -4.34625006 4.68680429 -4.078307629 4.67138672 -4.40528584 4.70649242 -3.99375367
+		 4.80402565 -4.46453285 4.85392523 -3.91177773 4.87386227 -4.53217506 4.94031811 -3.83920836
+		 4.88188696 -4.60073614 4.96392536 -3.8089931 4.88330364 -4.62979174 4.97181416 -3.76991343
+		 4.88750792 -4.16352177 4.97324133 -4.21472359 4.96544695 -4.26296043 4.98607731 -4.1093688
+		 4.97186947 -4.31594229 4.99617958 -4.046042919 4.9801178 -4.37576103 5.017972946
+		 -3.97170591 5.04076004 -4.4377203 5.091539383 -3.90466499 5.024710178 -4.50642633
+		 5.090004921 -3.83861089 5.021705151 -4.5710063 5.10119152 -3.81018567 5.021286011
+		 -4.598804 5.10682011 -3.77465034 5.023406982 -4.13019943 5.24421597 -4.23866987 5.25889444
+		 -4.07421875 5.25231934 -4.29135799 5.27757406 -4.008893013 5.2542758 -4.35417366
+		 5.29296017 -3.93781352 5.2525177 -4.42319345 5.30596018 -3.86488652 5.24354076 -4.4955225
+		 5.31224298 -3.80772877 5.22615623 -4.55464506 5.3074789 -3.78393102 5.2174325 -4.58027124
+		 5.30400085 -3.75336981 5.20986938 -4.10462856 5.47189045 -4.15960503 5.47332859 -4.21337843
+		 5.48670959 -4.045895576 5.47539711 -4.26990271 5.50194931 -3.97675967 5.47354221
+		 -4.33749628 5.51421785 -3.90072227 5.48244858 -4.40930986 5.5385046 -3.82267642 5.48863173
+		 -4.48356295 5.56057215 -3.75604033 5.48683977 -4.54841137 5.57306385 -3.72533417
+		 5.48746014 -4.57898951 5.58017874 -3.68583798 5.49273872 -4.075112343 5.66713905
+		 -4.13831758 5.66900635 -4.20044804 5.68297625 -4.0083093643 5.66455269 -4.26626682
+		 5.69403982 -3.93358827 5.66537094 -4.33902216 5.71010399 -3.85209751 5.67249489 -4.41703224
+		 5.73369741 -3.78870678 5.68066835 -4.47624969 5.75524139 -3.71768832 5.70668983 -4.53991604
+		 5.79579306 -3.68497252 5.72118282 -4.56942034 5.81688309 -3.64294243 5.74442673 -4.054909706
+		 5.82544184 -4.12122726 5.82798338 -4.18658352 5.84138489 -3.98543143 5.8254385 -4.25450039
+		 5.85562229 -3.90973806 5.82868338 -4.3276701 5.87437916 -3.83303571 5.82919025 -4.40231037
+		 5.89072227 -3.76670718 5.83858967 -4.46417952 5.91409302 -3.69521832 5.86700296 -4.52776623
+		 5.95708847 -3.65829873 5.88714647 -4.56031513 5.98458433 -3.61598587 5.91242266 -4.040549278
+		 5.96338367 -4.1064477 5.96438313 -4.17114782 5.97882557 -3.97203898 5.96160603 -4.23862457
+		 5.99119663 -3.89818144 5.96221733 -4.3107686 6.0072536469 -3.81968284 5.96860313
+		 -4.38621998 6.030222416 -3.76137233 5.99610949 -4.43651342 6.069188595 -3.70051813
+		 6.030547142 -4.48814726 6.1156311 -3.66174102 6.048731327 -4.52248907 6.14162493
+		 -3.60632825 6.062970638 -4.028122902 6.079114914 -4.094714165 6.072745323 -4.15890455
+		 6.093530178 -3.96166396 6.077133179 -4.22430611 6.10574579 -3.88855958 6.083036423
+		 -4.29454803 6.12698555 -3.81342793 6.092812061 -4.36589479 6.1523757 -3.75359178
+		 6.10614777 -4.42075109 6.17801714 -3.69816089 6.1158061 -4.47227859 6.19937229 -3.66203213
+		 6.1208005 -4.50674343 6.21195745 -3.60695362 6.11819839 -4.022449017 6.18948889 -4.083797455
+		 6.17418718 -4.14143467 6.20162249 -3.95842814 6.18637657 -4.20459747 6.21250486 -3.88617253
+		 6.19885588 -4.2725935 6.24014759 -3.81104875 6.21494675 -4.34235764 6.27186584 -3.7491858
+		 6.2071352 -4.40353966 6.27734089 -3.70582271 6.19749022 -4.44728327 6.27750206 -3.66448689
+		 6.200387 -4.48722267 6.28916597 -3.61341166 6.20434809 -4.019294739 6.32708836 -4.068787575
+		 6.30491209 -4.11744118 6.33569431 -3.96336436 6.29993486 -4.1767292 6.32139921 -3.89284015
+		 6.30898285 -4.24351072 6.34557343 -3.81728721 6.32149458 -4.31431389 6.37417936 -3.74734426
+		 6.30125189 -4.38528919 6.36940432 -3.71482015 6.28144026 -4.42034864 6.35756207 -3.67230153
+		 6.29006815 -4.46020317 6.37509298 -3.62600541 6.29551506 -4.011390686 6.57621479
+		 -4.047623158 6.56208801 -4.080856323 6.57931471 -3.96681333 6.49376631 -4.13810396
+		 6.50907898 -3.90635657 6.41542339 -4.20898342 6.44581842 -3.83128929 6.42328358 -4.2796874
+		 6.47008419 -3.75420475 6.39782953 -4.35844612 6.46200418 -3.71000028 6.37305975 -4.40597296
+		 6.44802475 -3.67028117 6.37595367 -4.44432831 6.45934868 -3.62429643 6.384552 -4.0042848587
+		 6.86140156 -4.024898529 6.87464905 -4.04408884 6.85759163 -3.97673559 6.72415066
+		 -4.087805271 6.73103285 -3.91927981 6.63853455 -4.15498114 6.66074276 -3.85048556
+		 6.58660555 -4.2285471 6.62519264 -3.76362586 6.55058527 -4.3185482 6.60906744 -3.70149446
+		 6.49059486 -4.39008141 6.56454706 -3.66642213 6.49370718 -3.61972022 6.49793816 -4.71116209
+		 4.83555603 -4.77252626 4.69615698 -4.66704941 4.98423195 -4.63319683 5.11635017 -4.61365414
+		 5.30303717 -4.18522215 5.24443197 -4.6188159 5.59362698 -4.60770035 5.84841871 -4.59867573
+		 6.018158913 -4.57461596 6.16745758 -4.5619173 6.22126293 -4.5369277 6.30398941 -4.5050602
+		 6.39028835 -4.48805714 6.47755814 -4.42401695 6.57507896 -4.46897364 6.58920717 -5.14692116
+		 -0.081301309 -5.10255814 0.21353611 -5.18860674 0.21175998 -5.23328638 -0.10217042
+		 -5.27155972 0.2349636 -5.31180334 -0.059869952 -5.039803028 -0.06136889 -4.98328686
+		 0.26593322 -5.37463331 0.31479052 -5.41080046 -0.013864709 -4.70289803 0.39493236
+		 -4.69487524 0.6033113 -4.85596228 0.44453749 -4.89207268 0.16870511 -5.4792552 0.24276456
+		 -5.44709158 0.51721436 -5.56360054 0.70977527 -5.60734224 0.50735724 -4.51100159
+		 0.63113046 -4.540205 0.74431497 -5.67905235 0.88333476 -5.73527861 0.78071815 -4.38629007
+		 0.74403006 -4.40427732 0.8456434 -5.78514385 1.014429808 -5.82801628 0.91892874 -5.85434103
+		 1.097495317 -4.23928118 0.9547978 -4.22859859 0.90286964 -5.90679312 0.99778074 -4.31629848
+		 0.90828037 -4.29002476 0.7997607 -5.035416126 0.57140434 -5.1390748 0.56877232 -5.24047565
+		 0.59569424 -4.93441153 0.6575976 -5.31694221 0.70317501;
+	setAttr ".uvtk[1500:1749]" -4.67400503 0.85242945 -4.80708694 0.75151461 -5.41764593
+		 0.82555181 -5.52174139 0.95648938 -4.53419209 0.94992095 -5.63299227 1.085887194
+		 -4.41383266 1.029608488 -5.72919273 1.19335377 -5.78293657 1.26581728 -4.28260374
+		 1.10671473 -4.3422451 1.086776018 -4.99787998 0.96445066 -5.091890812 0.9533636 -5.18016672
+		 0.98551923 -4.89044714 1.01243341 -5.27215433 1.058222413 -4.6512804 1.14707613 -4.77095413
+		 1.078003645 -5.37131453 1.1517415 -5.46962976 1.24946845 -4.52865791 1.22018027 -5.56964207
+		 1.3519088 -4.42651653 1.27609408 -5.65350914 1.43132424 -5.7110939 1.48097944 -4.30872726
+		 1.32899487 -4.35835838 1.31041563 -4.9447279 1.33405328 -5.04291153 1.33815551 -5.13899231
+		 1.35729575 -4.84428263 1.36470294 -5.22852135 1.41129613 -4.63466883 1.45289361 -4.73867655
+		 1.40584183 -5.3202343 1.47788501 -5.40883636 1.55045795 -4.53545713 1.50241017 -5.49218273
+		 1.62399507 -4.44206381 1.54042673 -5.57270432 1.68442285 -5.62826061 1.72131515 -4.33412886
+		 1.57344675 -4.37925768 1.56278062 -4.90152788 1.65812683 -5.099297047 1.68184566
+		 -4.80573845 1.67561436 -5.18776083 1.72209549 -4.61714983 1.74856508 -4.70837355
+		 1.70860839 -5.27370167 1.77893972 -5.3519578 1.84131956 -4.5273819 1.78710675 -5.4292016
+		 1.90166163 -4.45069313 1.8143487 -5.49671936 1.94725513 -5.54836082 1.96934724 -4.32360029
+		 1.81143904 -4.39532566 1.82322752 -4.86457348 1.95554447 -4.96286726 1.96468246 -5.060693741
+		 1.97898984 -4.77078772 1.96719778 -5.14879036 2.013520718 -4.58837843 2.047751427
+		 -4.67758894 2.003715992 -5.22998953 2.07260704 -5.30540705 2.13846326 -4.49701595
+		 2.086830378 -5.38409233 2.19979167 -4.41797256 2.10803986 -5.45535278 2.24005747
+		 -5.49877405 2.24681163 -4.29029226 2.093944788 -4.37458563 2.10437298 -4.82847404
+		 2.239604 -4.92840958 2.23956227 -5.025454998 2.26321101 -4.72770834 2.26086545 -5.11778307
+		 2.30930328 -4.53446198 2.3604722 -4.62989902 2.30680346 -5.20099926 2.37871861 -5.27983999
+		 2.45517468 -4.42035246 2.41669822 -5.37586737 2.53873515 -4.33286619 2.44576406 -5.45297194
+		 2.5889833 -5.51022291 2.60452485 -4.17108393 2.42084098 -4.27363348 2.446769 -4.77322054
+		 2.53241444 -4.89454937 2.51380897 -5.0074896812 2.5610826 -4.66493845 2.56893826
+		 -5.1028018 2.62381959 -4.4272089 2.71536875 -4.56117296 2.62618876 -5.18848991 2.70556521
+		 -5.29519606 2.82602811 -4.30835056 2.79834485 -5.38905573 2.93650603 -4.22103453
+		 2.84782076 -5.46112919 3.0063169003 -5.54425049 3.048309326 -4.059464931 2.85577989
+		 -4.12997866 2.86767936 -4.73679733 2.84068203 -4.85423326 2.83112788 -4.96621418
+		 2.86851907 -4.60942888 2.88757682 -5.077447891 2.94589686 -4.40045643 3.06010747
+		 -4.5104003 2.96302199 -5.15390348 3.044114113 -5.23540974 3.16614246 -4.28471851
+		 3.1914928 -5.31536198 3.32142401 -4.20488024 3.2765739 -5.37135077 3.42370391 -4.11900663
+		 3.34429336 -4.15882254 3.29380107 -5.3494978 -0.3578409 -5.27608204 -0.39465377 -5.43161964
+		 -0.296422 -5.52022171 -0.072592489 -5.63533449 0.37292495 -5.78777313 0.71862322
+		 -5.88067913 0.85005665 -4.21679115 0.8638956 -5.93320227 0.98352975 -4.35210752 0.66564256
+		 -4.27288628 0.78117347 -4.47526073 0.55769831 -4.70878029 0.25668481 -4.94816065
+		 -0.14564554 -5.09419632 -0.34021172 -5.18995762 -0.37936908 -5.67016459 1.74194884
+		 -5.62139082 1.97584248 -5.00031757355 1.67058134 -5.58417273 2.25822282 -5.61715603
+		 2.60510325 -5.61628866 3.053568363 -5.41201115 3.451478 -5.4391923 3.50902414 -5.96118975
+		 1.080412865 -5.93948078 1.11384106 -5.83601427 1.29891264 -5.75512028 1.51016796
+		 -5.91650724 1.16136527 -5.91052818 6.023037434 -6.19953775 5.92593288 -6.1823287
+		 5.79665232 -5.82643032 5.79020357 -6.20428085 5.6680789 -5.91894388 5.56057835 -6.10077477
+		 6.17554235 -6.24909973 6.033339024 -6.25777388 5.56253672 -6.11460257 5.4150753 -6.30071926
+		 6.29161835 -6.34898281 6.13773727 -6.36118698 5.46174383 -6.31844234 5.30623341 -6.48505497
+		 6.30453873 -6.49945784 6.20582151 -6.51383257 5.39904976 -6.50296497 5.29988623 -6.69113111
+		 6.2561779 -6.67575264 6.20731831 -6.68988752 5.40379858 -6.70699596 5.35551548 -6.89117622
+		 6.099927902 -6.86642122 6.081780434 -6.87573481 5.53601408 -6.90110779 5.51874781
+		 -6.92094374 5.98634195 -6.92913294 5.97439194 -6.92697239 5.63329029 -6.94555807
+		 5.81019163 -6.98005915 5.81079388 -6.93474865 5.64551783 -4.58481503 8.26076984 -4.51249504
+		 8.31838131 -4.76169014 8.41404724 -4.78284979 8.34916687 -5.019356728 8.48371792
+		 -4.99492216 8.3945446 -4.43353081 8.13746929 -4.36861134 8.17322254 -5.22115755 8.45132065
+		 -5.18980789 8.38416195 -4.29937696 7.93881893 -4.25111008 7.98156595 -5.42906952
+		 8.36580563 -5.41529322 8.30281544 -4.20946884 7.67869091 -4.16199636 7.69262362 -5.67142153
+		 8.18496704 -5.6413312 8.14567375 -4.19532681 7.38646173 -4.15292645 7.37703371 -5.86526203
+		 7.93556261 -5.82509851 7.91781616 -4.3278141 7.033455372 -4.2908206 7.016180515 -5.96713305
+		 7.56309843 -5.92765331 7.55523348 -4.40756083 6.86519718 -4.43827009 6.88984108 -5.96193314
+		 7.37245369 -4.61552095 6.65252161 -4.6471715 6.68090868 -5.9226079 7.37431526 -4.38194132
+		 8.47559738 -4.68779135 8.64058495 -5.032099724 8.68767834 -4.22597837 8.27512741
+		 -5.27626991 8.61773205 -4.10106468 8.026569366 -5.52372169 8.49064159 -4.033318996
+		 7.72657776 -5.75532246 8.28833866 -4.041629314 7.38732386 -5.948915 8.0096855164
+		 -4.20315504 7.014560699 -6.038831234 7.61353779 -4.33356619 6.84372902 -6.034377575
+		 7.39865637 -4.55920839 6.58866453 -3.90608072 7.79076767 -3.98053503 8.10427761 -5.57525587
+		 8.62447357 -5.82025814 8.41517735 -4.12512922 8.39173412 -5.28896713 8.77137756 -3.90847445
+		 7.43163061 -6.030230045 8.12398148 -4.10431242 6.98422575 -6.13654804 7.64723587
+		 -4.29903412 6.80961418 -4.51848364 6.5391202 -4.27048731 8.63615036 -5.027441978
+		 8.88306618 -4.61652851 8.85905647 -5.91880751 7.078150272 -5.876513 7.082488537 -6.0019044876
+		 7.059626579 -6.082365513 7.39138174 -6.063973904 7.043487549;
+	setAttr ".uvtk[1750:1999]" -5.20374918 7.33910847 -5.43164968 7.051807404 -5.37711573
+		 6.95895672 -5.024773121 7.17364264 -5.31959963 6.86792898 -4.95978689 6.93872404
+		 -5.36875725 7.37879276 -5.50959587 7.12841368 -5.28725338 6.76354027 -5.00017976761
+		 6.77388525 -5.56075239 7.39583063 -5.58084106 7.1605463 -5.2913785 6.6854887 -5.073079586
+		 6.59544373 -5.74960327 7.35254288 -5.70491505 7.19592047 -5.31685543 6.55900145 -5.19816446
+		 6.44746494 -5.93214035 7.23333502 -5.90234756 7.10345936 -5.48958063 6.42593575 -5.38782454
+		 6.33990908 -6.044774532 6.96208334 -5.98152828 6.91534853 -5.69308043 6.44183159
+		 -5.68055391 6.36419773 -6.00018453598 6.80979252 -5.96602964 6.80390882 -5.78499746
+		 6.50671911 -5.88901472 6.64708948 -5.94163084 6.61503124 -5.79542971 6.47367096 -7.53900576
+		 2.072573185 -7.36665201 2.36320567 -7.53737307 2.50008464 -7.7093854 2.15112209 -7.74990988
+		 2.55212474 -7.87545061 2.23841548 -7.38958645 1.95516634 -7.1995368 2.14556003 -8.024310112
+		 2.55211091 -8.059570313 2.28542018 -7.31506491 1.84017038 -7.082678795 1.89448404
+		 -8.29462337 2.49187875 -8.19616604 2.27448797 -7.2132678 1.63622463 -7.034610271
+		 1.6049087 -8.5535717 2.35363984 -8.41992092 2.23101115 -7.25562811 1.25727654 -7.10238981
+		 1.27699411 -8.77237415 2.10017037 -8.69468689 1.96662414 -7.48884964 0.98923892 -7.35297441
+		 1.0097087622 -8.83175087 1.73863459 -8.76523209 1.61840129 -7.56958532 0.88845056
+		 -7.65866375 0.89170617 -8.79599953 1.49297857 -7.91091442 0.71793628 -7.92919111
+		 0.75365549 -8.7391634 1.42430723 -7.22585487 2.41384292 -7.42819166 2.72157168 -7.79549837
+		 2.69463587 -7.11794615 2.22360516 -8.012104034 2.66435862 -7.029144764 1.97013342
+		 -8.26722527 2.58041382 -6.92490149 1.62373137 -8.60516644 2.45184755 -6.94967079
+		 1.30680656 -8.83940601 2.23643923 -7.24658823 0.98986727 -8.91227627 1.81092048 -7.47688627
+		 0.85605681 -7.87630939 0.64838046 -8.72336483 1.11841142 -8.68390179 1.12566137 -8.87814713
+		 1.54676843 -8.79960442 1.10348511 -7.84502506 1.71388972 -8.0066146851 1.70178342
+		 -8.009018898 1.58567333 -7.86207771 1.52194989 -8.44540024 1.12885392 -8.44933033
+		 1.28897989 -8.55788994 1.33029842 -8.62973404 1.18505859 -7.87573004 1.37942791 -8.041456223
+		 1.47751069 -8.081354141 1.40212822 -7.91411924 1.26941371 -8.19178581 1.082291603
+		 -8.25203609 1.28711534 -8.33688927 1.27844024 -8.30816936 1.08800745 -8.1506176 1.3207624
+		 -7.99583483 1.091107488 -7.91400385 1.86815262 -8.058339119 1.81458127 -8.64306641
+		 1.42054522 -8.74688721 1.30687368 -8.12990475 1.94700909 -8.1590004 1.88038981 -8.66621208
+		 1.53856218 -8.73888779 1.53663266 -8.28099728 1.87612534 -8.27020359 1.92435312 -8.61639309
+		 1.65003669 -8.46608162 1.78888798 -8.48519039 1.81724417 -8.66514206 1.65813792 -7.45516682
+		 5.38497829 -8.10227108 5.29070759 -8.18686676 5.19848156 -8.24919224 5.089372635
+		 -7.76726484 5.47534323 -7.94492483 5.40022898 -8.27032852 4.92565727 -6.69777012
+		 4.84127474 -6.61498928 4.97319221 -6.64548683 5.13542318 -6.713974 5.24077559 -6.80371809
+		 5.32799959 -6.96709204 5.42830992 -7.14876938 5.49310398 -7.458848 5.51319075 -7.57019758
+		 5.50740004 -7.3473506 5.51379824 -8.18011379 4.79870605 -6.95685148 3.73614335 -7.086937428
+		 3.77028704 -7.084253788 3.72874045 -6.95591116 3.70702958 -8.17278194 3.82507229
+		 -6.73577738 3.75412893 -6.73084545 3.72403288 -8.17795277 3.79640651 -7.1728549 3.83548522
+		 -7.19006634 3.79689264 -7.93320131 3.85122752 -7.94461203 3.89191413 -8.039108276
+		 3.83991694 -8.047811508 3.79920363 -7.22947025 3.92923069 -7.26328945 3.88979745
+		 -7.8472271 3.93249011 -7.87495279 3.9764235 -7.29676771 4.021717072 -7.33563757 3.94562459
+		 -7.76751947 3.97719884 -7.79491377 4.05813694 -7.38122606 4.084031105 -7.416255 3.97389054
+		 -7.68363667 3.99344134 -7.70229101 4.10750341 -7.47251081 4.11445713 -7.47638416
+		 3.9937377 -7.62126064 4.0043287277 -7.60755157 4.12432909 -7.53941154 4.12785482
+		 -7.54953766 3.98921037 -6.95247507 3.78183246 -7.073684216 3.82400823 -8.17045975
+		 3.8709116 -8.3767004 3.91137862 -7.15455818 3.88777566 -7.95510626 3.94631267 -8.04440403
+		 3.89499688 -7.21167326 3.96776152 -7.88695765 4.017133236 -7.27282238 4.064520359
+		 -7.8123765 4.10397005 -7.36436749 4.13223028 -7.71195936 4.15764332 -7.45683146 4.1639061
+		 -7.61587334 4.1755352 -7.53570223 4.17863894 -6.95009565 3.85840583 -7.067350388
+		 3.90532207 -8.038833618 3.97636461 -8.16167068 3.94701719 -7.143888 3.9702189 -7.95366716
+		 4.02943182 -7.20707798 4.047442436 -7.87991333 4.096636295 -7.27551222 4.13689375
+		 -7.79919195 4.17518616 -7.36551332 4.19511986 -7.70168161 4.21970224 -7.45596552
+		 4.22516441 -7.60781765 4.23627138 -7.53065205 4.24764681 -8.35327625 3.97710872 -7.43808651
+		 4.31765175 -7.42048979 4.41204119 -7.51643801 4.44200945 -7.52363157 4.34366465 -7.61571932
+		 4.42632151 -7.61204672 4.33037376 -7.35234261 4.2847352 -7.33988667 4.3839283 -7.69955778
+		 4.41023922 -7.70167112 4.31028509 -7.27318716 4.23188925 -7.27015162 4.34713078 -7.77390909
+		 4.38397884 -7.78767443 4.26951408 -7.20997286 4.15285397 -7.20475101 4.26823664 -7.85008907
+		 4.31543589 -7.86171389 4.20051289 -7.14707851 4.067510128 -7.14012957 4.17533541
+		 -7.92754412 4.23292112 -7.93635464 4.12522554 -7.067397118 3.99880624 -7.07080698
+		 4.11295986 -8.0052013397 4.18129492 -8.025183678 4.068849087 -6.95031404 3.957937
+		 -6.96484709 4.074028015 -8.11570072 4.15819979 -8.1469698 4.045456409 -6.78574848
+		 3.95705843 -8.25747299 4.17186594 -7.40106106 4.85331106 -7.48291206 4.90000772 -7.57069206
+		 4.86573172 -7.33307028 4.79593468 -7.64631319 4.81886482 -7.25662708 4.68795443 -7.73766565
+		 4.72315741 -7.21024084 4.57172155 -7.8004818 4.61491156 -7.16767645 4.46745634 -7.8577714
+		 4.51794243 -7.11337423 4.39002848 -7.9227643 4.44923449 -7.0066475868 4.32341909
+		 -8.038048744 4.3988657 -8.16638756 4.41593075 -7.38270998 5.1873517 -7.45849609 5.23326492
+		 -7.54016447 5.19888926 -7.27687883 5.071773052 -7.66171122 5.099961758;
+	setAttr ".uvtk[2000:2249]" -7.22192907 4.93141079 -7.7365303 4.9690938 -7.18341827
+		 4.79005861 -7.79522371 4.83484411 -7.15607882 4.69959974 -7.83544779 4.74931955 -7.11394501
+		 4.61470461 -7.88949394 4.67145348 -7.018221855 4.53417778 -7.9959197 4.60570717 -8.12150192
+		 4.62796164 -6.87718964 4.32162189 -6.89073324 4.53791857 -6.82259846 4.066911697
+		 -6.75616074 3.86028409 -8.30991173 4.068542004 -6.74255323 3.79184318 -8.3888855
+		 3.87504745 -8.39814186 3.84599066 -0.2721782 -5.0219841 -0.070461154 -4.95997524
+		 -0.035552204 -4.88178825 -0.2417634 -4.91999102 -3.0071563721 -4.69371653 -2.76304746
+		 -4.77904034 -2.79553318 -4.65273619 -3.046251059 -4.5963645 -0.57297385 -5.026585102
+		 -0.49637401 -4.91255379 -2.39493656 -4.7986474 -2.48342752 -4.6554637 -3.30072761
+		 -4.55063725 -3.32201123 -4.50823975 0.17340024 -4.85234642 0.19207574 -4.81842327
+		 0.44137499 -4.81389236 0.44297537 -4.83402252 0.30483016 -4.82786274 0.31749228 -4.80666399
+		 -0.9107936 -4.86940861 -0.79297149 -4.81676674 -1.97398329 -4.62188005 -2.11580658
+		 -4.55194902 -1.029217362 -4.73340702 -0.91226816 -4.71384287 -1.82266068 -4.46085501
+		 -1.96495152 -4.43146563 -0.95768172 -4.57089472 -1.074042797 -4.57984447 -0.73065072
+		 -4.67259121 -0.76264852 -4.55727291 -2.1854167 -4.37251902 -0.58953416 -4.7651577
+		 -2.36250758 -4.47930717 -0.36226574 -4.82614565 -2.64361668 -4.54342413 -0.15083058
+		 -4.83307219 -2.90282702 -4.54207563 0.044597968 -4.81243372 -3.1411581 -4.50772953
+		 -3.37417221 -4.46856022 0.23584495 -4.78766727 0.44494048 -4.79719734 0.34234896
+		 -4.79055643 -0.4553664 -4.63478994 -2.52073169 -4.31343937 -0.34951559 -4.70692539
+		 -2.65368843 -4.39684534 -0.19806187 -4.76327085 -2.84175205 -4.45880175 -0.030593991
+		 -4.79563856 -3.048310518 -4.49065304 0.12210663 -4.75433588 -3.23336601 -4.43300486
+		 -3.41198182 -4.37258577 0.26962924 -4.71055508 0.48278937 -4.72122049 0.37452826
+		 -4.7164216 -0.22410791 -4.5916667 -0.24494238 -4.52133417 -2.80189919 -4.24988461
+		 -0.14928328 -4.66084671 -2.8967278 -4.33111715 -0.04747875 -4.72171879 -3.024207354
+		 -4.40092278 0.078984395 -4.73492861 -3.17966771 -4.41123819 0.1901551 -4.68193245
+		 -3.31335378 -4.34120369 -3.47110057 -4.27710819 0.32076195 -4.63450193 0.51365072
+		 -4.66152954 0.4150739 -4.6483283 -0.056469522 -4.50590801 -0.06118077 -4.49189949
+		 -3.0032103062 -4.13709593 -0.030407131 -4.56107998 -3.037675858 -4.20344543 0.039258242
+		 -4.64279795 -3.12676859 -4.30027199 0.14245455 -4.67012119 -3.25440598 -4.32894278
+		 0.23804145 -4.60299063 -3.36836767 -4.24232912 -3.50565195 -4.15389681 0.35269997
+		 -4.53507614 0.56156439 -4.57370663 0.45429268 -4.55472565 -3.62702632 -4.49121714
+		 -3.62991095 -4.51579285 -3.4604938 -4.51459646 -3.47501421 -4.48805761 -3.63062263
+		 -4.470613 -3.50470519 -4.46719217 -3.67348123 -4.37585592 -0.49250284 -4.53958225
+		 -3.54069734 -4.3749404 -3.70853257 -4.30135393 -2.77313232 -4.16473198 -2.99679232
+		 -4.12016106 -3.58721948 -4.28970718 -3.63095212 -4.17329693 -3.76317787 -4.19162464
+		 -2.47084045 -4.19858551 -2.1408813 -4.23280478 -1.90270531 -4.25854063 -1.76064312
+		 -4.27490854 -0.015623659 -7.5671525 -0.041118473 -7.42018986 -0.29166088 -7.52202368
+		 -0.18670838 -7.55866671 -0.19221501 -7.39192963 -0.28821805 -7.3623414 -1.71426976
+		 -5.43151999 -1.75436497 -5.75176811 -1.5514518 -5.73595095 -1.56447637 -5.4869585
+		 -0.60426402 -7.44179678 -0.51504028 -7.25885534 -1.73144627 -6.061427116 -1.51729
+		 -6.0031304359 -0.88391703 -7.30685329 -0.75104231 -7.12905264 -1.086449146 -7.16277981
+		 -0.96078771 -7.022567749 -1.67173517 -6.30268431 -1.49518168 -6.23731136 -1.27815783
+		 -7.050738335 -1.14174938 -6.93808651 -1.63786125 -6.52210236 -1.48299277 -6.43662548
+		 -1.42814326 -6.92571259 -1.28338265 -6.85297775 -1.57661974 -6.70748949 -1.45580244
+		 -6.59959316 -1.52682281 -6.83322287 -1.39291978 -6.74215364 -0.056976475 -7.30360031
+		 -0.17554025 -7.27031088 -0.25729319 -7.24301481 -1.44763589 -5.73029995 -1.44214094
+		 -5.50200796 -0.47167125 -7.16435385 -1.43779731 -5.95391607 -0.67607689 -7.073163986
+		 -0.86712849 -6.98273087 -1.42375946 -6.16482067 -1.031420469 -6.8965354 -1.40385211
+		 -6.34927273 -1.16890228 -6.80215073 -1.36649561 -6.51179028 -1.29249763 -6.67384291
+		 -0.034162305 -7.25400114 -0.16559891 -7.19681549 -0.25641599 -7.15859842 -1.3682636
+		 -5.72470665 -1.36330485 -5.53218174 -0.43733039 -7.092566967 -1.36544478 -5.91492176
+		 -0.61324281 -7.020162106 -0.78706533 -6.93874598 -1.35346997 -6.10649538 -0.94841522
+		 -6.84660339 -1.3269428 -6.29039812 -1.081235409 -6.74109793 -1.27752721 -6.45266294
+		 -1.19799542 -6.60954618 0.0032526562 -7.20543003 -0.12679367 -7.13418865 -0.21623807
+		 -7.093582153 -1.29207253 -5.70305729 -1.28809249 -5.51866674 -0.38922772 -7.029626369
+		 -1.2956357 -5.88408661 -0.55893892 -6.96653032 -0.71930295 -6.89757681 -1.29031563
+		 -6.058568478 -0.8788262 -6.80462503 -1.26236475 -6.24107218 -1.0050153732 -6.70498133
+		 -1.21596432 -6.39501905 -1.12918472 -6.5627265 0.045309693 -7.15939903 -0.080106348
+		 -7.080076694 -0.16832368 -7.038323879 -1.22314358 -5.6834054 -1.21911478 -5.49437046
+		 -0.34565511 -6.97270727 -1.23055053 -5.85877085 -0.51151115 -6.91526413 -0.66873091
+		 -6.85173941 -1.22912574 -6.028336048 -0.81486273 -6.77131033 -1.20791233 -6.19378948
+		 -0.94406056 -6.67349339 -1.16431069 -6.3498683 -1.075700521 -6.5263238 0.08444652
+		 -7.12393713 -0.027750216 -7.042719364 -0.10935853 -7.00043344498 -1.16186595 -5.64501238
+		 -1.16223621 -5.45342207 -0.28746048 -6.92978382 -1.17057025 -5.81849432 -0.45204535
+		 -6.8742342 -0.60615581 -6.81610107 -1.17302203 -5.98318911 -0.7539975 -6.74267769
+		 -1.15895176 -6.1476655 -0.89280939 -6.64308453 -1.11722481 -6.31334114 -1.029691458
+		 -6.49501085 0.15845402 -7.07281971 0.04488799 -6.98191738 -0.06942229 -6.92164755
+		 -1.081208348 -5.62112999 -1.074299216 -5.44517183 -0.23565944 -6.86350393 -1.090961933
+		 -5.7897706 -0.39613596 -6.81070662 -0.54403931 -6.76178694 -1.099711657 -5.94530439
+		 -0.68530267 -6.70166349 -1.095604658 -6.098790169 -0.82717198 -6.6158638 -1.06782949
+		 -6.26225471 -0.98117238 -6.4619832 0.27207726 -6.99488497 0.14719673 -6.89020491
+		 0.027474076 -6.83156872;
+	setAttr ".uvtk[2250:2499]" -0.95930409 -5.61235046 -0.95495409 -5.3880744 -0.18280075
+		 -6.75330639 -0.98989469 -5.77329159 -0.34376583 -6.72272253 -0.50412637 -6.7179122
+		 -1.044255495 -5.92424202 -0.67298418 -6.57563496 -0.9738636 -6.13351631 -0.75324208
+		 -6.47556543 -0.91022629 -6.24489307 -0.84154367 -6.36690426 -1.65486693 -5.15818501
+		 -1.7098099 -5.32043362 -1.52754533 -5.23587418 -1.55675232 -5.38679361 -1.42494833
+		 -5.2934351 -1.4375217 -5.41594028 -1.37045729 -5.29042482 -1.36552382 -5.43367386
+		 -1.31156123 -5.27344465 -1.29303658 -5.42056322 -1.25332224 -5.25121546 -1.22557783
+		 -5.3969903 -1.20598543 -5.22781944 -1.1716181 -5.36199331 -1.13128853 -5.17773008
+		 -1.088411689 -5.31672907 -0.96555662 -5.25520658 -1.017098665 -5.10062981 -0.47875756
+		 -5.48398685 -0.54137999 -5.5554719 -0.3414067 -5.76085424 -0.22358947 -5.64603186
+		 -0.440301 -5.39709234 -0.16963024 -5.49060249 -0.60851532 -5.61314821 -0.46099082
+		 -5.82553911 -0.41690186 -5.31164169 -0.16195698 -5.35468912 -0.76332682 -5.66697073
+		 -0.7852248 -5.73278379 -0.4344902 -5.14835072 -0.38433456 -5.10049868 -0.89306933
+		 -5.63378096 -0.92800635 -5.64501476 -0.5200544 -5.045522213 -0.52488106 -5.0091495514
+		 -0.64763349 -5.0062747002 -0.6557796 -4.9533987 -0.98330259 -5.53545237 -1.034534812
+		 -5.55060387 -0.81750673 -5.039965153 -0.89189661 -4.98349619 -1.024857879 -5.36715746
+		 -1.1075995 -5.32381105 -0.98312181 -5.16411018 -0.90388566 -5.085642338 -0.95691079
+		 -5.046318054 -1.033113003 -5.1324234 -1.02014029 -5.26935244 -1.078408718 -5.23814821
+		 -0.16504045 -5.86410809 -0.055728227 -5.75272465 -0.0012472272 -5.60643816 -0.33014977
+		 -5.92564106 -0.015634056 -5.43068504 -0.69636506 -5.90436411 -0.19112743 -5.10777092
+		 -0.96050042 -5.75782251 -0.43685034 -4.9313817 -1.10293424 -5.59038401 -0.64904827
+		 -4.87455511 -0.91177064 -4.91221237 -1.18058252 -5.33619452 -1.013073921 -4.99575758
+		 -1.11497521 -5.080514431 -1.14810717 -5.20888567 -2.53640223 -5.31687069 -2.65723014
+		 -5.30473661 -2.65295243 -5.33269405 -2.54706693 -5.35992527 -2.32402968 -5.43597031
+		 -2.42388177 -5.36253929 -2.4407146 -5.38526678 -2.39917731 -5.41403532 -2.77981305
+		 -5.32306671 -2.95523047 -5.38231802 -2.86199617 -5.42083931 -2.70311427 -5.33874655
+		 -2.19655252 -5.5702529 -2.29698777 -5.5607996 -3.19143105 -5.60868931 -2.99410605
+		 -5.60002613 -2.093328476 -5.88070297 -2.26379418 -5.78093433 -2.19762444 -6.022436142
+		 -2.33862185 -5.91365671 -3.16535378 -5.78271532 -2.98988223 -5.75233078 -2.42892146
+		 -6.13373709 -2.46609449 -6.010490894 -3.012754917 -5.98911333 -2.92235088 -5.89746952
+		 -2.62377286 -6.21923542 -2.60254836 -6.059447765 -2.88034081 -6.15568018 -2.82452631
+		 -6.0044608116 -2.76155257 -6.22578955 -2.71956801 -6.056301594 -2.62125015 -5.91537476
+		 -2.684798 -5.91593599 -2.74073625 -5.885777 -2.53042722 -5.89079523 -2.80958557 -5.82164478
+		 -2.44539857 -5.82336187 -2.8533051 -5.72231722 -2.37018466 -5.72608757 -2.8744154
+		 -5.60118246 -2.81569505 -5.45710325 -2.35486102 -5.57125711 -2.67379212 -5.38265562
+		 -2.44560504 -5.43917942 -2.62383389 -5.37100887 -2.55160737 -5.37825346 -2.48435092
+		 -5.40556049 -0.70581901 -7.12562227 -0.79264116 -7.21284008 -0.77069229 -7.26859045
+		 -0.65909761 -7.16302681 -1.80361629 -7.17830896 -1.79030323 -7.11995983 -0.973988
+		 -7.36423922 -0.97709376 -7.40005255 -2.005345583 -7.056186676 -2.013834953 -7.021287918
+		 -1.30762553 -7.48211765 -1.28319752 -7.52061796 -2.35248685 -6.99036646 -2.33425784
+		 -6.94863129 -1.66448796 -7.55281115 -1.63708961 -7.58153105 -2.71562648 -6.97474527
+		 -2.69295955 -6.94222546 -3.061322927 -7.066365719 -3.0032444 -7.016291142 -2.020193815
+		 -7.51445818 -1.95520306 -7.55522346 -3.39194942 -7.18918371 -3.28267694 -7.10969496
+		 -2.36560965 -7.44258356 -2.24562907 -7.50483656 -2.84879518 -7.51938868 -3.6197691
+		 -7.21434355 -3.5552454 -7.15101576 -3.85408473 -7.10625362 -2.59468198 -7.45175314
+		 -2.52138901 -7.50479412 -0.66106826 -7.41280699 -0.47787103 -7.27970266 -1.70373487
+		 -6.96105433 -0.91633385 -7.51399088 -1.97107601 -6.89957571 -1.23890567 -7.61287737
+		 -2.30457616 -6.8507905 -1.58750355 -7.66247988 -2.65631723 -6.85475302 -2.94753623
+		 -6.95235014 -1.89041257 -7.61009979 -3.22412658 -7.063502789 -2.18079233 -7.54174519
+		 -3.51370835 -7.095021725 -3.83094168 -7.039415359 -2.47193694 -7.55399418 -0.46337181
+		 -7.55124664 -0.25323325 -7.41687059 -1.52930534 -6.7946167 -0.79141223 -7.65350962
+		 -1.8687613 -6.74294806 -1.16485798 -7.76697302 -2.25482607 -6.68738937 -1.52533817
+		 -7.80784988 -2.61699963 -6.70171022 -2.91927838 -6.89050388 -1.8531158 -7.66705513
+		 -3.22547293 -7.025234699 -2.17638707 -7.579813 -3.51357102 -7.044543266 -3.81019855
+		 -6.98044634 -2.46427035 -7.60392141 -0.25254315 -7.73690176 -0.039581791 -7.54692173
+		 -1.34893978 -6.57957411 -0.65479022 -7.88750887 -1.76907897 -6.49123669 -1.10009718
+		 -8.085089684 -2.23890352 -6.36344481 -1.42638683 -8.095262527 -2.56282282 -6.4028039
+		 -2.95052123 -6.87959528 -1.88242447 -7.68256044 -3.30303574 -7.0033912659 -2.24987888
+		 -7.61307287 -3.55322385 -7.0016202927 -3.79950881 -6.94978285 -2.49710703 -7.65232754
+		 -1.3015554 -6.89582682 -1.11004305 -6.73528004 -1.50282323 -7.065068245 -1.66428971
+		 -7.20753431 -1.70492744 -7.25146055 -2.74826455 -7.71161509 -2.73311567 -7.74036837
+		 -2.77758646 -7.65635204 -2.81046152 -7.59365463 -3.88090873 -7.18533182 -0.52701479
+		 -9.3167305 -0.3598634 -9.39186764 -0.37738344 -9.2983799 -0.48715752 -9.25742245
+		 -0.74585277 -9.026835442 -0.6597628 -9.19030094 -0.56656784 -9.17128181 -0.62321609
+		 -9.10375309 -0.17609487 -9.41018486 0.040052868 -9.35920143 -0.032556377 -9.28463078
+		 -0.2934919 -9.32543087 -0.77985477 -8.80734348 -0.68343121 -8.84654713 0.22559945
+		 -9.192132 0.13443798 -9.13357544 -0.6950224 -8.57259846 -0.60644335 -8.63499928 -0.51427901
+		 -8.3968544 -0.42293528 -8.46461678 0.32033369 -8.95841694 0.22315197 -8.89931202
+		 -0.23077743 -8.31925488 -0.21344678 -8.44595718 0.28541079 -8.66657257 0.16151269
+		 -8.69824409 -0.068856224 -8.35131359 -0.10398856 -8.49294472 0.19471879 -8.52866364
+		 0.076746911 -8.61455822 0.078710049 -8.4165411 0.004428179 -8.52693176 -0.12732391
+		 -8.61229134 -0.070230827 -8.63787556;
+	setAttr ".uvtk[2500:2749]" -0.025034867 -8.68113899 -0.23617537 -8.56978893 0.055357672
+		 -8.76593971 -0.40953925 -8.56818295 0.12217733 -8.92589283 -0.55574459 -8.66931343
+		 0.083552808 -9.099525452 -0.036144637 -9.22839928 -0.62995732 -8.8286953 -0.21848302
+		 -9.28240108 -0.61152685 -9.018042564 -0.33792892 -9.26809025 -0.46267492 -9.22098923
+		 -0.55342501 -9.12334824 -2.45368743 -9.11538696 -2.43634605 -8.94166946 -2.64621139
+		 -8.88180351 -2.69729686 -9.10984707 -3.59290695 -8.44131374 -3.4271028 -8.38889027
+		 -2.41586494 -8.77458572 -2.52383995 -8.67591286 -3.61299467 -8.30869675 -3.52922225
+		 -8.22766399 -2.28217769 -8.5748682 -2.31194043 -8.47282124 -3.72398996 -8.15263844
+		 -3.70258784 -8.07068634 -1.96113336 -8.43864346 -2.0047888756 -8.36704731 -3.98277903
+		 -8.051389694 -3.94962502 -7.9933753 -4.24418831 -8.076574326 -4.20163488 -8.01896286
+		 -1.6323055 -8.46093941 -1.68773746 -8.39017582 -4.45215988 -8.17920113 -4.41874552
+		 -8.12918663 -1.36775959 -8.58228397 -1.41145778 -8.52072811 -0.85752267 -8.82636166
+		 -0.85219163 -8.80426311 -1.15699267 -8.71280289 -1.16679275 -8.67455387 -2.87118649
+		 -8.85996628 -2.91800928 -9.10554504 -3.24840355 -8.36641502 -2.70215487 -8.63175011
+		 -3.38818884 -8.1884594 -2.42261624 -8.39513874 -3.6161902 -8.0063123703 -2.074021101
+		 -8.25867558 -3.89692807 -7.90549374 -4.18087721 -7.96943855 -1.71553946 -8.32878971
+		 -4.4204464 -8.10027409 -1.41035116 -8.48439884 -0.8413204 -8.75919819 -1.16730559
+		 -8.63316917 -3.10273552 -8.82280731 -3.15441966 -9.10311508 -3.06481123 -8.33158684
+		 -2.99030733 -8.55412865 -3.16043162 -8.12012482 -2.59756923 -8.21532345 -3.48089981
+		 -7.85913706 -2.16328979 -8.12178421 -3.82892013 -7.79444265 -4.16753006 -7.87799788
+		 -1.73553658 -8.21455383 -4.41552973 -8.063569069 -1.41782212 -8.43852711 -0.83219433
+		 -8.70966148 -1.13804209 -8.60473537 -4.85305071 -8.38513851 -4.61708784 -8.28792191
+		 -4.85779619 -8.36765575 -4.61014509 -8.25723553 -4.86747313 -8.33200836 -4.61067438
+		 -8.22426224 -4.63462162 -8.20227528 -4.87585974 -8.29275894 -3.20555854 -8.56096172
+		 -3.01731205 -8.55368423 -3.38126159 -8.56937695 -3.57517362 -8.57929039 -4.613204
+		 -3.93103719 -4.66559172 -4.2305665 -4.57413816 -4.24422407 -4.54545641 -4.0094385147
+		 -3.71019626 -4.11538267 -3.83066607 -3.83820367 -3.88640785 -3.93102407 -3.79582381
+		 -4.15043163 -4.42322063 -3.85971999 -4.48555899 -3.76329756 -3.99368405 -3.70403719
+		 -4.031600952 -3.81228614 -4.36497736 -3.77237868 -4.39676428 -3.65892482 -4.10481453
+		 -3.62358093 -4.10887146 -3.74120426 -4.23806334 -3.74825835 -4.25369501 -3.6175921
+		 -4.30397224 -3.95897889 -4.21479797 -3.93932271 -4.12389851 -3.93513727 -4.38922119
+		 -3.98087311 -4.036387444 -3.93780375 -4.4843688 -4.06282568 -3.92525768 -3.99701571
+		 -4.52917385 -4.24047375 -3.84027743 -4.15764093 -4.54844379 -4.50500774 -4.48860931
+		 -4.46122169 -3.75877976 -4.40916395 -3.82749176 -4.38120365 -4.37150431 -4.55676508
+		 -4.43332911 -4.60207653 -3.91693258 -4.5057168 -3.84605956 -4.53395414 -4.12978172
+		 -4.6566906 -3.97181773 -4.61565256 -3.98785949 -4.56544447 -4.13395786 -4.61780787
+		 -4.29236555 -4.64903784 -4.28815508 -4.59647512 -3.8392489 -4.325809 -4.49051666
+		 -4.40509844 -3.89577127 -4.45951986 -4.4033885 -4.51805496 -3.9838202 -4.5475769
+		 -4.1356616 -4.6018405 -4.29617643 -4.57975626 -4.160357 -0.41727307 -4.27602148 -0.35602996
+		 -4.31084585 -0.6414755 -4.20750618 -0.70428413 -4.4029665 -0.38720676 -4.431777 -0.67720932
+		 -4.047245979 -0.47836408 -4.084126949 -0.7741918 -4.52751303 -0.41977361 -4.56289482
+		 -0.71576279 -3.78142023 -0.99468094 -3.90783262 -0.64025581 -3.96909213 -0.97163492
+		 -3.85613298 -1.20821428 -4.70178175 -0.5433411 -4.90979195 -0.85692126 -4.88878155
+		 -1.082087874 -4.72207165 -0.87971824 -3.66733718 -1.33662677 -3.74914551 -1.42237008
+		 -5.10292625 -1.16130316 -5.044150829 -1.26421213 -3.60095191 -1.50587487 -3.66268492
+		 -1.57443523 -5.20812416 -1.30958438 -5.16470289 -1.39098406 -5.22552395 -1.4470948
+		 -5.26448059 -1.38085568 -5.30122137 -1.42007375 -3.57481408 -1.66020942 -3.61716962
+		 -1.64353752 -3.56341338 -1.58861661 -4.36120844 -1.040506363 -4.24037266 -1.083758593
+		 -4.48966551 -1.053699017 -4.13488913 -1.1535399 -4.60492468 -1.096167684 -4.03588438
+		 -1.29504001 -3.93203497 -1.45734048 -4.8750248 -1.34217668 -4.73518276 -1.20962822
+		 -3.82816458 -1.61434448 -5.013628006 -1.46957135 -3.74220443 -1.7233417 -5.12333727
+		 -1.55465627 -5.18729258 -1.58978462 -3.63200665 -1.77192497 -3.68866038 -1.77284706
+		 -4.40991211 -1.4450103 -4.27590466 -1.45598423 -4.54263544 -1.42298424 -4.17082739
+		 -1.52532744 -4.66108322 -1.46469283 -4.10863781 -1.62401736 -4.008327961 -1.74544787
+		 -4.87035847 -1.6401453 -4.74376774 -1.54642332 -3.90933442 -1.86356664 -4.99489021
+		 -1.7309587 -3.82586265 -1.93780756 -5.093820095 -1.78290999 -5.16468048 -1.79716468
+		 -3.70388627 -1.96877646 -3.76053476 -1.96869886 -4.45560694 -1.82432389 -4.35558844
+		 -1.81945169 -4.55150938 -1.79519379 -4.2422595 -1.87516356 -4.67473459 -1.82166028
+		 -4.17239237 -1.9557929 -4.071352005 -2.052684546 -4.88318062 -1.95348263 -4.76173306
+		 -1.88378406 -3.97646928 -2.13981104 -4.9962492 -2.015215158 -3.89468145 -2.19556308
+		 -5.089039326 -2.049656153 -5.15738583 -2.05593133 -3.77304888 -2.21678257 -3.82984805
+		 -2.21809888 -4.49646425 -2.16393447 -4.39972019 -2.15726113 -4.58878231 -2.13384652
+		 -4.28143311 -2.20704627 -4.71543694 -2.15334105 -4.21424532 -2.28106689 -4.12282038
+		 -2.36440897 -4.908216 -2.26844525 -4.79936838 -2.20957947 -4.035167217 -2.43498087
+		 -5.010226727 -2.31587863 -3.95976996 -2.48007011 -5.094271183 -2.34149432 -5.15680122
+		 -2.3414607 -3.8451407 -2.48224783 -3.89908576 -2.49508762 -4.53386068 -2.4751451
+		 -4.41994572 -2.48481727 -4.64677715 -2.45675135 -4.30609322 -2.53297424 -4.76876211
+		 -2.47573543 -4.25245857 -2.60581088 -4.1706934 -2.6904428 -4.9401536 -2.59644556
+		 -4.84042072 -2.53397679 -4.087346554 -2.76627922 -5.039284229 -2.65000653 -4.013664246
+		 -2.8104322 -5.12137032 -2.67516422 -5.17711258 -2.66682124 -3.91172647 -2.81416225
+		 -3.95753837 -2.81574178 -4.56951714 -2.7716887 -4.44026613 -2.79778886 -4.70123768
+		 -2.76551366 -4.3365016 -2.85773873;
+	setAttr ".uvtk[2750:2999]" -4.81621265 -2.79840994 -4.29658937 -2.93724656 -4.22548628
+		 -3.030337572 -4.9687047 -2.93957019 -4.87733078 -2.86630058 -4.1418581 -3.13315654
+		 -5.07456255 -3.019276142 -4.07004261 -3.19989824 -5.16033936 -3.066770792 -5.2276001
+		 -3.076581717 -3.93795562 -3.22061086 -4.0071382523 -3.22561359 -4.60537434 -3.052723646
+		 -4.50963688 -3.10017562 -4.70968914 -3.075737715 -4.42348051 -3.17431831 -4.81113577
+		 -3.12697983 -4.35322571 -3.26826167 -4.27239275 -3.41199851 -5.014944077 -3.32134223
+		 -4.90190601 -3.20127487 -4.20026445 -3.54654193 -5.11731005 -3.43458819 -4.13753128
+		 -3.63407707 -5.199224 -3.50447607 -5.28895473 -3.54185438 -3.97898412 -3.70083499
+		 -4.059438229 -3.69194865 -4.64466906 -3.3743813 -4.57718754 -3.40043998 -4.71630049
+		 -3.38347602 -4.49448395 -3.48677325 -4.81735039 -3.44737196 -4.44758797 -3.6025207
+		 -4.38671732 -3.76252484 -4.98831224 -3.68908572 -4.89076853 -3.54840827 -4.30050945
+		 -3.94439936 -5.11564493 -3.84493399 -4.2451973 -4.061531067 -5.1974926 -3.94532824
+		 -5.24989748 -3.96023631 -4.16340446 -4.13010693 -4.19796419 -4.088623524 -4.37729836
+		 -0.098314561 -4.24552679 -0.10593847 -4.50067329 -0.16516638 -4.68773079 -0.30405891
+		 -4.93063927 -0.69795305 -5.16740465 -1.10280335 -5.2661171 -1.26044369 -5.31092024
+		 -1.36812353 -5.3192277 -1.40958166 -3.51524472 -1.58742428 -3.53278184 -1.47211742
+		 -3.59061074 -1.29534352 -3.72292399 -0.8453986 -3.86384988 -0.40461448 -4.012052536
+		 -0.22476029 -4.11576414 -0.13019449 -3.53717184 -1.63551819 -5.27066803 -1.45307434
+		 -5.36918306 -3.53112221 -5.29343033 -3.99218106 -5.29355383 -3.055077314 -5.22119427
+		 -2.65426803 -5.20604944 -2.31603098 -5.21217728 -2.040997744 -5.21965981 -1.78362083
+		 -5.24204922 -1.57526231 -3.51714826 -1.62966037 -6.083206654 -2.88059568 -5.81258106
+		 -2.9490695 -5.8147049 -2.87188601 -5.98731565 -2.82494807 -5.54638624 -2.86661911
+		 -5.64496136 -2.81578326 -6.24489975 -2.76995301 -6.15609503 -2.71916938 -5.39023542
+		 -2.74888754 -5.48134279 -2.70249677 -6.34601355 -2.63958025 -6.22048998 -2.62698817
+		 -5.29557323 -2.61364675 -5.42157125 -2.60703588 -6.34569025 -2.45745087 -6.18225718
+		 -2.47265291 -5.30452156 -2.43174839 -5.46703529 -2.45470047 -6.16174078 -2.24092221
+		 -6.091734409 -2.32326031 -5.49873972 -2.22423625 -5.56457424 -2.30988145 -6.068520069
+		 -2.1018889 -6.020782471 -2.20695829 -5.59906387 -2.090203047 -5.64145088 -2.19753027
+		 -5.93621349 -2.18945336 -5.9676199 -2.058409691 -5.72691488 -2.18444681 -5.70203924
+		 -2.051914454 -5.83612394 -2.0024540424 -5.83224964 -2.1591599 -4.68668652 -4.68074131
+		 -4.80033302 -4.59303474 -4.82956791 -4.93135452 -4.73260736 -4.98546362 -4.92741156
+		 -4.66077805 -4.93443346 -4.96874475 -4.57358646 -4.82566547 -4.65285635 -5.079592705
+		 -5.063769817 -4.78502607 -5.029199123 -5.048425674 -4.52368498 -4.95778322 -4.59875679
+		 -5.19925928 -5.13562822 -4.90704775 -5.10305786 -5.15750742 -4.54489565 -5.23958302
+		 -4.57637787 -5.36854315 -5.16307211 -5.18839502 -5.1541605 -5.32075453 -4.54200888
+		 -5.49278879 -4.57252789 -5.56692743 -5.20934868 -5.43765688 -5.19198227 -5.51578188
+		 -4.48931646 -5.59652758 -4.51078653 -5.70615911 -5.27908039 -5.53135347 -5.27671862
+		 -5.64298487 -4.46221638 -5.73114777 -4.44740629 -5.64025593 -4.36442804 -5.66061211
+		 -4.38488579 -5.75125265 -4.85085344 -5.17771482 -4.76488161 -5.22546339 -4.94379473
+		 -5.21066236 -4.69611549 -5.2943778 -5.023406506 -5.2673068 -4.64500618 -5.39169073
+		 -5.090481281 -5.35486126 -4.61379576 -5.53176022 -5.14527082 -5.48786592 -4.5871911
+		 -5.68109179 -5.19710398 -5.63077736 -4.52014875 -5.79429865 -5.28260183 -5.73143673
+		 -4.4709816 -5.81471443 -4.39485979 -5.82475138 -4.8744626 -5.45101881 -4.79491854
+		 -5.49051428 -4.95965004 -5.47691488 -4.73063421 -5.54823732 -5.032921314 -5.52328205
+		 -4.67711258 -5.6335268 -5.10030794 -5.59860849 -4.63667011 -5.73435926 -5.1574645
+		 -5.69142103 -4.587883 -5.81204844 -5.21887636 -5.76004457 -4.51603556 -5.88362551
+		 -5.30197287 -5.81884909 -4.46820784 -5.8937006 -4.39922667 -5.89045477 -4.89620304
+		 -5.70276117 -4.80897331 -5.73440027 -4.98762035 -5.71968317 -4.73706245 -5.78359509
+		 -5.066941738 -5.7564187 -4.67997932 -5.85575914 -5.13558435 -5.81823635 -4.64212084
+		 -5.95081282 -5.18919802 -5.90577841 -4.59277534 -6.021412849 -5.24994373 -5.96731138
+		 -4.50812054 -6.036728382 -5.33601809 -5.96852732 -4.46143436 -6.024388313 -4.39446735
+		 -5.98742104 -4.9187932 -5.96443987 -4.82791805 -5.97842407 -4.74901199 -6.014635563
+		 -5.094765186 -5.98621559 -4.68427753 -6.077235222 -5.16930723 -6.037353039 -4.63795471
+		 -6.16899538 -5.23069525 -6.12025309 -4.58825541 -6.24350691 -5.29245996 -6.18558025
+		 -4.49866724 -6.26500177 -5.38446283 -6.19207525 -4.44210434 -6.2458477 -4.36112404
+		 -6.19092369 -4.93095255 -6.10527992 -4.82208443 -6.125741 -4.73733568 -6.1717639
+		 -5.13319921 -6.13926411 -4.6763401 -6.24481344 -5.20584393 -6.20131254 -4.62627649
+		 -6.32458735 -5.26886797 -6.27176809 -4.56456661 -6.3805232 -5.339293 -6.31679916
+		 -4.46990728 -6.40681791 -5.43711853 -6.32719183 -4.41406584 -6.39484549 -4.33378077
+		 -6.34444666 -4.94079113 -6.21924019 -4.82249355 -6.24616385 -4.73389673 -6.29968882
+		 -5.15849829 -6.26485538 -4.66871405 -6.37068605 -5.23492765 -6.32418633 -4.61462212
+		 -6.43507385 -5.29928875 -6.37880278 -4.54922485 -6.4858737 -5.37247086 -6.41815996
+		 -4.45684433 -6.51172924 -5.46797848 -6.42848587 -4.39578676 -6.50034189 -4.31594944
+		 -6.45264006 -4.9500699 -6.32668686 -4.8316102 -6.35429192 -4.73910236 -6.40393305
+		 -5.17121983 -6.36851025 -4.66685486 -6.46137381 -5.25229454 -6.41330671 -4.60559845
+		 -6.52064943 -5.32285118 -6.46170092 -4.54130554 -6.57457733 -5.39547777 -6.50431728
+		 -4.4525733 -6.61113405 -5.48922396 -6.52579308 -4.39184475 -6.60455894 -4.3015542
+		 -6.55534744 -4.95609713 -6.39641047 -4.82795572 -6.43074512 -4.73744202 -6.48020935
+		 -5.18592358 -6.44345856 -4.66492414 -6.53600979 -5.26698923 -6.48658657 -4.60145283
+		 -6.59281492 -5.33930016 -6.53217268 -4.53308392 -6.64306927 -5.41531992 -6.57049608
+		 -4.44339037 -6.66947603 -5.50827599 -6.58180571 -4.38817263 -6.65568924 -4.2983284
+		 -6.59458351 -4.96199322 -6.46465874 -4.83916426 -6.49816036;
+	setAttr ".uvtk[3000:3249]" -4.74637032 -6.54475164 -5.18817711 -6.50857162 -4.67164373
+		 -6.5990119 -5.27115536 -6.54981375 -4.59884024 -6.66253424 -5.35382318 -6.60048532
+		 -4.53059912 -6.70705652 -5.4287343 -6.63317347 -4.44970608 -6.72689486 -5.5118885
+		 -6.63945103 -4.38474941 -6.71469402 -4.29441833 -6.65704393 -4.96530628 -6.55527449
+		 -4.86019421 -6.57884216 -4.7703743 -6.60639477 -5.17506504 -6.57330036 -4.69140244
+		 -6.64941549 -5.26030684 -6.60276079 -4.6141324 -6.70938635 -5.34677076 -6.64919233
+		 -4.53804636 -6.76258135 -5.43090582 -6.68913794 -4.45706463 -6.78975725 -5.51540422
+		 -6.7026372 -4.3880806 -6.786057 -4.28877306 -6.72938776 -4.98578405 -6.74792814 -4.881845
+		 -6.7308507 -5.08658123 -6.71416903 -4.79776859 -6.69311142 -5.16291094 -6.66332197
+		 -4.71674919 -6.70563889 -5.24494362 -6.66236258 -4.63574219 -6.75092268 -5.332582
+		 -6.69369507 -4.54783535 -6.80968523 -5.42932844 -6.73718691 -4.44890022 -6.84082699
+		 -5.53220892 -6.75164127 -4.38387823 -6.83205748 -4.28542709 -6.77917957 -5.0089845657
+		 -7.012434483 -4.90530729 -6.94166851 -5.099337578 -6.92594004 -4.82048082 -6.82786655
+		 -5.16359615 -6.79994345 -4.73783779 -6.83187437 -5.24576569 -6.79029989 -4.66623259
+		 -6.84765577 -5.31908846 -6.79408216 -4.57369089 -6.89731169 -5.41885185 -6.82782364
+		 -4.44438267 -6.92037773 -5.55029345 -6.82933092 -4.37289572 -6.89144564 -4.27908754
+		 -6.8488059 -5.32789183 -5.5676136 -5.41317701 -5.5740447 -5.40855551 -5.66677046
+		 -5.32887983 -5.65966177 -5.41132832 -5.74088144 -5.33456945 -5.74350023 -5.41828871
+		 -5.80639601 -5.35084772 -5.82093239 -5.43960714 -5.90124273 -5.37992716 -5.94869375
+		 -5.50735807 -6.096456051 -5.43694353 -6.16390467 -5.01077795 -5.96340179 -5.56062651
+		 -6.24335527 -5.49011946 -6.30622149 -5.041771889 -6.10772943 -5.59674835 -6.34710693
+		 -5.52621794 -6.40723944 -5.061990738 -6.22656107 -5.62854195 -6.44601154 -5.5479641
+		 -6.50934362 -5.071513653 -6.33468723 -5.6384449 -6.48416805 -5.56034899 -6.55914927
+		 -5.088182449 -6.40950203 -5.65301037 -6.54510069 -5.57383442 -6.61676073 -5.088648319
+		 -6.4778285 -5.67097187 -6.6155014 -5.58278465 -6.68766308 -5.081677914 -6.56084585
+		 -5.68280649 -6.6640377 -5.59481144 -6.73232317 -5.7009902 -6.73163748 -5.61581707
+		 -6.78907013 -4.15135288 -8.5241127 -4.35928106 -8.42308807 -4.38829756 -8.75352287
+		 -4.26985931 -8.78244877 -4.58160496 -8.48629951 -4.50993681 -8.76104259 -4.028343678
+		 -8.71573162 -4.17489862 -8.83917236 -4.73586655 -8.65386772 -4.612957 -8.80082321
+		 -3.94003367 -8.91315746 -4.087499142 -8.94197369 -4.85665131 -8.83299255 -4.71652889
+		 -8.88744354 -3.94680285 -9.085713387 -4.039690971 -9.088724136 -4.88032341 -9.0039482117
+		 -4.78943729 -9.023511887 -4.01253891 -9.27178478 -4.056098461 -9.25232792 -4.84840298
+		 -9.19910049 -4.8020792 -9.18758011 -4.17753267 -9.43996334 -4.19159889 -9.41508293
+		 -4.71386099 -9.39557648 -4.69578838 -9.37335587 -4.28546762 -9.45440769 -4.29732513
+		 -9.46078873 -4.61010265 -9.42873383 -4.5994544 -9.43698978 -4.45188236 -9.49338531
+		 -4.44933939 -9.46131706 -6.12749481 -7.39802456 -5.91595984 -7.44637728 -5.89387798
+		 -7.38176394 -6.150702 -7.30846977 -5.71905994 -7.53757334 -5.64590883 -7.4809413
+		 -6.32262087 -7.40569973 -6.35305071 -7.33807468 -5.5694313 -7.66303873 -5.50398111
+		 -7.62817383 -6.5493412 -7.48393106 -6.56224966 -7.42072535 -5.43798256 -7.86365747
+		 -5.38909674 -7.82155943 -6.77763414 -7.63793612 -6.80722666 -7.59825468 -5.35166359
+		 -8.12523174 -5.30397463 -8.11188984 -6.9646244 -7.86316872 -7.0042052269 -7.84521961
+		 -5.34166527 -8.41795158 -5.29887152 -8.42790222 -7.070876122 -8.22515774 -7.11084938
+		 -8.21673393 -5.4776125 -8.76960659 -5.44130945 -8.78704929 -7.10824251 -8.40767479
+		 -7.068867683 -8.40642357 -7.027385712 -8.69912338 -7.069768906 -8.70279598 -5.81679821
+		 -7.15615082 -6.1606102 -7.10424042 -5.51310301 -7.32547188 -6.40586853 -7.17081881
+		 -5.35985947 -7.52820492 -6.65520287 -7.29452705 -5.23834467 -7.77861452 -6.88973379
+		 -7.49374199 -5.17472553 -8.079650879 -7.087035656 -7.77008104 -5.18740416 -8.41890907
+		 -7.18193817 -8.16532612 -5.3536396 -8.78981018 -7.18033266 -8.38036346 -7.1531949
+		 -8.72001839 -6.7048912 -7.15991974 -6.95291233 -7.36590862 -5.046535015 -8.017241478
+		 -5.11666965 -7.70255423 -6.41642809 -7.016927242 -5.25733614 -7.41294861 -7.16690016
+		 -7.6545949 -5.053653717 -8.37637424 -7.27923393 -8.13016796 -5.25522709 -8.82159996
+		 -7.22845936 -8.38688755 -7.21555281 -8.73516178 -6.1532321 -6.9088254 -5.39936352
+		 -7.16639566 -5.74245691 -6.93857145 -5.59041166 -8.91127396 -5.80271721 -9.11697006
+		 -5.7714963 -9.14586544 -5.56007814 -8.93640423 -5.71616936 -9.21063995 -5.48638344
+		 -8.95899773 -5.67622757 -9.26086521 -5.45237398 -8.9936657 -6.10364103 -8.089287758
+		 -6.3182373 -8.0097608566 -6.34868622 -8.39716721 -6.24747753 -8.40297127 -6.54261971
+		 -8.054784775 -6.44955778 -8.38708878 -6.000088691711 -8.21053791 -6.14992619 -8.43532276
+		 -6.66384459 -8.15837002 -6.55096149 -8.40380001 -5.90394831 -8.36427021 -6.092720509
+		 -8.48141956 -6.7828207 -8.29519558 -6.61466646 -8.44039631 -5.85989714 -8.54118729
+		 -6.010334969 -8.5704937 -6.85396767 -8.46305943 -6.70995235 -8.5155077 -5.88220453
+		 -8.74514961 -6.0038933754 -8.77550697 -6.86380148 -8.66800499 -6.74835205 -8.71699715
+		 -6.06192112 -8.95524693 -6.12808704 -8.92209339 -6.71911049 -8.90359592 -6.64857912
+		 -8.88118649 -6.22829008 -8.9565258 -6.20880318 -8.98268032 -6.55498123 -8.93085384
+		 -6.57831621 -8.95363903 -6.39735556 -9.016446114 -6.39281464 -8.95865822 -5.81191158
+		 -5.72714901 -5.98954535 -5.78958416 -5.85054493 -6.15444946 -5.66707802 -6.033766747
+		 -6.16368961 -5.86116219 -6.067803383 -6.18642664 -5.65156126 -5.6239152 -5.47960758
+		 -5.83204556 -6.35207796 -5.89078474 -6.34196758 -6.16056919 -5.56627417 -5.51603699
+		 -5.33920145 -5.59219122 -6.48752928 -5.86699581 -6.60637522 -6.074929237 -5.44535446
+		 -5.32185173 -5.26390076 -5.30739069 -6.70699692 -5.8024826 -6.85208368 -5.9124198
+		 -5.45198774 -4.93923807 -5.30073786 -4.97337103 -6.95662928 -5.51244402 -7.046825886
+		 -5.63855696 -5.65976381 -4.64946318 -5.52593374 -4.68271399 -6.99431276 -5.1578722
+		 -7.072101116 -5.27173948 -5.73093939 -4.54115725;
+	setAttr ".uvtk[3250:3459]" -5.82024765 -4.53602028 -6.077541828 -4.37260771 -6.055916786
+		 -4.33864021 -5.76231813 -6.3860302 -5.53117037 -6.097619534 -6.12677431 -6.3245225
+		 -5.40543604 -5.91770887 -6.340343 -6.27387047 -5.29283714 -5.67281771 -6.58734131
+		 -6.16596746 -5.15645695 -5.33655834 -6.91288376 -6.0056834221 -5.15477085 -5.017198563
+		 -7.12663364 -5.76839685 -5.41777039 -4.67290783 -7.1593647 -5.3363781 -5.63526773
+		 -4.51752186 -6.014790058 -4.27240181 -6.94998837 -4.96639729 -6.86664438 -4.67321301
+		 -6.90539074 -4.66225195 -7.013243198 -5.029657841 -6.98016024 -4.64015865 -7.10038853
+		 -5.075665474 -5.83506155 -5.44321156 -5.97658348 -5.29329109 -6.057775497 -5.44418621
+		 -5.97881699 -5.54013443 -6.72700262 -5.34956932 -6.84457922 -5.51892424 -6.68797302
+		 -5.59332037 -6.62421513 -5.48666525 -6.08246994 -5.18261623 -6.18761253 -5.11562586
+		 -6.24014282 -5.33789015 -6.15670633 -5.37482882 -6.54483318 -5.14241314 -6.6388073
+		 -5.2243371 -6.53673124 -5.40333176 -6.45973873 -5.35435867 -6.37439775 -5.019997597
+		 -6.35224295 -5.31546736 -5.79070616 -5.61849928 -5.9474206 -5.66913509 -6.86229563
+		 -5.69886875 -6.69978285 -5.72555971 -5.91994095 -5.82779169 -5.98852587 -5.79107141
+		 -6.70328045 -5.88654137 -6.64094639 -5.84000301 -6.093802452 -5.86838436 -6.052787304
+		 -5.90173626 -6.52531433 -5.90074825 -6.56089354 -5.93984461 -6.30433464 -5.95419455
+		 -6.30707502 -5.91771173 -6.6345191 -2.34844041 -6.63255835 -2.31306624 -6.7892437
+		 -2.33586907 -6.79367018 -2.38631129 -6.35936069 -2.34007502 -6.36620378 -2.37652993
+		 -6.91982985 -2.41578746 -6.8999753 -2.46319318 -7.82501554 -2.46127582 -7.96292162
+		 -2.39483809 -7.95347071 -2.44458437 -7.84001684 -2.510432 -7.011472702 -2.52672172
+		 -6.97144032 -2.57560635 -7.72274113 -2.56246829 -7.75766277 -2.61512017 -7.10101318
+		 -2.59259605 -7.055849075 -2.68619537 -7.62706661 -2.61903381 -7.66260481 -2.71669078
+		 -7.19984245 -2.62473083 -7.1602788 -2.75962234 -7.52552748 -2.64110398 -7.55134249
+		 -2.77927923 -7.27351236 -2.64719701 -7.27212477 -2.7940886 -7.36235142 -2.63966775
+		 -7.35384512 -2.80852818 -6.63048029 -2.40411735 -6.77905703 -2.45200324 -8.11403942
+		 -2.47862458 -6.37550592 -2.42219687 -6.87918377 -2.52728343 -7.96143913 -2.51141047
+		 -7.85428572 -2.57628417 -6.95086861 -2.6229527 -7.77338648 -2.66428685 -7.027916908
+		 -2.73890567 -7.68510199 -2.77193618 -7.14111376 -2.8186965 -7.56448412 -2.8399756
+		 -7.25442743 -2.85464978 -7.35074043 -2.87037992 -6.77362776 -2.55105281 -6.62973595
+		 -2.49729085 -8.10546589 -2.5714066 -7.95692158 -2.61050129 -6.86850739 -2.62782931
+		 -7.85483742 -2.6773901 -6.94749641 -2.71996927 -7.76701784 -2.76114821 -7.033196926
+		 -2.82683587 -7.67104006 -2.8588903 -7.1442523 -2.89513803 -7.55370331 -2.91571426
+		 -7.25507259 -2.92916226 -7.34651232 -2.954427 -6.39397287 -2.50503087 -7.23590374
+		 -3.042115688 -7.34064436 -3.071372509 -7.33463335 -3.19115257 -7.21713543 -3.15737844
+		 -7.44778347 -3.052760124 -7.1307292 -3.004472971 -7.11834621 -3.12543678 -7.5562048
+		 -3.025851488 -7.55641222 -3.14744067 -7.033011913 -2.94241619 -7.032529354 -3.082633018
+		 -7.65964794 -2.97389865 -7.64609003 -3.11345363 -6.95394659 -2.84806848 -6.95081282
+		 -2.98851991 -7.74776411 -2.88795114 -7.73681784 -3.028002739 -6.8750968 -2.74604344
+		 -6.86964798 -2.87735581 -7.83644056 -2.79434419 -7.82870626 -2.92553163 -6.77629328
+		 -2.66472578 -6.78362131 -2.80343914 -7.94288683 -2.72333193 -7.92170382 -2.86060619
+		 -6.63278675 -2.61831021 -6.65369844 -2.75906539 -8.05542469 -2.82945991 -6.43266296
+		 -2.62186766 -6.48054171 -2.75440478 -7.30665016 -3.74897099 -7.20582485 -3.69447446
+		 -7.41242266 -3.70484424 -7.12155628 -3.62660813 -7.5030632 -3.64575624 -7.025594234
+		 -3.49744368 -7.61146688 -3.52684999 -6.96595383 -3.35740352 -7.68482733 -3.39349723
+		 -6.91129255 -3.23180485 -7.75178909 -3.27400923 -6.84310675 -3.13916898 -7.82890368
+		 -3.1886692 -6.71148157 -3.061157942 -7.96768379 -3.12422919 -6.55402422 -3.062600851
+		 -7.28628969 -4.15486622 -7.19285917 -4.10116053 -7.38462734 -4.11078024 -7.060947418
+		 -3.96358848 -7.52964211 -3.98710179 -6.9902091 -3.79445362 -7.6169529 -3.82590151
+		 -6.93943453 -3.6236496 -7.68456459 -3.66104364 -6.90366888 -3.51441741 -7.73108768
+		 -3.55594611 -6.85007429 -3.41236353 -7.79463196 -3.45977521 -6.73144484 -3.31711507
+		 -7.92220736 -3.37688947 -6.57654285 -3.32523465 -8.12108326 -2.38782358 -8.39019108
+		 -2.44199872 -8.37974072 -2.47758698 -8.115592 -2.42282271 -7.44997835 -2.65606523
+		 -7.43660545 -2.80235529 -7.44814062 -2.86438632 -8.36593437 -2.52210021 -8.09031868
+		 -2.69150901 -8.28908634 -2.71505427 -7.44002676 -2.93845773 -8.33927631 -2.60267353
+		 -7.45491838 -3.16931987 -8.22818851 -2.84214139 -8.12420845 -3.14141679 -8.075523376
+		 -3.40046525 0.20447333 0.12126204 0.57431692 -0.097629763 0.36326465 0.066211276
+		 0.21187 0.12689821 -0.15391691 -0.061953701 0.060176976 0.079063259 0.70011222 -0.51349324
+		 0.67241627 -0.30109841 -0.29988757 -0.43859187 -0.26008919 -0.24469574 0.59854889
+		 -0.78051156 0.67160922 -0.65103489 -0.22104086 -0.6880098 -0.28172871 -0.56607741
+		 0.17188393 -0.91585404 0.41660747 -0.91041285 -0.057900973 -0.81492954 0.17188416
+		 -0.83035046;
 createNode polyMapDel -n "polyMapDel6";
 	rename -uid "833EE206-47C9-1C8A-D49E-74BFB3AED193";
 	setAttr ".uopa" yes;
