@@ -3,4 +3,4 @@
 3/25 Added gold trim, downloaded and applied leather handle
 3/29 Hand painted drop shadows on the gold trim. This really sucks
 3/30 Added dirt texture and more drop shadows to trim.
-4/1 Tried to fix gold texuring issue
+4/1 Tried to fix gold texuring issue/ fixed issue.
