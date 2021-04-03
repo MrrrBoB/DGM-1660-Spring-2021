@@ -5,3 +5,4 @@
 3/30 Added dirt texture and more drop shadows to trim.
 4/1 Tried to fix gold texuring issue/ fixed issue.
 4/2 Touched up a few textures and exported.
+4/3 Tried to add a screw to the gold, gave up
