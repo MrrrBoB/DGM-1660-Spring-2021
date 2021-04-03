@@ -4,3 +4,4 @@
 3/29 Hand painted drop shadows on the gold trim. This really sucks
 3/30 Added dirt texture and more drop shadows to trim.
 4/1 Tried to fix gold texuring issue/ fixed issue.
+4/2 Touched up a few textures and exported.
