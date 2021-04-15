@@ -6,3 +6,4 @@
 4/1 Tried to fix gold texuring issue/ fixed issue.
 4/2 Touched up a few textures and exported.
 4/3 Tried to add a screw to the gold, gave up
+4/15 Colored cockpit, will start serious work next week.
