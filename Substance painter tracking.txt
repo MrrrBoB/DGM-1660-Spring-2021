@@ -9,3 +9,4 @@
 4/15 Colored cockpit, will start serious work next week.
 4/16 Downloaded some textures, will mess around with them
 4/17 Looked for more textures, didn't really find anything
+4/19 Finished body texturing, next will do missiles
