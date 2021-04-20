@@ -10,3 +10,4 @@
 4/16 Downloaded some textures, will mess around with them
 4/17 Looked for more textures, didn't really find anything
 4/19 Finished body texturing, next will do missiles
+4/20 Painted missiles and other stuff. just need to finish hieght mapping and whatnot
