@@ -15,3 +15,4 @@
 4/21 Added decals n stuff.
 4/22 Touched up decals, fixed afterburner. 
 4/23 Added dirt to plane. Start working on additional assets for display scene.
+4/24 Updated model with effects, need to fix the textures on it though.
